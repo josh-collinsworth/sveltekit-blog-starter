@@ -14,18 +14,3 @@
     </ul>
   </nav>
 </header>
-
-
-<style lang="scss">
-  header {
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: $mainColor;
-
-    nav ul {
-      list-style-type: none;
-    }
-  }
-</style>

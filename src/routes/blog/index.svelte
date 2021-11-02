@@ -17,26 +17,26 @@
 
 
 <svelte:head>
-	<title>Josh Collinsworth | Writing</title>
+	<title>Blog</title>
 	<meta data-key="description" name="description" content="Writings on development, design, and random thoughts.">
-	<meta property="og:image" content="https://joshcollinsworth.com/images/site-image.png" />
-	<meta name="twitter:image" content="https://joshcollinsworth.com/images/site-image.png"/>
 </svelte:head>
 
-<h1>Blog</h1>
+<main>
+  <h1>Blog</h1>
+  
+  <ul class="posts-list">
+    {#each posts as post}
+      <li>
+        <img src={post.coverImage} alt=""/>
+        <h2>
+          <a href="/blog/{post.slug}">
+            {post.title}
+          </a>
+        </h2>
 
-<ul>
-
-  {#each posts as post}
-  <li>
-
-    <h2>
-      <a href="/blog/{post.slug}">
-        {post.title}
-      </a>
-    </h2>
-
-    <p>{post.excerpt}</p>
-  </li>
-  {/each}
-</ul>
+        <p>{post.excerpt}</p>
+      </li>
+    {/each}
+  </ul>
+</main>
+  

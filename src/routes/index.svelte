@@ -1,2 +1,5 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<main>
+  <h1>SvelteKit blog starter</h1>
+  <p>This starter contains everything you need to get up and running with SvelteKit as a static site generator for your markdown blog posts.</p>
+  <p>Sass and MDSvex are pre-installed, with some add-ons. For more info, see <a href="https://github.com/josh-collinsworth/sveltekit-blog-starter">this project's repo readme</a>.</p>
+</main>

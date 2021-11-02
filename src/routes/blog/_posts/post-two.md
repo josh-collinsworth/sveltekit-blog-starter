@@ -1,14 +1,14 @@
 ---
-title: "I am a markdown page"
-date: "2021-10-26"
-updated: "2021-10-26"
+title: "I'm another markdown post"
+date: "2021-04-28"
+updated: "2021-04-28"
 categories: 
-  - "css"
+  - "javascript"
   - "web"
-  - "wordpress"
-coverImage: "gutenberg-wide-illustration.png"
-coverWidth: 32
-coverHeight: 29
+  - "writing"
+coverImage: "/images/example-image.png"
+coverWidth: 16
+coverHeight: 9
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor, libero sed tincidunt vehicula, mi quam faucibus purus, nec pulvinar tortor lacus ac quam. Maecenas orci justo, vestibulum at leo et, ultricies eleifend mi.
 ---
 
