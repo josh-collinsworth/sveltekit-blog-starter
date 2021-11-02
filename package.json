@@ -9,13 +9,21 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
+    "@sveltejs/adapter-static": "^1.0.0-next.21",
     "@sveltejs/kit": "next",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
+    "mdsvex": "^0.9.8",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
+    "rehype-autolink-headings": "^6.1.0",
+    "rehype-slug": "^5.0.0",
+    "sass": "^1.43.4",
     "svelte": "^3.42.6"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "svelte-preprocess": "^4.9.8"
+  }
 }
