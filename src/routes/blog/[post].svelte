@@ -1,7 +1,7 @@
 <script context="module">
   export async function load({page}) {
     try {
-      const Post = await import(`./_posts/${page.params.slug}.md`)
+      const Post = await import(`./_posts/${page.params.post}.md`)
       
       return {
         props: {

@@ -1,12 +1,21 @@
 header,
 footer {
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $mainColor;
+  background: $darker;
+  color: $background;
+  
+  a {
+    color: $background;
+  }
 
   nav ul {
     list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
   }
 }

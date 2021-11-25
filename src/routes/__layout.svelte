@@ -13,7 +13,9 @@
 
 <div class="layout">
   <Header />
-  <slot />
+  <main>
+    <slot />
+  </main>
   <Footer />
 </div>
 

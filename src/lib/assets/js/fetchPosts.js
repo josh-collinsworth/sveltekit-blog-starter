@@ -36,8 +36,6 @@ const fetchPosts = async (options) => {
       categories: post.categories,
     }))
   })
-
-  console.log(posts)
   
   return posts
 }
