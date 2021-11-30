@@ -1,6 +1,7 @@
 header,
 footer {
-  padding: 2rem;
+  font-family: $accentFont;
+  padding: 1.5rem 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

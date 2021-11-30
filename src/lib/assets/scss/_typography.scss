@@ -1,15 +1,21 @@
 html {
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 body {
-  font-family: 'Barlow', 'Helvetica', 'Arial', sans-serif;
+  font-family: $primaryFont;
+  color: $ink;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 4.5rem 0 1rem;
   line-height: 1;
+  font-family: $accentFont;
+  font-weight: normal;
+  color: $darker;
 }
 
 h1 {
@@ -23,6 +29,10 @@ h2 {
 
 h3 {
   font-size: 1.8rem;
+}
+
+a {
+  color: inherit;
 }
 
 pre {
@@ -41,7 +51,7 @@ code {
 
 pre,
 code {
-  font-family: monospace;
+  font-family: $codeFont;
   font-size: 0.8rem;
   border-radius: .125rem;
 }

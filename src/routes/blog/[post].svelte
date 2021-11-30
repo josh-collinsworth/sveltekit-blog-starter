@@ -37,42 +37,41 @@
   <!-- <meta name="twitter:image" content="https://joshcollinsworth.com{imagePath}" /> -->
 </svelte:head>
 
-<main>
-  <article class="post">
-    <img
-      class="cover-image"
-      src="{meta.coverImage}"
-      alt=""
-      style="
-        aspect-ratio: {meta.coverWidth} / {meta.coverHeight};
-        "
-      width={meta.coverWidth}
-      height={meta.coverHeight}
-    />
 
-    <h1>{ meta.title }</h1>
-    
-    <div class="meta">
-      <b>Published:</b> {meta.date}
-      <br>
-      <b>Updated:</b> {meta.updated}
-    </div>
-    
-    <svelte:component this={Post} />
+<article class="post">
+  <img
+    class="cover-image"
+    src="{meta.coverImage}"
+    alt=""
+    style="
+      aspect-ratio: {meta.coverWidth} / {meta.coverHeight};
+      "
+    width={meta.coverWidth}
+    height={meta.coverHeight}
+  />
 
-    <aside class="post-footer">
-      {#if meta.categories}
-        <h2>Posted in: </h2>
-        <ul>
-          {#each meta.categories as category}
-            <li>
-              <a href="/blog/category/{category}/">
-                { category }
-              </a>
-            </li>
-          {/each}
-        </ul>
-      {/if}
-    </aside>
-  </article>
-</main>
+  <h1>{ meta.title }</h1>
+  
+  <div class="meta">
+    <b>Published:</b> {meta.date}
+    <br>
+    <b>Updated:</b> {meta.updated}
+  </div>
+  
+  <svelte:component this={Post} />
+
+  <aside class="post-footer">
+    {#if meta.categories}
+      <h2>Posted in: </h2>
+      <ul>
+        {#each meta.categories as category}
+          <li>
+            <a href="/blog/category/{category}/">
+              { category }
+            </a>
+          </li>
+        {/each}
+      </ul>
+    {/if}
+  </aside>
+</article>

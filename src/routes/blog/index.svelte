@@ -19,6 +19,7 @@
 	<meta data-key="description" name="description" content="Writings on development, design, and random thoughts.">
 </svelte:head>
 
+<sdf>
 <h1>Blog</h1>
 
 <ul class="posts-list">
@@ -37,4 +38,4 @@
     </li>
   {/each}
 </ul>
-  
+  </sdf>

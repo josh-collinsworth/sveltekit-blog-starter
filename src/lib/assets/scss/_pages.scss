@@ -1,0 +1,40 @@
+// The __layout.scss file dynamically adds classes based on the current route.
+
+.blog {
+
+  .posts-list {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 4rem;
+    }
+
+    a + h2 {
+      margin-top: 1rem;
+    }
+  }
+
+  h1 {
+    margin-top: 1rem;
+  }
+
+  .post-footer {
+    
+    ul {
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      background-color: $lightAccent;
+      padding: .25rem 0.5rem;
+      text-transform: uppercase;
+      font-family: $accentFont;
+
+      + li {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

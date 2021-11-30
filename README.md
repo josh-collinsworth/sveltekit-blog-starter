@@ -2,14 +2,15 @@
 
 This starter contains everything you need to get up and running with SvelteKit as a static site generator for your Markdown (and Svelte)-powered blog.
 
-- Static site generation with hydration
+**Features:**
+
+- Super fast static site generation with hydration; every route is compiled down to static HTML with optional JavaScript
+- No-config prefetching for fast page loading
 - Sass pre-installed
-- MDSvex is pre-installed for Markdown support and for Svelte components inside Markdown
+- MDSvex for Markdown support, _and_ for Svelte components inside Markdown
   - For a demo, check out the `blog/post-one` page, or `src/routes/blog/_posts/post-one.md`
   - Rehype plugins are included for automatic heading links
-- Global `__layout.svelte` file
-  - `Header` and `Footer` Svelte components
-- Route prefetching for fast loading
+- Global `__layout.svelte` file with `Header` and `Footer` Svelte components, pre-configured with route-specific dynamic classes
 - Basic SEO for blog posts (strongly recommend checking that out for yourself, though)
 - RSS feed
 
@@ -42,9 +43,11 @@ There's a demo of how to use Svelte components inside of Markdown (the whole ide
 
 ### How posts are loaded
 
-The `/blog` route (handled by `src/routes/blog/index.svelte`) queries the `posts.json.js` file for info about all posts. (This is rendered as `/blog/posts.json` in the browser, if you'd like to take a look.)
+The `/blog` route (handled by `src/routes/blog/index.svelte`) queries the `posts.json.js` file for info about all posts. (This is available as `/blog/posts.json` in the browser, if you'd like to take a look.)
 
 In turn, that route uses the `fetchPosts.js` file inside of `src/lib/assets/js`. There are several options available for use in that file, but the gist is: it handles loading Markdown files inside the `_posts` folder, maybe doing some sorting, formatting, and/or filtering, then handing them back.
+
+This is what SvelteKit considers an "[endpoint](https://kit.svelte.dev/docs#routing-endpoints)." You _could_ make the JSON feed of your posts hidden if you wanted to, but having the JSON feed available _does_ open up some nice options, like being able to query your posts from another site, or even adding a client-side search bar or recent posts widget.
 
 
 ### RSS
