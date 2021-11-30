@@ -19,12 +19,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-top: 0;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 
 h3 {
@@ -33,14 +33,14 @@ h3 {
 
 a {
   color: inherit;
+  text-decoration-thickness: 1px;
+  text-decoration-color: $dark;
 }
 
 pre {
   overflow-y: auto;
-  width: calc(100% + 2rem);
-  margin: 1rem 0 1rem -1rem;
   color: $background;
-  background: $darker;
+  background: $gradient;
   padding: 1rem;
 }
 
@@ -58,9 +58,13 @@ code {
 
 pre code {
   padding: 0;
-  background: inherit;
+  background: transparent;
 }
 
 ul {
   list-style-type: square;
+
+  ::marker {
+    color: $accent;
+  }
 }

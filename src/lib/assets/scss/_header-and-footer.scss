@@ -1,12 +1,13 @@
 header,
 footer {
-  font-family: $accentFont;
+  font-family: $primaryFont;
   padding: 1.5rem 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background: $darker;
+  background: $gradient;
   color: $background;
   
   a {
@@ -20,5 +21,24 @@ footer {
     gap: 1rem;
     padding: 0;
     margin: 0;
+  }
+}
+
+.skip-to-content-link {
+  position: absolute;
+  top: -6rem;
+  left: 0;
+  padding: .5em;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  background: $accent;
+
+  &:focus {
+    transform: translateY(6rem);
+    opacity: 1;
+    z-index: 11;
   }
 }

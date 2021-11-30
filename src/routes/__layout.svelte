@@ -1,6 +1,5 @@
 <script context="module">
 	export const load = async({ page }) => {
-    console.log(page.path)
     return {
       props: {
         path: page.path
@@ -18,6 +17,7 @@
 
   export let path;
 
+  // Used to add classes to the page based on route
   $: dynamicPath = path.replace(/\//g, ' ').trim() || 'home'
 
   // This pre-fetches all routes on the site in the background for faster loading.
@@ -30,7 +30,7 @@
 <!-- This markup is used on every page in the site. The <slot> is where the page's actual contents will show up. The dynamic path adds classes based on the current route. -->
 <div class="layout {dynamicPath}">
   <Header />
-  <main>
+  <main id="main" tabindex="-1">
     <slot />
   </main>
   <Footer />

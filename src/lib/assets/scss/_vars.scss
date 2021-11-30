@@ -4,11 +4,15 @@ $lightAccent: #A8DADC;
 $dark: #457B9D;
 $darker: #1D3557;
 
+$gradient: linear-gradient(to left, $dark, $darker);
+
 $ink: #2F3948;
 $white: #fff;
 $black: #000;
 
 
-$primaryFont: 'Source Serif Pro', Georgia, Times, serif; 
-$accentFont: 'Source Sans Pro', sans-serif;
+// $primaryFont: 'Source Serif Pro', Georgia, Times, serif; 
+$accentFont: 'Source Serif Pro', Georgia, Times, serif; 
+// $accentFont: 'Source Sans Pro', sans-serif;
+$primaryFont: 'Source Sans Pro', sans-serif;
 $codeFont: 'Fira Code', monospace;

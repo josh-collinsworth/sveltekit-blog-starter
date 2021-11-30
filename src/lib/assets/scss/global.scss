@@ -3,4 +3,14 @@
 @import './layout';
 @import './components';
 @import './header-and-footer';
+@import './forms';
 @import './pages';
+
+*:focus {
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+}
+
+main:focus {
+  outline: none;
+}

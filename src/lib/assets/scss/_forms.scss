@@ -1,0 +1,9 @@
+button {
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  background: $darker;
+  color: $background;
+  border: 2px solid $darker;
+  border-radius: 0.125rem;
+  box-shadow: inset .125rem .125rem 0 0 $dark, inset -.125rem -.125rem 0 0 $accent;
+}
