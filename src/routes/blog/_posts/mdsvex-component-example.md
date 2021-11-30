@@ -1,20 +1,28 @@
 ---
-title: "I'm another markdown post"
-date: "2021-04-28"
-updated: "2021-04-28"
+title: "A Markdown post with a Svelte component"
+date: "2021-10-26"
+updated: "2021-10-26"
 categories: 
-  - "javascript"
+  - "css"
   - "web"
-  - "writing"
+  - "wordpress"
 coverImage: "/images/example-image.png"
 coverWidth: 16
 coverHeight: 9
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor, libero sed tincidunt vehicula, mi quam faucibus purus, nec pulvinar tortor lacus ac quam. Maecenas orci justo, vestibulum at leo et, ultricies eleifend mi.
 ---
 
+<script>
+  import Alert from '../../../lib/components/Alert.svelte';
+</script>
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor, libero sed tincidunt vehicula, mi quam faucibus purus, nec pulvinar tortor lacus ac quam. Maecenas orci justo, vestibulum at leo et, ultricies eleifend mi. Pellentesque non cursus dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sed massa risus. Nunc porttitor sollicitudin tortor, eget luctus ipsum volutpat ac. Pellentesque id enim in sem iaculis consectetur. Mauris ut facilisis metus, ac feugiat augue. Nam eget consequat sapien. Praesent id tellus enim. Duis pretium, enim a sollicitudin cursus, libero tortor sodales turpis, quis bibendum quam arcu eu leo. Cras gravida dapibus est viverra tempus. In lacus dui, sodales semper justo sed, elementum imperdiet mi.
 
-Curabitur auctor quis velit eu commodo. Donec venenatis iaculis leo, sed blandit dui consectetur sed. Quisque dictum, metus ac laoreet rutrum, ex nunc dictum eros, ut ullamcorper ex tellus vitae quam. Phasellus nec nunc fringilla, finibus risus tempus, commodo dui. Vestibulum nec ipsum dictum, ultrices ante in, pulvinar metus. Praesent efficitur sed risus blandit dignissim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris euismod orci dolor, id rhoncus nisi porttitor a. Duis ornare congue est, quis tristique justo pharetra ut. Praesent at felis eget neque egestas tincidunt. Duis vel risus ac nibh auctor varius. Nam fringilla leo augue. In hac habitasse platea dictumst. Nulla finibus ullamcorper urna vitae pretium. Nullam suscipit lacinia egestas.
+<Alert>
+This is an example of the Alert.svelte component! Find it in `src/lib/components/Alert.svelte`.
+</Alert>
+
+Curabitur auctor quis velit eu commodo. Donec venenatis iaculis leo, sed blandit dui consectetur sed. Quisque dictum, metus ac laoreet rutrum, ex nunc dictum eros, ut ullamcorper ex tellus vitae quam. Phasellus nec nunc fringilla, finibus risus tempus, commodo dui. Vestibulum nec ipsum dictum, ultrices ante in, pulvinar metus. Praesent efficitur sed risus blandit dignissim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris euismod orci dolor, id rhoncus nisi porttitor a. 
 
 Mauris elementum diam eu ligula venenatis suscipit. Sed mollis quis nunc a vehicula. Ut auctor eleifend mollis. Curabitur dapibus, enim et consectetur gravida, metus mauris laoreet urna, et vulputate ante sapien vitae tellus. Suspendisse ut massa sit amet dolor pharetra fringilla. Fusce ipsum dui, facilisis a luctus sed, consequat non lorem. Phasellus pretium erat non nisi molestie, sed imperdiet enim ornare. Etiam dapibus accumsan odio. Nulla a nulla porta, auctor quam vitae, ullamcorper augue. Nam rutrum efficitur condimentum. Duis dignissim, lorem id auctor facilisis, felis risus lacinia elit, vitae tempus urna est ac lorem. Aenean imperdiet posuere scelerisque. Vestibulum tincidunt velit a rutrum consectetur.
 

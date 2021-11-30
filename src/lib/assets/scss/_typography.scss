@@ -37,30 +37,6 @@ a {
   text-decoration-color: $dark;
 }
 
-pre {
-  overflow-y: auto;
-  color: $background;
-  background: $gradient;
-  padding: 1rem;
-}
-
-code {
-  background: $lightAccent;
-  padding: 0.25em 0.5em;
-}
-
-pre,
-code {
-  font-family: $codeFont;
-  font-size: 0.8rem;
-  border-radius: .125rem;
-}
-
-pre code {
-  padding: 0;
-  background: transparent;
-}
-
 ul {
   list-style-type: square;
 
