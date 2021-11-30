@@ -1,4 +1,5 @@
 const fetchPosts = async (options) => {
+  // While none of these options except `withContent` are used by the starter, you can implement them if you like.
   const { withContent, offset, limit } = options
 
   const posts = await Promise.all(

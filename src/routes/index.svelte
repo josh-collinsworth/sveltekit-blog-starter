@@ -1,7 +1,24 @@
-<svelte:head>
-  <title>SvelteKit Blog Starter</title>
-</svelte:head>
+<script context="module">
+  export async function load() {
+		const ReadMeFile = await import('../../README.md');
+    const ReadMe = ReadMeFile.default;
 
-<h1>SvelteKit blog starter</h1>
-<p>This starter contains everything you need to get up and running with SvelteKit as a static site generator for your markdown blog posts.</p>
-<p>Sass and MDSvex are pre-installed, with some add-ons. For more info, see <a href="https://github.com/josh-collinsworth/sveltekit-blog-starter">this project's repo readme</a>.</p>
+		return {
+			props: {
+				ReadMe
+			}
+		}
+	}
+</script>
+
+<script>
+  export let ReadMe
+</script>
+
+
+<svelte:component this={ReadMe} />
+<!-- This is the README.md file in the root of the repo. It serves double duty as the homepage's content. If you'd rather use your own HTML and/or Svelte, you can delete/modify everything above this line. -->
+
+<svelte:head>
+  <title>SvelteKit Static Blog Starter</title>
+</svelte:head>

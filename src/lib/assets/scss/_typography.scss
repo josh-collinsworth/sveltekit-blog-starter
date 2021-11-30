@@ -8,12 +8,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 4rem 0 1rem;
-  color: $accent;
-  
-  a {
-    color: $accent;
-  }
+  margin: 4.5rem 0 1rem;
+  line-height: 1;
 }
 
 h1 {
@@ -27,4 +23,34 @@ h2 {
 
 h3 {
   font-size: 1.8rem;
+}
+
+pre {
+  overflow-y: auto;
+  width: calc(100% + 2rem);
+  margin: 1rem 0 1rem -1rem;
+  color: $background;
+  background: $darker;
+  padding: 1rem;
+}
+
+code {
+  background: $lightAccent;
+  padding: 0.25em 0.5em;
+}
+
+pre,
+code {
+  font-family: monospace;
+  font-size: 0.8rem;
+  border-radius: .125rem;
+}
+
+pre code {
+  padding: 0;
+  background: inherit;
+}
+
+ul {
+  list-style-type: square;
 }

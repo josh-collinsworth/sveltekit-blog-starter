@@ -8,4 +8,10 @@ This is an example of how you can have _markdown_ in page content!
 
 If you like, you can also import markdown into any Svelte page.
 
-Anyway, here's the [home link](/) if you wanna go back.
+Anyway, you can find this file here:
+
+```
+src/routes/about.md
+```
+
+Here's the [home link](/) if you wanna go back.

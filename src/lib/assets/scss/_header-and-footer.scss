@@ -2,6 +2,7 @@ header,
 footer {
   padding: 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background: $darker;
@@ -14,6 +15,7 @@ footer {
   nav ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     padding: 0;
     margin: 0;

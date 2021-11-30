@@ -32,7 +32,15 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: null
-		})
+		}),
+
+		vite: {
+			server: {
+				fs: {
+					allow: ['.']
+				}
+			}
+		}
 	}
 };
 
