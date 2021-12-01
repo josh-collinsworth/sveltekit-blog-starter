@@ -1,18 +1,34 @@
+// Colors
 $accent: #E63946;
 $background: #F1FAEE;
 $lightAccent: #A8DADC;
 $dark: #457B9D;
 $darker: #1D3557;
 
-$gradient: linear-gradient(to left, $dark, $darker);
-
 $ink: #2F3948;
 $white: #fff;
 $black: #000;
 
+$gradient: linear-gradient(to left, $dark, $darker);
 
-// $primaryFont: 'Source Serif Pro', Georgia, Times, serif; 
+
+// Fonts
 $accentFont: 'Source Serif Pro', Georgia, Times, serif; 
-// $accentFont: 'Source Sans Pro', sans-serif;
 $primaryFont: 'Source Sans Pro', sans-serif;
 $codeFont: 'Fira Code', monospace;
+
+
+// Breakpoints
+$xsMin: 600px;
+$xsMax: 767px;
+$smMin: 768px;
+$smMax: 1023px;
+$mdMin: 1024px;
+$mdMax: 1279px;
+$lgMin: 1280px;
+$lgMax: 1439px;
+$xlMin: 1440px;
+$xlMax: 1679px;
+$xxlMin: 1680px;
+$xxlMax: 1959px;
+$xxxlMin: 1960px;

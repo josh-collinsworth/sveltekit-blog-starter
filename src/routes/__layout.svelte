@@ -12,6 +12,7 @@
   import '$lib/assets/scss/global.scss';
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import { currentPage } from '$lib/assets/js/store';
 	import { prefetchRoutes } from '$app/navigation'
   import { onMount } from 'svelte'
 
@@ -19,6 +20,8 @@
 
   // Used to add classes to the page based on route
   $: dynamicPath = path.replace(/\//g, ' ').trim() || 'home'
+  
+  $: currentPage.set(path)
 
   // This pre-fetches all routes on the site in the background for faster loading.
   onMount(() => {

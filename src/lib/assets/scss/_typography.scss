@@ -1,6 +1,14 @@
 html {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.6;
+
+  @media (min-width: $smMin) {
+    font-size: 1.125rem;
+  }
+
+  @media (min-width: $lgMin) {
+    font-size: 1.25rem;
+  }
 }
 
 body {
@@ -12,19 +20,31 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 4.5rem 0 1rem;
-  line-height: 1;
+  line-height: 1.1;
   font-family: $accentFont;
   font-weight: normal;
   color: $darker;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-top: 0;
+
+  @media (min-width: $smMin) {
+    font-size: 3.4rem;
+  }
+
+  @media (min-width: $lgMin) {
+    font-size: 4rem;
+  }
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
+  
+  @media (min-width: $smMin) {
+    font-size: 2.4rem;
+  }
 }
 
 h3 {

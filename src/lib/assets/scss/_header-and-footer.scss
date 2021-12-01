@@ -12,6 +12,11 @@ footer {
   
   a {
     color: $background;
+    text-decoration: none;
+
+    &.active {
+      border-bottom: 1px solid currentColor;
+    }
   }
 
   nav ul {
@@ -21,6 +26,58 @@ footer {
     gap: 1rem;
     padding: 0;
     margin: 0;
+  }
+}
+
+header {
+  .hamburger-btn {
+    position: relative;
+    z-index: 3;
+    border: 0;
+    color: inherit;
+    background: transparent;
+    box-shadow: none;
+    width: 2em;
+    height: 1.5em;
+    border-radius: 0;
+    background: repeating-linear-gradient(currentColor, currentColor 18%, transparent 18%, transparent 41%, currentColor 41%, currentColor 60%, transparent 60%, transparent 82%, currentColor 82%, currentColor 100%);
+
+    @media (min-width: $smMin) {
+      display: none;
+    }
+
+    &[aria-pressed="true"] + .main-nav {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .main-nav {
+
+    @media (max-width: $xsMax) {
+      transition: transform .25s cubic-bezier(0.23, 1, 0.320, 1), opacity .25s cubic-bezier(0.23, 1, 0.320, 1);
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: $dark;
+      display: grid;
+      place-content: center;
+      transform: translateX(-100vw);
+      opacity: 0;
+      z-index: 2;
+      
+      ul {
+        width: 100%;
+        max-width: 20rem;
+        font-size: 1.25rem;
+        
+        li {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 

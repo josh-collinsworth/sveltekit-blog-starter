@@ -24,6 +24,7 @@
   },
   "type": "module",
   "dependencies": {
+    "just-throttle": "^4.0.1",
     "svelte-preprocess": "^4.9.8"
   }
 }
