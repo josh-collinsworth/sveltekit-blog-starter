@@ -12,8 +12,9 @@
 
   // Safety function, to prevent the menu from disappearing after a resize
   const checkForWindowSize = throttle(() => {
+    console.log('sldkj')
     isMenuOpen.set(window && window.innerWidth >= 768)
-  }, 300)
+  }, 100)
 
   const focusMain = () => {
 		const main = document.querySelector('main');
