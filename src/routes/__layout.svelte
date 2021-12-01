@@ -13,8 +13,8 @@
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import { currentPage } from '$lib/assets/js/store';
-	import { prefetchRoutes } from '$app/navigation'
-  import { onMount } from 'svelte'
+	import { prefetchRoutes } from '$app/navigation';
+  import { onMount } from 'svelte';
 
   export let path;
 

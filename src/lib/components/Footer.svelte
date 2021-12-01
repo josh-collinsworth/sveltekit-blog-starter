@@ -1,3 +1,20 @@
+<script>
+  import MainNav from "./MainNav.svelte";
+</script>
+
 <footer>
-  <p>&copy; this year by me. (Find and change this text in the Footer.svelte file.)</p>
+  <nav>
+    <ul>
+      <li>
+        <a href="/rss.xml">RSS</a>
+      </li>
+      <li>
+        <a href="/">Home</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <MainNav />
+
+  <p>&copy; {new Date().getFullYear()} by me.<br>(Find and change this text in the Footer.svelte file.)</p>
 </footer>

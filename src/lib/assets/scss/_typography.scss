@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-top: 0;
 
   @media (min-width: $smMin) {
@@ -35,7 +35,7 @@ h1 {
   }
 
   @media (min-width: $lgMin) {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
 }
 

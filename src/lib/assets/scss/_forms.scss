@@ -1,9 +1,64 @@
-button {
+form {
+  margin: 2rem 0;
+}
+
+button,
+input[type=submit] {
   font-size: 1rem;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   background: $darker;
   color: $background;
+  font-weight: bold;
   border: 2px solid $darker;
   border-radius: 0.125rem;
-  box-shadow: inset .125rem .125rem 0 0 $dark, inset -.125rem -.125rem 0 0 $accent;
+  background: $darker;
+  margin: 2rem 0 0;
+  display: block;
+  width: max-content;
+  transition: background .2s;
+
+  &:hover,
+  &:focus {
+    background: $accent;
+  }
+}
+
+label,
+fieldset {
+  font-weight: bold;
+  display: inline-block;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+input {
+  display: block;
+  font-size: inherit;
+  padding: 0.5rem;
+  border: 1px solid $darker;
+  border-radius: 0.125rem;
+  width: 100%;
+  accent-color: $accent;
+
+  &[type=radio],
+  &[type=checkbox] {
+    display: initial;
+    width: auto;
+
+    &:not(:checked) + label {
+      font-weight: normal;
+    }
+  }
+}
+
+.form-section,
+fieldset {
+  margin-top: 1.5rem;
+}
+
+::placeholder {
+  color: darken($lightAccent, 30%);
 }

@@ -1,7 +1,9 @@
-.alert {
-  color: $background;
-  background: $accent;
-  padding: 1rem;
-  width: calc(100% + 2rem);
-  margin: 2rem 0 2rem -1rem;
+.callout {
+  background: $lightAccent;
+  padding: 2rem;
+  width: calc(100% + 4rem);
+  margin: 2rem 0 2rem -2rem;
+  font-size: 1.125rem;
+  font-style: italic;
+  border-radius: 0.125rem;
 }

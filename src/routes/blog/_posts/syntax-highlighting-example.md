@@ -1,24 +1,23 @@
 ---
 title: "Syntax highlighting with MDSvex"
-date: "2021-04-28"
-updated: "2021-04-28"
+date: "2021-12-01"
+updated: "2021-12-01"
 categories: 
-  - "javascript"
+  - "sveltekit"
   - "web"
-  - "writing"
+  - "css"
+  - "markdown"
 coverImage: "/images/example-image.png"
 coverWidth: 16
 coverHeight: 9
-excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor, libero sed tincidunt vehicula, mi quam faucibus purus, nec pulvinar tortor lacus ac quam. Maecenas orci justo, vestibulum at leo et, ultricies eleifend mi.
+excerpt: This post shows you how syntax highlighting works here.
 ---
 
 MDSvex has automatic, built-in syntax highlighting with [Prism.js](https://prismjs.com/); just include the language name after the triple backticks, like so:
 
 ```
 \```css
-.my-css-class { 
-  color: orange;
-}
+/* Your CSS here */
 \```
 ```
 
@@ -26,7 +25,9 @@ And that will render just like so:
 
 ```css
 .my-css-class { 
-  color: orange;
+  color: #ffd100;
+  box-sizing: border-box;
+  /* etc... */
 }
 ```
 
@@ -34,36 +35,20 @@ Here's how you'd do JavaScript:
 
 ```
 \```js
-const invertNumberInRange = (num, range) => {
-  return range - num;
-}
+// You can use js or javascript for the language
 \```
 ```
 
-Output:
+Highlighted code sample:
 ```js
 const invertNumberInRange = (num, range) => {
   return range - num;
 }
+
+invertNumberInRange(25, 100); // 75
 ```
 
-Of course, MDSvex supports Svelte, too:
-
-```
-\```svelte
-<script>
-  import myComponent from '$lib/components/myComponent.svelte';
-
-  export let myProp = undefined;
-</script>
-
-<div>
-  <MyComponent prop={myProp}>
-</div>
-\```
-```
-
-Output:
+Of course, MDSvex supports Svelte highlighting, too:
 
 ```svelte
 <script>
@@ -76,3 +61,5 @@ Output:
   <MyComponent prop={myProp}>
 </div>
 ```
+
+All these colors are in the `_prism.scss` file inside `src/lib/assets/scss`, if you'd like to change them.

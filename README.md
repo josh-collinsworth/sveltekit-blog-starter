@@ -6,12 +6,12 @@ This starter contains everything you need to get up and running with [SvelteKit]
 
 - **Super fast static site generation** with hydration. Every route is compiled down to static HTML with optional JavaScript, thanks to the SvelteKit adapter-static (pre-installed)
 - **Zero-config prefetching** for automatic, fast background page loading
+- **Markdown support** for both pages and posts
 - **Sass** pre-installed and -configured
-- **MDSvex** for Markdown support, _and_ for Svelte components inside Markdown
+- **MDSvex** pre-installed--use Svelte components inside Markdown!
   - **Rehype** plugins are included to generate unique heading IDs, for direct linking
-  - For a demo, check out `/blog` posts
 - **Global layout file** with `Header` and `Footer` Svelte components, pre-configured with route-specific dynamic classes and a "skip to content" link
-- **Built responsive by default** 
+- **Responsive by default** 
 - **Basic SEO** for blog posts (_strongly recommend checking that out for yourself, though_)
 - **RSS feed** set up and ready to go (_though it could also likely benefit from some optimization_)
 
@@ -33,18 +33,18 @@ npm run dev
 That should get a dev server up and running (assuming you have NPM and Node installed already). Any changes to components and styles should auto-refresh super quickly.
 
 
-## Handling and adding posts
+## Adding new posts
 
 A couple of demo Markdown posts are included in `src/routes/blog/_posts`. These can be updated or removed, but it may be easiest to duplicate one as a starting point. Otherwise, to create a new post, drop a new `.md` file into `src/routes/blog/_posts`. It will automatically show up in the list.
 
-**Note: it's important that all posts have a `date` frontmatter property!** This is how they're sorted by default.
+**Note: it's important that all posts have a `date` frontmatter property!** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
 
 The posts each offer a demo of a feature of SvelteKit and/or MDSvex.
 
 
 ### How posts are loaded
 
-Behind the scenes, when you hit the `/blog` route, you're hitting the `src/routes/blog/index.svelte` file. That file queries the `posts.json` endpoint for info about all posts. (This is available as `/blog/posts.json` in the browser, if you'd like to take a look.)
+Behind the scenes, when you hit the `/blog` route, you're hitting the `src/routes/blog/index.svelte` file. That file queries the `posts.json.js` endpoint for info about all posts. (Visit `/blog/posts.json` while this project is running in the browser, if you'd like to take a look.)
 
 Under the hood, that endpoint uses the `fetchPosts.js` file, found in `src/lib/assets/js`. That file handles loading all the Markdown files inside the `_posts` folder, maybe doing some sorting, formatting, and/or filtering, then handing them back to the page.
 
@@ -69,7 +69,7 @@ This is because, while scoped, component-based CSS is very nice, it can also be 
 
 ## Site navigation menus
 
-To add or remove pages from the site's navigation menu, edit the `MainNav.svelte` file inside `src/lib/components`. (_Make sure to add new pages using the `NavItem` component as shown for best results; it automatically handles accessibility attributes, highlighting the current page, and closing the nav menu when clicked._)
+To add or remove pages from the site's navigation menu (in both the header and footer), edit the `MainNav.svelte` file inside `src/lib/components`. (_I recommend using the `NavItem` component as shown for best results; it automatically handles highlighting the current page, visually and accessibly._)
 
 
 ## Colors and Fonts

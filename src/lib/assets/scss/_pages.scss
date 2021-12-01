@@ -1,6 +1,14 @@
 // The __layout.scss file dynamically adds classes based on the current route.
 
 .blog {
+  .meta {
+    font-size: 0.8rem;
+    margin-bottom: 4rem;
+  }
+
+  img + h1 {
+    margin-top: 1rem;
+  }
 
   .posts-list {
     list-style-type: none;
@@ -13,10 +21,6 @@
     a + h2 {
       margin-top: 1rem;
     }
-  }
-
-  h1 {
-    margin-top: 1rem;
   }
 
   .post-footer {

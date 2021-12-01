@@ -7,6 +7,7 @@
 @import './pages';
 @import './utilities';
 @import './code';
+@import './prism';
 
 *:focus {
   outline: 2px solid $accent;

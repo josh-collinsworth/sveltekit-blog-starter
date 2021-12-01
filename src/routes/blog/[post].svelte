@@ -24,6 +24,7 @@
 
 
 <svelte:head>
+  <!-- Be sure to add your image files and un-comment the lines below -->
   <title>{meta.title}</title>
   <meta data-key="description" name="description" content="{meta.excerpt}">
   <meta property="og:type" content="article" />
@@ -31,21 +32,20 @@
   <meta name="twitter:title" content={meta.title} />
   <meta property="og:description" content={meta.excerpt} />
   <meta name="twitter:description" content={meta.excerpt} />
-  <!-- <meta property="og:image" content="https://joshcollinsworth.com{imagePath}" /> -->
+  <!-- <meta property="og:image" content="https://yourdomain.com/image_path" /> -->
   <meta property="og:image:width" content={meta.coverWidth} />
   <meta property="og:image:height" content={meta.coverHeight} />
-  <!-- <meta name="twitter:image" content="https://joshcollinsworth.com{imagePath}" /> -->
+  <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
 
 
 <article class="post">
+  <!-- You might want to add an alt frontmatter attribute. If not leaving alt blank here works, too. -->
   <img
     class="cover-image"
     src="{meta.coverImage}"
     alt=""
-    style="
-      aspect-ratio: {meta.coverWidth} / {meta.coverHeight};
-      "
+    style="aspect-ratio: {meta.coverWidth} / {meta.coverHeight};"
     width={meta.coverWidth}
     height={meta.coverHeight}
   />

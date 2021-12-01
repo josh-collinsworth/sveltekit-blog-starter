@@ -19,8 +19,6 @@ footer {
     gap: 1.5rem;
     padding: 0;
     margin: 0;
-    border-top: 1px solid;
-    width: max-content;
 
     a:hover {
       text-decoration: underline;
@@ -30,6 +28,7 @@ footer {
 
 header {
   background: $lightAccent;
+  color: $darker;
 
   .site-title {
     @extend h2;
@@ -43,14 +42,38 @@ header {
 
   nav ul {
     text-align: center;
-    margin: 1.5rem auto 0;
+    margin: 1rem auto 0;
     padding-top: 0.5rem;
+    border-top: 1px solid $dark;
+    width: max-content;
   }
 }
 
 footer {
   background: $gradient;
   color: $background;
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr;
+  align-items: stretch;
+  gap: 2rem;
+
+  p {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+
+  nav {
+    display: initial;
+    border-right: 1px solid;
+
+    ul {
+      display: initial;
+
+      li + li {
+        margin-top: 0.5rem;
+      }
+    }
+  }
 }
 
 .skip-to-content-link {
