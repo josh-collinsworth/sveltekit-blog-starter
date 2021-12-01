@@ -59,6 +59,11 @@ a {
 
 ul {
   list-style-type: square;
+  padding-left: 1.5rem;
+
+  ul {
+    list-style-type: circle;
+  }
 
   ::marker {
     color: $accent;
