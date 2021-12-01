@@ -72,7 +72,7 @@ This is because, while scoped, component-based CSS is very nice, it can also be 
 To add or remove pages from the site's navigation menu, edit the `MainNav.svelte` file inside `src/lib/components`. (_Make sure to add new pages using the `NavItem` component as shown for best results; it automatically handles accessibility attributes, highlighting the current page, and closing the nav menu when clicked._)
 
 
-## Defaults
+## Colors and Fonts
 
 This starter has a default color palette and fonts, but you can easily override those. (Credit to [coolors.co](https://coolors.co/palettes/trending) for the default palette.)
 

@@ -1,10 +1,9 @@
 <script>
   import NavItem from "./NavItem.svelte";
-  import { isMenuOpen } from '$lib/assets/js/store';
 </script>
 
 <!-- Contents of this file will be used in the header and the responsive hamburger menu. -->
-<nav class="main-nav" aria-hidden={!$isMenuOpen}>
+<nav class="main-nav">
   <ul>
     <NavItem href="/blog">
       Blog

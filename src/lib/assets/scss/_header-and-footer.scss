@@ -1,21 +1,13 @@
 header,
 footer {
   font-family: $primaryFont;
-  padding: 1.5rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  background: $darker;
-  background: $gradient;
-  color: $background;
+  padding: 3rem 2rem 2.5rem;
   
   a {
-    color: $background;
     text-decoration: none;
 
     &.active {
-      border-bottom: 1px solid currentColor;
+      font-weight: bold;
     }
   }
 
@@ -23,62 +15,42 @@ footer {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    justify-content: center;
+    gap: 1.5rem;
     padding: 0;
     margin: 0;
+    border-top: 1px solid;
+    width: max-content;
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 header {
-  .hamburger-btn {
-    position: relative;
-    z-index: 3;
-    border: 0;
+  background: $lightAccent;
+
+  .site-title {
+    @extend h2;
+    line-height: 1;
     color: inherit;
-    background: transparent;
-    box-shadow: none;
-    width: 2em;
-    height: 1.5em;
-    border-radius: 0;
-    background: repeating-linear-gradient(currentColor, currentColor 18%, transparent 18%, transparent 41%, currentColor 41%, currentColor 60%, transparent 60%, transparent 82%, currentColor 82%, currentColor 100%);
-
-    @media (min-width: $smMin) {
-      display: none;
-    }
-
-    &[aria-pressed="true"] + .main-nav {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    max-width: 32rem;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
   }
 
-  .main-nav {
-
-    @media (max-width: $xsMax) {
-      transition: transform .25s cubic-bezier(0.23, 1, 0.320, 1), opacity .25s cubic-bezier(0.23, 1, 0.320, 1);
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      background: $dark;
-      display: grid;
-      place-content: center;
-      transform: translateX(-100vw);
-      opacity: 0;
-      z-index: 2;
-      
-      ul {
-        width: 100%;
-        max-width: 20rem;
-        font-size: 1.25rem;
-        
-        li {
-          width: 100%;
-        }
-      }
-    }
+  nav ul {
+    text-align: center;
+    margin: 1.5rem auto 0;
+    padding-top: 0.5rem;
   }
+}
+
+footer {
+  background: $gradient;
+  color: $background;
 }
 
 .skip-to-content-link {
