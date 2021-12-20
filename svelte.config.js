@@ -19,7 +19,6 @@ const config = {
 				rehypeSlug,
 				rehypeAutolinkHeadings,
 			]
-			//Optional: add a layout here
 		}),
 	],
 
