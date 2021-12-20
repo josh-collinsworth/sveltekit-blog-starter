@@ -16,8 +16,8 @@ const config = {
 		mdsvex({
 			extensions: ['.md'],
 			rehypePlugins: [
+				rehypeSlug,
 				rehypeAutolinkHeadings,
-				rehypeSlug
 			]
 			//Optional: add a layout here
 		}),
