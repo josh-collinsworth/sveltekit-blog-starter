@@ -1,3 +1,7 @@
+---
+layout: false
+---
+
 # SvelteKit static blog starter
 
 This starter contains everything you need to get up and running with [SvelteKit](https://kit.svelte.dev/) as a static site generator for your Markdown (and Svelte)-powered blog. [Check out the demo here](https://sveltekit-static-starter.netlify.app/).

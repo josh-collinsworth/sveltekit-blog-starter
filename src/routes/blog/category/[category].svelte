@@ -2,7 +2,7 @@
 	export async function load({ fetch, page }) {
     const category = page.params.category
 
-    const res = await fetch(`/blog/posts.json`)
+    const res = await fetch(`/api/posts.json`)
 		let { posts } = await res.json()
 
     const matchingPosts = posts
@@ -33,11 +33,11 @@
 <ul class="posts-list">
   {#each posts as post}
     <li>
-      <a href="/blog/{post.slug}">
+      <a href="{post.slug}">
         <img src={post.coverImage} alt=""/>
       </a>
       <h2>
-        <a href="/blog/{post.slug}">
+        <a href="{post.slug}">
           {post.title}
         </a>
       </h2>

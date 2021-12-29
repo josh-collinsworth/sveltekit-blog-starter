@@ -18,7 +18,8 @@ const config = {
 			rehypePlugins: [
 				rehypeSlug,
 				rehypeAutolinkHeadings,
-			]
+			],
+			layout: 'src/routes/blog/_post.svelte'
 		}),
 	],
 

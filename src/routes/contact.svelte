@@ -1,7 +1,7 @@
 <script>
-import Callout from "$lib/components/Callout.svelte";
-
+import Callout from "$lib/components/Callout.svelte"
 </script>
+
 <h1>Contact</h1>
 
 This starter was made by Josh Collinsworth. You can <a rel="external" href="https://joshcollinsworth.com/contact">get in touch with Josh here</a>.

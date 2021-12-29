@@ -1,6 +1,5 @@
 import fetchPosts from '$lib/assets/js/fetchPosts'
 
-
 // IMPORTANT: update all the property values in this `config` object to reflect your site!
 const config = {
   siteTitle: 'SvelteKit Static Blog Starter',
@@ -10,7 +9,16 @@ const config = {
 }
 
 export const get = async () => {
-  const data = await fetchPosts({ withContent: false })
+  const data = await Promise.all(
+    Object.entries(import.meta.glob('./blog/*.md')).map(async ([path, page]) => {
+      const { metadata } = await page()
+      const slug = path.split('/').pop().split('.').shift()
+      return { ...metadata, slug }
+    })
+  )
+  .then(posts => {
+    return posts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
+  })
 
   const body = render(data)
   const headers = {
