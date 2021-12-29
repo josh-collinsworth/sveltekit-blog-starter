@@ -39,22 +39,13 @@ That should get a dev server up and running (assuming you have NPM and Node inst
 
 ## Adding new posts
 
-A couple of demo Markdown posts are included in `src/routes/blog/_posts`. These can be updated or removed, but it may be easiest to duplicate one as a starting point. Otherwise, to create a new post, drop a new `.md` file into `src/routes/blog/_posts`. It will automatically show up in the list.
+A couple of demo Markdown posts are included in `src/routes/blog/`. These can be updated or removed, but it may be easiest to duplicate one as a starting point. Otherwise, to create a new post, drop a new `.md` file into `src/routes/blog/`. It will automatically show up in the list.
 
-**Note: it's important that all posts have a `date` frontmatter property!** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
+**Note: posts should have a `date` property.** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
 
 The posts each offer a demo of a feature of SvelteKit and/or MDSvex.
 
-
-### How posts are loaded
-
-Behind the scenes, when you hit the `/blog` route, you're hitting the `src/routes/blog/index.svelte` file. That file queries the `posts.json.js` endpoint for info about all posts. (Visit `/blog/posts.json` while this project is running in the browser, if you'd like to take a look.)
-
-Under the hood, that endpoint uses the `fetchPosts.js` file, found in `src/lib/assets/js`. That file handles loading all the Markdown files inside the `_posts` folder, maybe doing some sorting, formatting, and/or filtering, then handing them back to the page.
-
-The `/blog/posts.json` route is what SvelteKit considers an [endpoint](https://kit.svelte.dev/docs#routing-endpoints). You _could_ make the JSON feed of your posts hidden if you wanted to, but having it available _does_ open up some nice options, like being able to query your posts from another site, or even adding a client-side search bar or recent posts widget.
-
-**NOTE!** Currently, there is no pagination included. You may need to do a little extra if migrating blogs that already have dozens and dozens of posts.
+**Note:** there's currently no pagination included in post fetching or rendering. However, `src/routes/api/posts.json.js` has the capability set up; it just needs to be used.
 
 
 ### RSS

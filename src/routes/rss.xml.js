@@ -17,7 +17,7 @@ export const get = async () => {
     })
   )
   .then(posts => {
-    return posts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
+    return posts.sort((a, b) => new Date(b.date) - new Date(a.date))
   })
 
   const body = render(data)
