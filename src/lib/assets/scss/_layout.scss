@@ -32,6 +32,49 @@ img {
   height: auto;
 }
 
+.post {
+  .meta {
+    font-size: 0.8rem;
+    margin-bottom: 4rem;
+  }
+
+  img + h1 {
+    margin-top: 1rem;
+  }
+}
+
+.posts-list {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 6rem;
+  }
+
+  a + h2 {
+    margin-top: 1rem;
+  }
+}
+
+.post-footer { 
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    background-color: $lightAccent;
+    padding: .25rem 0.5rem;
+    text-transform: uppercase;
+    font-family: $primaryFont;
+    font-weight: bold;
+
+    + li {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
 :where(h2, h3, h4, h5, h6) {
   .icon-link {
     position: relative;

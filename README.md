@@ -72,7 +72,12 @@ This starter has a default color palette (Credit to [coolors.co](https://coolors
 This starter includes only a few components, most of which are for the header, footer, and site nav. You're welcome and encouraged to create your own (using them in Markdown is fun!); I just didn't want to push authors too far in any component direction right off the bat.
 
 
-## Deploying
+## Static files
+
+Things that should just live in the site root of the finished site (like a `robots.txt` file, favicon, or maybe images) should go in the `static` folder. If you link to them, use the root path (not `/static`).
+
+
+## Building and deploying
 
 The build command (from package.json) is simply:
 

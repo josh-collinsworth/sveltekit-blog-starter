@@ -1,8 +1,3 @@
----
-layout: false
----
-
-
 # About
 
 This is an example of how you can have _markdown_ in page content!
