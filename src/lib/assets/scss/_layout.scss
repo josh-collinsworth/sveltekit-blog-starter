@@ -31,3 +31,20 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+:where(h2, h3, h4, h5, h6) {
+  .icon-link {
+    position: relative;
+    
+    &::before {
+      content: '#';
+      position: absolute;
+      left: -1.5ch;
+      top: 0;
+      line-height: 1.2;
+      text-decoration: underline;
+      color: $dark;
+      font-weight: normal;
+    }
+  }
+}

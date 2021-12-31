@@ -1,4 +1,7 @@
+<!-- This is a template file that renders each individual markdown post inside src/routes/blog/ -->
+
 <script>
+  // These are pulled from the frontmatter of the current post
   export let title
   export let excerpt
   export let coverImage = ''
@@ -27,7 +30,7 @@
 
 
 <article class="post">
-  <!-- You might want to add an alt frontmatter attribute. If not leaving alt blank here works, too. -->
+  <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
   <img
     class="cover-image"
     src="{coverImage}"
@@ -47,8 +50,8 @@
   
   <slot />
 
-  <aside class="post-footer">
-    {#if categories}
+  {#if categories}
+    <aside class="post-footer">
       <h2>Posted in: </h2>
       <ul>
         {#each categories as category}
@@ -59,6 +62,6 @@
           </li>
         {/each}
       </ul>
-    {/if}
-  </aside>
+    </aside>
+  {/if}
 </article>

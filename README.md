@@ -1,7 +1,3 @@
----
-layout: false
----
-
 # SvelteKit static blog starter
 
 This starter contains everything you need to get up and running with [SvelteKit](https://kit.svelte.dev/) as a static site generator for your Markdown (and Svelte)-powered blog. [Check out the demo here](https://sveltekit-static-starter.netlify.app/).
@@ -26,54 +22,49 @@ Clone or download [this repo](https://github.com/josh-collinsworth/sveltekit-blo
 
 ```
 npm install
+npm run dev -- --open
 ```
 
-Followed by:
-
-```
-npm run dev
-```
-
-That should get a dev server up and running (assuming you have NPM and Node installed already). Any changes to components and styles should auto-refresh super quickly.
+That should get a dev server up and running (assuming you have npm and Node installed already). Any saved changes to components and styles should auto-refresh blazingly fast.
 
 
 ## Adding new posts
 
-A couple of demo Markdown posts are included in `src/routes/blog/`. These can be updated or removed, but it may be easiest to duplicate one as a starting point. Otherwise, to create a new post, drop a new `.md` file into `src/routes/blog/`. It will automatically show up in the list.
+Adding new posts is as simple as dropping a new `.md` file into `src/routes/blog`. It will automatically show up on the site, and be added to the posts API.
+
+A few demo Markdown posts are included, and highlight some of the features of this starter. These can be updated or removed, but it may be best to use one as a starting point, just for the frontmatter properties.
 
 **Note: posts should have a `date` property.** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
 
-The posts each offer a demo of a feature of SvelteKit and/or MDSvex.
-
-**Note:** there's currently no pagination included in post fetching or rendering. However, `src/routes/api/posts.json.js` has the capability set up; it just needs to be used.
+**Note:** there's currently no pagination included in post fetching or rendering. However, `src/routes/api/posts.json.js` has the capability set up; it just needs to be implemented. (If you have many, many posts, this will probably be a good idea.)
 
 
 ### RSS
 
-This starter also includes a basic RSS feed, though you'll want to update it as directed in `src/routes/rss.xml.js`. Like the blog SEO (and in fact most of this starter), it's very minimal and not guaranteed to be in optimal shape. It _does_ work, however.
+This starter also includes a basic RSS feed. It's very minimal, so you may want to tweak it depending on your XML feed needs, but it _does_ work out of the box. That said: you'll want to update its details as directed in `src/routes/rss.xml.js`, to get your site's unique info correct.
   
 
 ## Sass
 
-There's a Sass build pipeline for global SCSS included.
+There's a Sass build pipeline for global SCSS already configured.
 
 **By default, all CSS is global.** It's located in `src/lib/assets/scss`, and all compiled into the `global.scss` file (which is then loaded into the global `__layout.svelte` file).
 
-This is because, while scoped, component-based CSS is very nice, it can also be hard to track down and get into. Since this is a starter, I felt it was best to keep all the (basic, minimal) styles together in one place, and let you, the author, decide whether you want to keep them that way or move to scoped CSS instead, or (as I do), use a mixture. It's up to you.
+This is because, while component-based scoped CSS is very nice, it can also be hard to track down and update. Since this is a starter, I felt it was best to keep all the (basic, minimal) styles together in one place, and let you, the author, decide whether you want to keep them as they are, move to scoped CSS instead, or use a mixture.
 
 
 ## Site navigation menus
 
-To add or remove pages from the site's navigation menu (in both the header and footer), edit the `MainNav.svelte` file inside `src/lib/components`. (_I recommend using the `NavItem` component as shown for best results; it automatically handles highlighting the current page, visually and accessibly._)
+To add or remove pages from the site's navigation menu (in both the header and footer), edit the `MainNav.svelte` file inside `src/lib/components`. (_I recommend using the included `NavItem` component as shown for best results; it automatically handles highlighting the current page, visually and accessibly._)
 
 
 ## Colors and Fonts
 
-This starter has a default color palette and fonts, but you can easily override those. (Credit to [coolors.co](https://coolors.co/palettes/trending) for the default palette.)
+This starter has a default color palette (Credit to [coolors.co](https://coolors.co/palettes/trending)) and fonts, but you can easily override those here:
 
 **Colors:** `src/lib/assets/scss/_vars.scss`
   
-**Fonts:** `src/app.html`
+**Fonts:** `src/app.html` for the links, `_vars.scss` for the font names.
 
 
 ## Components

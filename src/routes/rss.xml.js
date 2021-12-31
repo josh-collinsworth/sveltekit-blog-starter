@@ -1,5 +1,3 @@
-import fetchPosts from '$lib/assets/js/fetchPosts'
-
 // IMPORTANT: update all the property values in this `config` object to reflect your site!
 const config = {
   siteTitle: 'SvelteKit Static Blog Starter',
