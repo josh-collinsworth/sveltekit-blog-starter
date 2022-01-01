@@ -6,7 +6,7 @@ const config = {
   siteLink: 'https://github.com/josh-collinsworth/sveltekit-blog-starter'
 }
 
-export const get = async () => {
+export const get = async () => {  
   const data = await Promise.all(
     Object.entries(import.meta.glob('./blog/*.md')).map(async ([path, page]) => {
       const { metadata } = await page()
