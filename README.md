@@ -41,7 +41,7 @@ A few demo Markdown posts are included, and highlight some of the features of th
 
 ### RSS
 
-This starter also includes a basic RSS feed. It's very minimal, so you may want to tweak it depending on your XML feed needs, but it _does_ work out of the box. That said: you'll want to update its details as directed in `src/routes/rss.xml.js`, to get your site's unique info correct.
+This starter also includes a basic RSS feed. It's very minimal, so you may want to tweak it depending on your XML feed needs, but it _does_ work out of the box. That said: you'll want to update the details in `package.json`, to get your site's unique info correct.
   
 
 ## Sass
