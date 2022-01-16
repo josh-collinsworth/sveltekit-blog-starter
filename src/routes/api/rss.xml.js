@@ -1,5 +1,5 @@
 // IMPORTANT: update all the property values in `package.json`
-import { starterConfig } from '../../package.json'
+import { starterConfig } from '../../../package.json'
 
 const { siteTitle, siteDescription, mySiteURL, siteLink } = starterConfig
 
