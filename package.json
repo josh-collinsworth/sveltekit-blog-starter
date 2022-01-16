@@ -1,4 +1,10 @@
 {
+  "starterConfig": {
+    "siteTitle": "SvelteKit Static Blog Starter",
+    "siteDescription": "Add a description here",
+    "mySiteURL": "example.com",
+    "siteLink": "https://github.com/josh-collinsworth/sveltekit-blog-starter"
+  },
   "name": "sveltekit-blog-starter",
   "version": "1.0.0",
   "scripts": {
@@ -10,7 +16,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.21",
-    "@sveltejs/kit": "^1.0.0-next.199",
+    "@sveltejs/kit": "next",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",

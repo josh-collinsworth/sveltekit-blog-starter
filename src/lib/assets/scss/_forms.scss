@@ -42,6 +42,7 @@ input {
   border-radius: 0.125rem;
   width: 100%;
   accent-color: $accent;
+  background-color: transparent;
 
   &[type=radio],
   &[type=checkbox] {

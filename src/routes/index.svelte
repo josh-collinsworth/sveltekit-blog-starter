@@ -1,5 +1,5 @@
 <script context="module">
-  export async function load() {
+  export const load = async () => {
 		const ReadMeFile = await import('../../README.md');
     const ReadMe = ReadMeFile.default;
 

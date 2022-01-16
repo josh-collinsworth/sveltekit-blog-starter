@@ -1,8 +1,8 @@
 <!-- This dynamic page renders any page at /blog/category/* -->
 
 <script context="module">
-	export async function load({ fetch, page }) {
-    const category = page.params.category
+	export const load = async ({ fetch, params }) => {
+    const category = params.category
 
     const res = await fetch(`/api/posts.json`)
 		let { posts } = await res.json()
@@ -36,11 +36,11 @@
   <ul class="posts-list">
     {#each posts as post}
       <li>
-        <a href="{post.slug}">
+        <a href="/blog/{post.slug}">
           <img src={post.coverImage} alt=""/>
         </a>
         <h2>
-          <a href="{post.slug}">
+          <a href="/blog/{post.slug}">
             {post.title}
           </a>
         </h2>

@@ -4,7 +4,7 @@ This starter contains everything you need to get up and running with [SvelteKit]
 
 ## Features
 
-- **Super fast static site generation** with hydration. Every route is compiled down to static HTML with optional JavaScript, thanks to the SvelteKit adapter-static (pre-installed)
+- **Super fast static site generation** with hydration. Every route is compiled down to static HTML with optional JavaScript, thanks to the SvelteKit static adapter (pre-installed)
 - **Zero-config prefetching** for automatic, fast background page loading
 - **Markdown support** for both pages and posts
 - **Sass** pre-installed and -configured

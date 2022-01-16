@@ -25,21 +25,6 @@ const config = {
 				rehypeSlug,
 				rehypeAutolinkHeadings,
 			],
-
-			/**
-			 * Automatically matches any markdown file inside the 'blog' folder, and
-			 * uses the named file to lay out those markdown files.
-			 * 
-			 * You can add more layouts. If the key matches a folder, it will apply
-			 * to any markdown file in that folder. Otherwise, layouts can be used
-			 * in any markdown file's frontmatter, with `layout: name_here`.
-			 * 
-			 * You can also specify a fallback layout by naming it `_`. More here:
-			 * https://mdsvex.pngwn.io/docs#named-layouts
-			 */ 
-			layout: {
-				blog: 'src/routes/blog/_post.svelte'
-			}
 		}),
 	],
 
@@ -48,10 +33,7 @@ const config = {
 		target: '#svelte',
 		adapter: adapter(),
 
-		/**
-		 * This `vite` block is only necessary to load the README file from the root. 
-		 * If you're not loading from the root directory, you should remove it.
-		 */  
+		// Allows reading from files in the root directory. Necessary for package.json props and README
 		vite: {
 			server: {
 				fs: {

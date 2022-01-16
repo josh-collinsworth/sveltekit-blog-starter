@@ -1,15 +1,29 @@
-<!-- This is a template file that renders each individual markdown post inside src/routes/blog/ -->
+<script context="module">
+  export const load = async ({ params }) => {
+    try {  
+      const post = await import(`./_posts/${params.post}.md`)
+
+      return {
+        props: {
+          PostContent: post.default,
+          meta: { ...post.metadata, slug: params.post } 
+        }
+      }
+    } catch(error) {
+      return {
+        status: 404,
+        error: error.message
+      }
+    }
+  }
+</script>
+
 
 <script>
-  // These are pulled from the frontmatter of the current post
-  export let title
-  export let excerpt
-  export let coverImage = ''
-  export let coverWidth = ''
-  export let coverHeight = ''
-  export let date = ''
-  export let updated = ''
-  export let categories = []
+  export let PostContent
+  export let meta
+
+  const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = meta
 </script>
 
 
@@ -48,7 +62,7 @@
     <b>Updated:</b> {updated}
   </div>
   
-  <slot />
+  <PostContent />
 
   {#if categories}
     <aside class="post-footer">

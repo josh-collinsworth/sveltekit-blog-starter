@@ -1,5 +1,9 @@
 <script context="module">
-	export async function load({ fetch }) {
+	export const load = async ({ fetch }) => {
+    // Not used in this file, but here just to ensure
+    // the RSS route is pre-rendered by being called.
+    const rss = await fetch(`/api/rss.xml`)
+
 		const res = await fetch(`/api/posts.json`)
 		const { posts } = await res.json()
 
@@ -11,7 +15,7 @@
 
 
 <script>
-	export let posts;
+	export let posts = []
 </script>
 
 
@@ -26,11 +30,11 @@
 <ul class="posts-list">
   {#each posts as post}
     <li>
-      <a href="{post.slug}">
+      <a href="/blog/{post.slug}">
         <img src={post.coverImage} alt="" />
       </a>
       <h2>
-        <a href="{post.slug}">
+        <a href="/blog/{post.slug}">
           {post.title}
         </a>
       </h2>
