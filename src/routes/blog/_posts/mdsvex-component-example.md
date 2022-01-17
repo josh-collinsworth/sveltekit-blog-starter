@@ -6,7 +6,7 @@ categories:
   - "sveltekit"
   - "markdown"
   - "svelte"
-coverImage: "/images/example-image.png"
+coverImage: "/images/jerry-zhang-ePpaQC2c1xA-unsplash.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: This post demonstrates how to include a Svelte component in a Markdown post.
