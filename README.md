@@ -11,16 +11,20 @@ This starter contains everything you need to get up and running with [SvelteKit]
 - **MDSvex** pre-installed--use Svelte components inside Markdown!
   - **Rehype** plugins are included to generate unique heading IDs, for direct linking
 - **Global layout file** with `Header` and `Footer` Svelte components, pre-configured with route-specific dynamic classes and a "skip to content" link
-- **Responsive by default** 
+- **Responsive by default** (_though you may want to build your own mobile menu--that's up to you_)
 - **Basic SEO** for blog posts (_strongly recommend checking that out for yourself, though_)
 - **RSS feed** set up and ready to go (_though it could also likely benefit from some optimization_)
 
 
 ## Installation
 
-Clone or download [this repo](https://github.com/josh-collinsworth/sveltekit-blog-starter), then inside of it, in the terminal, run:
+Clone or download [this repo](https://github.com/josh-collinsworth/sveltekit-blog-starter), then install the dependencies and run the dev server.
+
+I recommend using these commands:
 
 ```
+npx degit https://github.com/josh-collinsworth/sveltekit-blog-starter my-sveltekit-blog
+cd my-sveltekit-blog
 npm install
 npm run dev -- --open
 ```
@@ -30,18 +34,20 @@ That should get a dev server up and running (assuming you have npm and Node inst
 
 ## Adding new posts
 
-Adding new posts is as simple as dropping a new `.md` file into `src/routes/blog`. It will automatically show up on the site, and be added to the posts API.
+Adding new posts is as simple as dropping a new `.md` file into `src/routes/blog/_posts`. It will automatically show up on the site, and be added to the posts API.
 
 A few demo Markdown posts are included, and highlight some of the features of this starter. These can be updated or removed, but it may be best to use one as a starting point, just for the frontmatter properties.
 
-**Note: posts should have a `date` property.** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
+If you want to use other frontmatter properties in the template (or just modify it), make changes in `src/routes/blog/[post].svelte`.
 
-**Note:** there's currently no pagination included in post fetching or rendering. However, `src/routes/api/posts.json.js` has the capability set up; it just needs to be implemented. (If you have many, many posts, this will probably be a good idea.)
+**Note: posts should have a `date` frontmatter property.** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
+
+**Note:** there's currently no pagination included in post fetching or rendering. If you have many, many posts, adding this feature will probably be a good idea. (I hope to add this feature on my own soon.)
 
 
 ### RSS
 
-This starter also includes a basic RSS feed. It's very minimal, so you may want to tweak it depending on your XML feed needs, but it _does_ work out of the box. That said: you'll want to update the details in `package.json`, to get your site's unique info correct.
+This starter also includes a basic RSS feed. It's very minimal, so you may want to tweak it depending on your XML feed needs, but it _does_ work out of the box. That said: you'll want to update the `starterConfig` details in `package.json` to get your site's unique info correct. (You could also pull this info in other places, or add to it, to keep things consistent, but that's up to you.)
   
 
 ## Sass
@@ -74,7 +80,7 @@ This starter includes only a few components, most of which are for the header, f
 
 ## Static files
 
-Things that should just live in the site root of the finished site (like a `robots.txt` file, favicon, or maybe images) should go in the `static` folder. If you link to them, use the root path (not `/static`).
+Things that should just live in the site root of the finished site (like a `robots.txt` file, favicon, or maybe images) should go in the `static` folder. If you link to them, use the root path (e.g., `/images/my.png`, not `../static/images/my.png`).
 
 
 ## Building and deploying
@@ -86,6 +92,8 @@ npm run build
 ```
 
 That should do it on a host like Netlify or Vercel. Or, if you prefer, you can run `npm run build` to generate the static files, then upload those (they'll be generated into a `build` folder).
+
+Use `npm run preview` _after_ a build to preview the built site.
 
 
 ## Further documentation
