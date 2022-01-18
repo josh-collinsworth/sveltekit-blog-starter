@@ -34,7 +34,6 @@ header {
     @extend h2;
     line-height: 1;
     color: inherit;
-    max-width: 32rem;
     text-align: center;
     margin: 0 auto;
     display: block;
@@ -87,6 +86,7 @@ footer {
   align-items: center;
   height: 3rem;
   background: $accent;
+  color: $white;
 
   &:focus {
     transform: translateY(6rem);

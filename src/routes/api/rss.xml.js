@@ -1,7 +1,5 @@
-// IMPORTANT: update all the property values in `package.json`
-import { starterConfig } from '../../../package.json'
-
-const { siteTitle, siteDescription, mySiteURL, siteLink } = starterConfig
+// IMPORTANT: update all these property values in src/lib/config.js
+import { siteTitle, siteDescription, siteURL, siteLink } from '$lib/config'
 
 export const get = async () => {  
   const data = await Promise.all(
@@ -34,13 +32,13 @@ const render = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 <title>${siteTitle}</title>
 <description>${siteDescription}</description>
 <link>${siteLink}</link>
-<atom:link href="https://${mySiteURL}/rss.xml" rel="self" type="application/rss+xml"/>
+<atom:link href="https://${siteURL}/rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
   .map(
     (post) => `<item>
-<guid isPermaLink="true">https://${mySiteURL}/blog/${post.slug}</guid>
+<guid isPermaLink="true">https://${siteURL}/blog/${post.slug}</guid>
 <title>${post.title}</title>
-<link>https://${mySiteURL}/blog/${post.slug}</link>
+<link>https://${siteURL}/blog/${post.slug}</link>
 <description>${post.excerpt}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`
