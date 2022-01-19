@@ -4,17 +4,18 @@ This starter contains everything you need to get up and running with [SvelteKit]
 
 ## Features
 
-- **Super fast static site generation** with hydration. Every route is compiled down to static HTML with optional JavaScript, thanks to the SvelteKit static adapter (pre-installed)
-- **Zero-config prefetching** for automatic, fast background page loading
-- **Markdown support** for both pages and posts
-  - **Pagination included!**
-- **Sass** pre-installed and -configured
-- **MDSvex** pre-installed--use Svelte components inside Markdown!
-  - **Rehype** plugins are included to generate unique heading IDs, for direct linking
-- **Global layout file** with `Header` and `Footer` Svelte components, pre-configured with route-specific dynamic classes and a "skip to content" link
-- **Responsive by default** (_though you may want to build your own mobile menu--that's up to you_)
-- **Basic SEO** for blog posts (_strongly recommend checking that out for yourself, though_)
-- **RSS feed** set up and ready to go (_though it could also likely benefit from some optimization_)
+- ⚡️ **Super fast static site generation** with hydration. Every route is compiled down to static HTML with optional JavaScript, thanks to the SvelteKit static adapter (pre-installed)
+- 📦 **Zero-config prefetching** for automatic, fast background page loading
+- ✍️ **Markdown support** with a pre-configured blog
+  - 📑 **Pagination** included. (Can also customize posts per page.)
+  - ✅ **Category pages** included
+- 💅 **Sass** pre-installed and -configured
+- 📝 **MDSvex** pre-installed--use Svelte components inside Markdown!
+  - 🔗 **Rehype** plugins are included to generate unique heading IDs, for direct linking
+- 🌍 **Global layout file**, with dynamic classes and a "skip to content" link
+- 📱 **Responsive by default** (_though you may want to build your own mobile menu--that's up to you_)
+- 🔎 **Basic SEO** for blog posts (_strongly recommend checking that out for yourself, though_)
+- 📰 **RSS feed** set up and ready to go (_though it could also likely benefit from some optimization_); just update `src/lib/config.js`
 
 
 ## Installation
@@ -42,6 +43,11 @@ A few demo Markdown posts are included, and highlight some of the features of th
 If you want to use other frontmatter properties in the template (or just modify it), make changes in `src/routes/blog/[post].svelte`.
 
 **Note: posts should have a `date` frontmatter property.** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
+
+
+### Pagination
+
+Pagination automatically kicks in once you have more posts than the `postsPerPage` option in `src/lib/config.js`. This means you won't see the pagination right away unless you either change `postsPerPage` to a very low number, or add several more Markdown files to the `_posts` folder.
 
 
 ### RSS

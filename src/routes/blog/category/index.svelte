@@ -55,23 +55,3 @@
     {/each}
   </ul>
 </div>
-
-
-<style lang="scss">
-  h1.h2 {
-    margin: 0 0 var(--wholeNote);
-  }
-
-  li {
-    text-transform: uppercase;
-    margin-bottom: var(--quarterNote);
-    font-style: italic;
-    
-    a {
-      font-family: var(--headingFont);
-      font-weight: bold;
-      font-size: 0.85em;
-      font-style: normal;
-    }
-  }
-</style>
