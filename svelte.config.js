@@ -35,7 +35,8 @@ const config = {
 		prerender: {
 			crawl: true,
 			entries: [
-				'/blog/page'
+				'/blog/page/2',
+				'/blog/page/3'
 			]
 		},
 
