@@ -1,5 +1,12 @@
 <script context="module">
   export const load = async ({ params }) => {
+    // Prevents a 404 during page generation
+    if (params.post == 'page') {
+      return {
+        status: 301,
+        redirect: '/blog'
+      }
+    }
     try {  
       const post = await import(`./_posts/${params.post}.md`)
 
