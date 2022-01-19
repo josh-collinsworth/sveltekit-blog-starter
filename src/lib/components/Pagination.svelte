@@ -10,29 +10,29 @@
   const isCurrentPage = (page) => page == currentPage
 </script>
 
-
-{#if pagesAvailable > 1}
-  <nav aria-label="Pagination navigation" class="pagination">
-    <ul>
-      {#each Array.from({length: pagesAvailable}, (_, i) => i + 1) as page}
-        <li>
-          <a href="/blog/page/{page}" aria-current="{isCurrentPage(page)}">
-            {#if isCurrentPage(page)}
+<!-- For some reason, the pagination wasn't re-rendering properly during navigation without the #key block -->
+{#key currentPage}
+  {#if pagesAvailable > 1}
+    <nav aria-label="Pagination navigation" class="pagination">
+      <ul>
+        {#each Array.from({length: pagesAvailable}, (_, i) => i + 1) as page}
+          <li>
+            <a href="/blog/page/{page}" aria-current="{isCurrentPage(page)}">
               <span class="sr-only">
-                Current page
+                {#if isCurrentPage(page)}
+                  Current page: 
+                {:else}
+                  Go to page 
+                {/if}
               </span>
-            {:else}
-              <span class="sr-only">
-                Go to page
-              </span>
-            {/if}
-            {page}
-          </a>
-        </li>
-      {/each}
-    </ul>
-  </nav>
-{/if}
+              {page}
+            </a>
+          </li>
+        {/each}
+      </ul>
+    </nav>
+  {/if}
+{/key}
 
 
 <style lang="scss">

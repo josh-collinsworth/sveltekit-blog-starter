@@ -1,5 +1,6 @@
 <script context="module">
   import { postsPerPage } from '$lib/config'
+  import fetchPosts from '$lib/assets/js/fetchPosts'
 
   export const load = async ({ fetch, params }) => {
     try {
@@ -17,9 +18,7 @@
     
       const totalPostsRes = await fetch('/api/posts/count.json')
       const { total } = await totalPostsRes.json()
-
-      const postsRes = await fetch(`/api/posts.json?page=${page}&offset=${offset}`)
-      const { posts } = await postsRes.json()
+      const { posts } = await fetchPosts({ offset, page })
       
       return {
         status: 200,
@@ -43,7 +42,7 @@
   import PostsList from '$lib/components/PostsList.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
 
-  export let page = 1
+  export let page
   export let totalPosts
   export let posts = []
 
@@ -58,7 +57,7 @@
 </svelte:head>
 
 
-<h1 class="h2">Posts {lowerBound}–{upperBound} of {totalPosts}</h1>
+<h1>Posts {lowerBound}–{upperBound} of {totalPosts}</h1>
 <Pagination currentPage={page} {totalPosts} />
 
 <PostsList {posts} />

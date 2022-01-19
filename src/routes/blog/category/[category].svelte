@@ -1,19 +1,16 @@
 <!-- This dynamic page renders any page at /blog/category/* -->
-
+<!-- TODO: add pagination to this route -->
 <script context="module">
-	export const load = async ({ fetch, params }) => {
+  import fetchPosts from '$lib/assets/js/fetchPosts'
+
+	export const load = async ({ params }) => {
     const category = params.category
-
-    const res = await fetch(`/api/posts.json`)
-		let { posts } = await res.json()
-
-    // TODO: this would work better server-side
-    const matchingPosts = posts
-      .filter(post => post.categories.includes(category))
+    const options = { category }
+    const { posts } = await fetchPosts(options)
 
 		return {
 			props: { 
-        posts: matchingPosts,
+        posts,
         category
       }
 		}
