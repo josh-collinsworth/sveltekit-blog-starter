@@ -5,12 +5,6 @@
     // Not used in this file, but here just to ensure
     // the RSS route is pre-rendered by being called.
     const rss = await fetch(`/api/rss.xml`)
-    const postCount = await fetch('/api/posts.json')
-    const total = await postCount.json()
-
-    for (let i = 1; i < total / 10; i++) {
-      await fetch(`/blog/page/${i}`);
-    }
 
     return {
       props: {
