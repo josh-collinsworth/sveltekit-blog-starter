@@ -1,6 +1,6 @@
 import { postsPerPage } from '$lib/config'
 
-export default fetchPosts = async (options = { offset: undefined, limit: postsPerPage }) => {
+const fetchPosts = async (options = { offset: undefined, limit: postsPerPage }) => {
   const { offset, limit } = options
 
   const posts = await Promise.all(
@@ -35,3 +35,5 @@ export default fetchPosts = async (options = { offset: undefined, limit: postsPe
     posts: sortedPosts
   }
 }
+
+export default fetchPosts
