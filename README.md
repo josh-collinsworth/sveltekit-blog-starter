@@ -7,6 +7,7 @@ This starter contains everything you need to get up and running with [SvelteKit]
 - **Super fast static site generation** with hydration. Every route is compiled down to static HTML with optional JavaScript, thanks to the SvelteKit static adapter (pre-installed)
 - **Zero-config prefetching** for automatic, fast background page loading
 - **Markdown support** for both pages and posts
+  - **Pagination included!**
 - **Sass** pre-installed and -configured
 - **MDSvex** pre-installed--use Svelte components inside Markdown!
   - **Rehype** plugins are included to generate unique heading IDs, for direct linking
@@ -42,8 +43,6 @@ If you want to use other frontmatter properties in the template (or just modify 
 
 **Note: posts should have a `date` frontmatter property.** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
 
-**Note:** there's currently no pagination included in post fetching or rendering. If you have many, many posts, adding this feature will probably be a good idea. (I hope to add this feature on my own soon.)
-
 
 ### RSS
 
@@ -75,7 +74,7 @@ This starter has a default color palette (Credit to [coolors.co](https://coolors
 
 ## Components
 
-This starter includes only a few components, most of which are for the header, footer, and site nav. You're welcome and encouraged to create your own (using them in Markdown is fun!); I just didn't want to push authors too far in any component direction right off the bat.
+This starter includes only a few basic structural components, for the header, footer, site nav, posts lists (since lists of posts are repeated in several locations), and pagination. You're welcome and encouraged to create your own (using them in Markdown is fun!); I just didn't want to push authors too far in any component direction right off the bat.
 
 
 ## Static files

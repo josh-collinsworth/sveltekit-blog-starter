@@ -5,6 +5,7 @@
     try {
       const page = params.page ? params.page : 1
 
+      // Keeps from duplicationg the blog index route as page 1
       if (page <= 1) {
         return {
           status: 301,
@@ -46,7 +47,7 @@
   export let totalPosts
   export let posts = []
 
-  $: lowerBound = page * postsPerPage - postsPerPage || 1
+  $: lowerBound = (page * postsPerPage) - (postsPerPage - 1) || 1
   $: upperBound = Math.min(page * postsPerPage, totalPosts)
 </script>
 

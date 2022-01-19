@@ -1,4 +1,5 @@
-import {postsPerPage} from '$lib/config'
+import { postsPerPage } from '$lib/config'
+import fetchPosts from '$lib/assets/js/fetchPosts'
 
 export const get = async ({ url }) => {
 	try {
@@ -7,44 +8,23 @@ export const get = async ({ url }) => {
 		 * /api/posts.json?offset=10&limit=20
 		 **/
 		const params = new URLSearchParams(url.search)
-		
+				
 		const options = {
 			offset: parseInt(params.get('offset')) || null,
 			limit: parseInt(params.get('limit')) || postsPerPage
 		}
 
-		const posts = await Promise.all(
-			Object.entries(import.meta.glob('../../blog/_posts/*.md')).map(async ([path, resolver]) => {
-				const { metadata } = await resolver()
-				const slug = path.split('/').pop().slice(0, -3)
-				return { ...metadata, slug }
-			})
-		)
-
-		let sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date))
-
-		
-		if (options.offset) {
-			sortedPosts = sortedPosts.slice(options.offset)
-		}
-		
-		if (options.limit < sortedPosts.length) {
-			sortedPosts = sortedPosts.slice(0, options.limit)
-		}
-
-		sortedPosts = sortedPosts.map(post => ({
-			title: post.title,
-			slug: post.slug,
-			excerpt: post.excerpt,
-			coverImage: post.coverImage,
-			date: post.date,
-			categories: post.categories,
-		}))
+		/**
+		 * Endpoint uses a utility function for retrieving the posts, because without that,
+		 * query parameters wouldn't result in static routes being generated at build time.
+		 * It's also a little cleaner in the code.
+		 */
+		const { posts } = await fetchPosts(options)
 		
 		return {
 			status: 200,
 			body: {
-				posts: sortedPosts
+				posts
 			}
 		}
 	}
