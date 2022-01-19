@@ -1,9 +1,5 @@
 <script context="module">
 	export const load = async ({ fetch }) => {
-    // Not used in this file, but here just to ensure
-    // the RSS route is pre-rendered by being called.
-    const rss = await fetch(`/api/rss.xml`)
-
 		const postRes = await fetch(`/api/posts.json`)
 		const { posts } = await postRes.json()
 
