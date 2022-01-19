@@ -86,12 +86,16 @@ img {
     &::before {
       content: '#';
       position: absolute;
-      left: -1.5ch;
+      left: -1ch;
       top: 0;
       line-height: 1.2;
       text-decoration: underline;
       color: $dark;
       font-weight: normal;
+
+      @media (min-width: $smMin) {
+        left: -1.5ch;
+      }
     }
   }
 }

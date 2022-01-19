@@ -1,7 +1,11 @@
 <!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
 
 <script context="module">
-	export const load = async({ url }) => {
+	export const load = async({ url, fetch }) => {
+    // Not used in this file, but here just to ensure
+    // the RSS route is pre-rendered by being called.
+    const rss = await fetch(`/api/rss.xml`)
+
     return {
       props: {
         path: url.pathname

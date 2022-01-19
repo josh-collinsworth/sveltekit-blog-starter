@@ -1,21 +1,23 @@
 <script context="module">
 	export const load = async ({ fetch }) => {
-    // Not used in this file, but here just to ensure
-    // the RSS route is pre-rendered by being called.
-    const rss = await fetch(`/api/rss.xml`)
+		const postRes = await fetch(`/api/posts.json`)
+		const { posts } = await postRes.json()
 
-		const res = await fetch(`/api/posts.json`)
-		const { posts } = await res.json()
+    const totalRes = await fetch(`/api/posts/count.json`)
+    const { total } = await totalRes.json()
 
 		return {
-			props: { posts }
+			props: { posts, total }
 		}
 	}
 </script>
 
 
 <script>
+  import PostsList from '$lib/components/PostsList.svelte'
+  import Pagination from '$lib/components/Pagination.svelte'
 	export let posts = []
+  export let total = 0
 </script>
 
 
@@ -27,19 +29,6 @@
 
 <h1>Blog</h1>
 
-<ul class="posts-list">
-  {#each posts as post}
-    <li>
-      <a href="/blog/{post.slug}">
-        <img src={post.coverImage} alt="" />
-      </a>
-      <h2>
-        <a href="/blog/{post.slug}">
-          {post.title}
-        </a>
-      </h2>
+<PostsList {posts} />
 
-      <p>{post.excerpt}</p>
-    </li>
-  {/each}
-</ul>
+<Pagination currentPage={1} totalPosts={total} />

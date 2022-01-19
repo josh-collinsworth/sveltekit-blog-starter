@@ -33,7 +33,7 @@ const config = {
 		target: '#svelte',
 		adapter: adapter(),
 
-		// Allows reading from files in the root directory. Necessary for package.json props and README
+		// Allows reading from files in the root directory. Necessary for loading the README on the homepage, but nothing else.
 		vite: {
 			server: {
 				fs: {

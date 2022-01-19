@@ -1,18 +1,16 @@
 <!-- This dynamic page renders any page at /blog/category/* -->
-
+<!-- TODO: add pagination to this route -->
 <script context="module">
-	export const load = async ({ fetch, params }) => {
+  import fetchPosts from '$lib/assets/js/fetchPosts'
+
+	export const load = async ({ params }) => {
     const category = params.category
-
-    const res = await fetch(`/api/posts.json`)
-		let { posts } = await res.json()
-
-    const matchingPosts = posts
-      .filter(post => post.categories.includes(category))
+    const options = { category }
+    const { posts } = await fetchPosts(options)
 
 		return {
 			props: { 
-        posts: matchingPosts,
+        posts,
         category
       }
 		}
@@ -20,6 +18,8 @@
 </script>
 
 <script>
+  import PostsList from '$lib/components/PostsList.svelte'
+
 	export let posts
   export let category
 </script>
@@ -33,22 +33,7 @@
 <h1>Blog category: {category}</h1>
 
 {#if posts.length}
-  <ul class="posts-list">
-    {#each posts as post}
-      <li>
-        <a href="/blog/{post.slug}">
-          <img src={post.coverImage} alt=""/>
-        </a>
-        <h2>
-          <a href="/blog/{post.slug}">
-            {post.title}
-          </a>
-        </h2>
-
-        <p>{post.excerpt}</p>
-      </li>
-    {/each}
-  </ul>
+  <PostsList {posts} />
 {:else}
   <p><strong>Ope!</strong> Sorry, couldn't find any posts in the category "{category}".</p>
 

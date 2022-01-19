@@ -1,10 +1,4 @@
 {
-  "starterConfig": {
-    "siteTitle": "SvelteKit Static Blog Starter",
-    "siteDescription": "Add a description here",
-    "mySiteURL": "example.com",
-    "siteLink": "https://github.com/josh-collinsworth/sveltekit-blog-starter"
-  },
   "name": "sveltekit-blog-starter",
   "version": "1.0.0",
   "scripts": {
