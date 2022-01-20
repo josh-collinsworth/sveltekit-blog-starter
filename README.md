@@ -72,7 +72,7 @@ This is because, while component-based scoped CSS is very nice, it can also be h
 
 ## Site navigation menus
 
-To add or remove pages from the site's navigation menu (in both the header and footer), edit the `MainNav.svelte` file inside `src/lib/components`. (_I recommend using the included `NavItem` component as shown for best results; it automatically handles highlighting the current page, visually and accessibly._)
+To add or remove pages from the site's navigation menu (in both the header and footer), edit the `navItems` array in `src/lib/config.js`. Items there will be automatically added to the main menu in the header and footer, and the mobile nav menu. They'll also have proper classes and ARIA attributes to show when they're the current page.
 
 
 ## Colors and Fonts
