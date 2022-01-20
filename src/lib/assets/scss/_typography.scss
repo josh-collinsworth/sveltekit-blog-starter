@@ -28,7 +28,21 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3rem;
-  margin-top: 0;
+  margin: 0 0 3rem;
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 1rem;
+
+  &::after {
+    content: '';
+    height: 0.25rem;
+    background: $accent;
+    width: 100%;
+    margin-left: -100%;
+    position: absolute;
+    bottom: 0;
+  }
 
   @media (min-width: $smMin) {
     font-size: 3.2rem;
