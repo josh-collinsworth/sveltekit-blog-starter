@@ -7,14 +7,14 @@ This starter contains everything you need to get up and running with [SvelteKit]
 - ⚡️ **Super fast static site generation** with hydration. Every route is compiled down to static HTML with optional JavaScript, thanks to the SvelteKit static adapter (pre-installed)
 - 📦 **Zero-config prefetching** for automatic, fast background page loading
 - ✍️ **Markdown support** with a pre-configured blog
-  - 📑 **Pagination** included. (Can also customize posts per page.)
+  - 📑 **Pagination** included (can also customize posts per page)
   - ✅ **Category pages** included
   - 💬 **Posts JSON API**
 - 💅 **Sass** pre-installed and -configured
 - 📝 **MDSvex** pre-installed--use Svelte components inside Markdown!
   - 🔗 **Rehype** plugins are included to generate unique heading IDs, for direct linking
 - 🌍 **Global layout file**, with dynamic classes and a "skip to content" link
-- 📱 **Responsive by default** (_though you may want to build your own mobile menu--that's up to you_)
+- 📱 **Responsive by default**—now includes an animated mobile menu
 - 🔎 **Basic SEO** for blog posts (_strongly recommend checking that out for yourself, though_)
 - 📰 **RSS feed** set up and ready to go (_though it could also likely benefit from some optimization_); just update `src/lib/config.js`
 
@@ -33,6 +33,11 @@ npm run dev -- --open
 ```
 
 That should get a dev server up and running (assuming you have npm and Node installed already). Any saved changes to components and styles should auto-refresh blazingly fast.
+
+
+## Customization
+
+Be sure to update `src/lib/config.js` to reflect your site's domain, preferences, etc. This is where the nav menu can be updated, as well as where details for the RSS feed will be pulled in.
 
 
 ## Adding new posts
@@ -106,7 +111,7 @@ Use `npm run preview` _after_ a build to preview the built site.
 
 ## To do:
 
-- Add a mobile nav menu
+- ~~Add a mobile nav menu~~ ✅
 - Add pagination to category routes
 
 

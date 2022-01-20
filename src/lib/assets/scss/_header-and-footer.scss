@@ -24,6 +24,10 @@ footer {
       text-decoration: underline;
     }
   }
+
+  svg {
+    fill: currentColor;
+  }
 }
 
 header {
@@ -56,6 +60,11 @@ header {
 
   .menu-button {
     margin: 0;
+    background: transparent !important;
+    color: inherit;
+    padding: 0;
+    border: 0;
+    width: 2rem;
 
     @media (min-width: $smMin) {
       display: none;
@@ -75,13 +84,25 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $dark;
+    background: $darker;
+    color: $background;
     transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
     &.open {
       transform: translateX(0);
       opacity: 1;
       pointer-events: unset;
+
+      li {
+        opacity: 0;
+        animation: slide_in_left .2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+
+        @for $i from 1 through 10 {
+          &:nth-of-type(#{$i}) {
+            animation-delay: 0.15s + $i * 0.05s;
+          }
+        }
+      }
     }
 
     .menu-button {
@@ -105,6 +126,7 @@ header {
       width: auto;
       background: unset;
       pointer-events: unset;
+      color: inherit;
 
       ul {
         margin: 1rem auto 0;
@@ -124,12 +146,20 @@ header {
 }
 
 footer {
-  background: $gradient;
+  background: $darker;
   color: $background;
   display: grid;
-  grid-template-columns: 1fr 1fr 4fr;
+  grid-template-columns: 100%;
   align-items: stretch;
   gap: 2rem;
+
+  @media (min-width: $smMin) {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
+  .menu-button {
+    display: none;
+  }
 
   p {
     margin: 0;
@@ -138,7 +168,10 @@ footer {
 
   nav {
     display: initial;
-    border-right: 1px solid;
+
+    @media (min-width: $smMin) {
+      border-right: 1px solid $dark;
+    }
 
     ul {
       display: initial;

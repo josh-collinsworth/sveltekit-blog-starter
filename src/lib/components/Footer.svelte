@@ -1,8 +1,11 @@
 <script>
   import MainNav from './MainNav.svelte'
+  import { siteAuthor } from '$lib/config'
 </script>
 
 <footer>
+  <MainNav />
+
   <nav>
     <ul>
       <li>
@@ -13,8 +16,6 @@
       </li>
     </ul>
   </nav>
-  
-  <MainNav />
 
-  <p>&copy; {new Date().getFullYear()} by me.<br>(Find and change this text in the Footer.svelte file.)</p>
+  <p>&copy;{new Date().getFullYear()} {siteAuthor}</p>
 </footer>

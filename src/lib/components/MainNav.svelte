@@ -7,12 +7,12 @@
 
 <!-- Contents of this file will be used in the header and the responsive hamburger menu. -->
 <nav class="main-nav" class:open={$isMenuOpen}>
-  <HamburgerMenuButton />
   <ul>
     {#each navItems as page}
-      <NavItem href={page.route}>
-        {page.title}
-      </NavItem>
+    <NavItem href={page.route}>
+      {page.title}
+    </NavItem>
     {/each}
   </ul>
+  <HamburgerMenuButton closeOnly="true" />
 </nav>
