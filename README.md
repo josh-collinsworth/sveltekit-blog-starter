@@ -9,6 +9,7 @@ This starter contains everything you need to get up and running with [SvelteKit]
 - ✍️ **Markdown support** with a pre-configured blog
   - 📑 **Pagination** included. (Can also customize posts per page.)
   - ✅ **Category pages** included
+  - 💬 **Posts JSON API**
 - 💅 **Sass** pre-installed and -configured
 - 📝 **MDSvex** pre-installed--use Svelte components inside Markdown!
   - 🔗 **Rehype** plugins are included to generate unique heading IDs, for direct linking
@@ -101,6 +102,12 @@ npm run build
 That should do it on a host like Netlify or Vercel. Or, if you prefer, you can run `npm run build` to generate the static files, then upload those (they'll be generated into a `build` folder).
 
 Use `npm run preview` _after_ a build to preview the built site.
+
+
+## To do:
+
+- Add a mobile nav menu
+- Add pagination to category routes
 
 
 ## Further documentation

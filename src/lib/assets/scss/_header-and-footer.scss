@@ -29,22 +29,97 @@ footer {
 header {
   background: $lightAccent;
   color: $darker;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $smMin) {
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+  }
 
   .site-title {
     @extend h2;
     line-height: 1;
     color: inherit;
     text-align: center;
-    margin: 0 auto;
+    margin: 0;
     display: block;
+    font-size: 1.6rem;
+
+    @media (min-width: $smMin) {
+      width: 100%;
+      font-size: 2.3rem;
+    }
   }
 
-  nav ul {
-    text-align: center;
-    margin: 1rem auto 0;
-    padding-top: 0.5rem;
-    border-top: 1px solid $dark;
-    width: max-content;
+  .menu-button {
+    margin: 0;
+
+    @media (min-width: $smMin) {
+      display: none;
+    }
+  }
+
+  .main-nav {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transform: translateX(-100vw);
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $dark;
+    transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    &.open {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: unset;
+    }
+
+    .menu-button {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+    
+    ul li {
+      font-size: 1.2rem;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (min-width: $smMin) {
+      opacity: 1;
+      transform: none;
+      position: unset;
+      height: auto;
+      width: auto;
+      background: unset;
+      pointer-events: unset;
+
+      ul {
+        margin: 1rem auto 0;
+        padding-top: 0.5rem;
+        border-top: 1px solid $dark;
+        width: max-content;
+
+        li {
+          font-size: inherit;
+          display: initial;
+          width: initial;
+          text-align: initial;
+        }
+      }
+    }
   }
 }
 
