@@ -19,7 +19,7 @@ const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = 
     sortedPosts = sortedPosts.slice(offset)
   }
   
-  if (limit && limit < sortedPosts.length) {
+  if (limit && limit < sortedPosts.length && limit != -1) {
     sortedPosts = sortedPosts.slice(0, limit)
   }
 

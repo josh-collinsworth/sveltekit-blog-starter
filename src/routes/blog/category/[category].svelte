@@ -3,15 +3,18 @@
 <script context="module">
   import fetchPosts from '$lib/assets/js/fetchPosts'
 
-	export const load = async ({ params }) => {
+	export const load = async ({ params, fetch }) => {
     const category = params.category
     const options = { category }
     const { posts } = await fetchPosts(options)
+    const res = await fetch(`/api/posts/category/${category}/count.json`)
+    const { total } = await res.json()
 
 		return {
 			props: { 
         posts,
-        category
+        category,
+        total
       }
 		}
 	}
@@ -19,9 +22,11 @@
 
 <script>
   import PostsList from '$lib/components/PostsList.svelte'
+  import Pagination from '$lib/components/Pagination.svelte'
 
 	export let posts
   export let category
+  export let total
 </script>
 
 
@@ -34,6 +39,7 @@
 
 {#if posts.length}
   <PostsList {posts} />
+  <Pagination currentPage="1" totalPosts={total} />
 {:else}
   <p><strong>Ope!</strong> Sorry, couldn't find any posts in the category "{category}".</p>
 
