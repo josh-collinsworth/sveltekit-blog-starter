@@ -1,5 +1,5 @@
 <script>
-  import MainNav from "./MainNav.svelte";
+  import MainNav from './MainNav.svelte'
 </script>
 
 <footer>

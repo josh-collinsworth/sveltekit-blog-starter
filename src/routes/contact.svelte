@@ -1,5 +1,5 @@
 <script>
-  import Callout from "$lib/components/Callout.svelte"
+  import Callout from '$lib/components/Callout.svelte'
 </script>
 
 <h1>Contact</h1>
