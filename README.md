@@ -14,7 +14,7 @@ This starter contains everything you need to get up and running with [SvelteKit]
 - 📝 **MDSvex** pre-installed--use Svelte components inside Markdown!
   - 🔗 **Rehype** plugins are included to generate unique heading IDs, for direct linking
 - 🌍 **Global layout file**, with dynamic classes and a "skip to content" link
-- 📱 **Responsive by default**—now includes an animated mobile menu
+- 📱 **Responsive and accessible defaults**
 - 🔎 **Basic SEO** for blog posts (_strongly recommend checking that out for yourself, though_)
 - 📰 **RSS feed** set up and ready to go (_though it could also likely benefit from some optimization_); just update `src/lib/config.js`
 
@@ -42,13 +42,15 @@ Be sure to update `src/lib/config.js` to reflect your site's domain, preferences
 
 ## Adding new posts
 
-Adding new posts is as simple as dropping a new `.md` file into `src/routes/blog/_posts`. It will automatically show up on the site, and be added to the posts API.
+Adding new posts is as simple as dropping a new `.md` file into `src/routes/blog/_posts`. It will automatically show up on the site, be added to the posts API, and any category pages.
 
-A few demo Markdown posts are included, and highlight some of the features of this starter. These can be updated or removed, but it may be best to use one as a starting point, just for the frontmatter properties.
+A few demo Markdown posts are included, and highlight some of the features of this starter. These posts can be updated or removed, but it may be best to use one as a starting point, just for the frontmatter properties.
 
-If you want to use other frontmatter properties in the template (or just modify it), make changes in `src/routes/blog/[post].svelte`.
+If you want to use other frontmatter properties in the template (or just modify the layout), make changes in `src/routes/blog/[post].svelte`.
 
 **Note: posts should have a `date` frontmatter property.** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
+
+The starter will still work without `date` properties in your posts, but the sorting won't be right.
 
 
 ### Pagination
@@ -58,16 +60,16 @@ Pagination automatically kicks in once you have more posts than the `postsPerPag
 
 ### RSS
 
-This starter also includes a basic RSS feed. It's very minimal, so you may want to tweak it depending on your XML feed needs, but it _does_ work out of the box. That said: you'll want to update the `config` details in `src/lib/config.js` to get your site's unique info correct. (You could also pull this info in other places, or add to it, to keep things consistent, but that's up to you.)
+This starter also includes a basic RSS feed. It's very minimal, so you may want to tweak it depending on your XML feed needs, but it _does_ work out of the box.
+
+Update the `config` details in `src/lib/config.js` to get your site's unique info correct. (You could also pull this info in other places, or add to it, to keep things consistent, but that's up to you.)
   
 
 ## Sass
 
-There's a Sass build pipeline for global SCSS already configured.
+**By default, all CSS in this starter is global.** It's located in `src/lib/assets/scss`, and all compiled into the `global.scss` file (which is then loaded into the global `__layout.svelte` file) automatically.
 
-**By default, all CSS is global.** It's located in `src/lib/assets/scss`, and all compiled into the `global.scss` file (which is then loaded into the global `__layout.svelte` file).
-
-This is because, while component-based scoped CSS is very nice, it can also be hard to track down and update. Since this is a starter, I felt it was best to keep all the (basic, minimal) styles together in one place, and let you, the author, decide whether you want to keep them as they are, move to scoped CSS instead, or use a mixture.
+I didn't use component `<style>` blocks because, while component-based scoped CSS is very nice, it can also be hard to track down and update. Since this is a starter, I felt it was best to keep all the styles together in one place, and let you, the author, decide whether you want to keep them as they are, move to scoped CSS instead, or use a mixture.
 
 
 ## Site navigation menus
@@ -86,7 +88,9 @@ This starter has a default color palette (Credit to [coolors.co](https://coolors
 
 ## Components
 
-This starter includes only a few basic structural components, for the header, footer, site nav, posts lists (since lists of posts are repeated in several locations), and pagination. You're welcome and encouraged to create your own (using them in Markdown is fun!); I just didn't want to push authors too far in any component direction right off the bat.
+This starter includes only a handful of structural components, for the header, footer, site nav, posts lists (since lists of posts are repeated in several locations), and pagination (plus a couple that are actually just SVG icons).
+
+You're welcome and encouraged to create your own (using them in Markdown is fun!); I just didn't want to push authors too far in any component direction right off the bat.
 
 
 ## Static files
@@ -107,12 +111,6 @@ npm run build
 That should do it on a host like Netlify or Vercel. Or, if you prefer, you can run `npm run build` to generate the static files, then upload those (they'll be generated into a `build` folder).
 
 Use `npm run preview` _after_ a build to preview the built site.
-
-
-## To do:
-
-- ~~Add a mobile nav menu~~ ✅
-- Add pagination to category routes
 
 
 ## Further documentation

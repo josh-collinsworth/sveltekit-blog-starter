@@ -9,7 +9,6 @@
 
 <li>
   <a
-    tabindex={$isMenuOpen ? '0' : '-1'}
     href={href}
     class:active={isCurrentPage}
     aria-current={isCurrentPage ? 'page' : false}

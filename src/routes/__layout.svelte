@@ -20,6 +20,7 @@
   import { currentPage, isMenuOpen } from '$lib/assets/js/store'
 	import { prefetchRoutes } from '$app/navigation'
   import { onMount } from 'svelte'
+import HamburgerSvg from '$lib/components/svg/HamburgerSVG.svelte'
 
   export let path
   
