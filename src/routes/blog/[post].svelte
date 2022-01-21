@@ -1,12 +1,7 @@
+<!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
+
 <script context="module">
   export const load = async ({ params }) => {
-    // Prevents a 404 during page generation
-    if (params.post == 'page') {
-      return {
-        status: 301,
-        redirect: '/blog'
-      }
-    }
     try {  
       const post = await import(`./_posts/${params.post}.md`)
 
@@ -69,7 +64,7 @@
     <b>Updated:</b> {updated}
   </div>
   
-  <PostContent />
+  <svelte:component this={PostContent} />
 
   {#if categories}
     <aside class="post-footer">

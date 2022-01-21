@@ -1,5 +1,5 @@
 export const siteTitle = 'My Awesome Blog'
-export const siteDescription = 'Add a description here'
+export const siteDescription = 'Built with the SvelteKit Static Blog Starter'
 export const siteURL = 'example.com'
 export const siteLink = 'https://github.com/josh-collinsworth/sveltekit-blog-starter'
 export const siteAuthor = 'Josh Collinsworth - find and change this text in src/lib/config.js'

@@ -16,14 +16,15 @@
 <script>
   import PostsList from '$lib/components/PostsList.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
-	export let posts = []
-  export let total = 0
+	import { siteDescription } from '$lib/config'
+	export let posts
+  export let total
 </script>
 
 
 <svelte:head>
 	<title>Blog</title>
-	<meta data-key="description" name="description" content="Writings on development, design, and random thoughts.">
+	<meta data-key="description" name="description" content={siteDescription}>
 </svelte:head>
 
 

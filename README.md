@@ -15,6 +15,7 @@ This starter contains everything you need to get up and running with [SvelteKit]
   - 🔗 **Rehype** plugins are included to generate unique heading IDs, for direct linking
 - 🌍 **Global layout file**, with dynamic classes and a "skip to content" link
 - 📱 **Responsive and accessible defaults**
+- 🔄 **Page transitions** (_fancy!_)
 - 🔎 **Basic SEO** for blog posts (_strongly recommend checking that out for yourself, though_)
 - 📰 **RSS feed** set up and ready to go (_though it could also likely benefit from some optimization_); just update `src/lib/config.js`
 

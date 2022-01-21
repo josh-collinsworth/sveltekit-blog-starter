@@ -88,18 +88,23 @@ img {
     position: relative;
     
     &::before {
-      content: '#';
+      content: url('/link.svg');
+      fill: currentColor;
       position: absolute;
-      left: -1ch;
+      left: -1rem;
+      width: 1rem;
+      height: 1rem;
       top: 0;
-      line-height: 1.2;
-      text-decoration: underline;
-      color: $dark;
-      font-weight: normal;
-
+      opacity: 0.2;
+      transition: opacity .2s;
+      
       @media (min-width: $smMin) {
-        left: -1.5ch;
+        left: -1.5rem;
       }
+    }
+
+    &:hover::before {
+      opacity: 1;
     }
   }
 }
