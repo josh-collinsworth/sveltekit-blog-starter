@@ -23,11 +23,10 @@
   import { navItems } from '$lib/config'
 	import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
-  import { fly } from 'svelte/transition'
-  import { cubicIn, cubicOut } from 'svelte/easing'
+  import { fade } from 'svelte/transition'
 
-  const transitionIn = { delay: 200, duration: 400, y: 12, easing: cubicOut }
-  const transitionOut = { duration: 200, y: -8, easing: cubicIn }
+  const transitionIn = { delay: 150, duration: 150 }
+  const transitionOut = { duration: 100 }
 
   export let path
   
@@ -66,8 +65,8 @@
     <main
       id="main"
       tabindex="-1"
-      in:fly={transitionIn}
-      out:fly={transitionOut}
+      in:fade={transitionIn}
+      out:fade={transitionOut}
     >
       <slot />
     </main>
