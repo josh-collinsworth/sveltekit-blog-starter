@@ -1,6 +1,6 @@
 header,
 footer {
-  font-family: $primaryFont;
+  font-family: var(--primaryFont);
   padding: 3rem 2rem 2.5rem;
   
   a {
@@ -31,8 +31,8 @@ footer {
 }
 
 header {
-  background: $lightAccent;
-  color: $darker;
+  background: var(--lightAccent);
+  color: var(--darker);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,8 +85,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $darker;
-    color: $background;
+    background: var(--darker);
+    color: var(--paper);
     transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
     &.open {
@@ -134,7 +134,7 @@ header {
       ul {
         margin: 1rem auto 0;
         padding-top: 0.5rem;
-        border-top: 1px solid $dark;
+        border-top: 1px solid var(--dark);
         width: max-content;
 
         li {
@@ -149,8 +149,8 @@ header {
 }
 
 footer {
-  background: $darker;
-  color: $background;
+  background: var(--darker);
+  color: var(--paper);
   display: grid;
   grid-template-columns: 100%;
   align-items: stretch;
@@ -173,7 +173,7 @@ footer {
     display: initial;
 
     @media (min-width: $smMin) {
-      border-right: 1px solid $dark;
+      border-right: 1px solid var(--dark);
     }
 
     ul {
@@ -196,8 +196,8 @@ footer {
   justify-content: center;
   align-items: center;
   height: 3rem;
-  background: $darker;
-  color: $white;
+  background: var(--darker);
+  color: var(--background);
 
   &:focus {
     transform: translateY(6rem);

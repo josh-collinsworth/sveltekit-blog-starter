@@ -1,5 +1,5 @@
 .callout {
-  background: $lightAccent;
+  background: var(--lightAccent);
   padding: 2rem;
   width: calc(100% + 4rem);
   margin: 2rem 0 2rem -2rem;
@@ -25,7 +25,7 @@
     }
 
     a {
-      background: $lightAccent;
+      background: var(--lightAccent);
       text-decoration: none;
       line-height: 1;
       display: flex;
@@ -33,18 +33,18 @@
       justify-content: center;
       width: 2em;
       height: 2em;
-      font-family: $primaryFont;
+      font-family: var(--primaryFont);
       font-weight: bold;
       transition: background .1s;
 
       &:hover {
-        background: $accent;
-        color: $white;
+        background: var(--accent);
+        color: var(--background);
       }
 
       &[aria-current="true"] {
-        background: $accent;
-        color: $white;
+        background: var(--accent);
+        color: var(--background);
         border: 1px solid currentColor;
       }
     }

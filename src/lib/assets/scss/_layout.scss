@@ -5,13 +5,6 @@
   font-family: inherit;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: $darker;
-  background: $background;
-}
-
 main {
   width: 100%;
   max-width: 42rem;
@@ -47,6 +40,10 @@ img {
   }
 }
 
+li {
+  margin-bottom: 0.25rem;
+}
+
 .posts-list {
   list-style-type: none;
   padding: 0;
@@ -70,10 +67,10 @@ img {
     font-size: 0.8rem;
 
     a {
-      background-color: $lightAccent;
+      background-color: var(--lightAccent);
       padding: .5rem 0.75rem;
       text-transform: uppercase;
-      font-family: $primaryFont;
+      font-family: var(--primaryFont);
       font-weight: bold;
     }
 
