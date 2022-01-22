@@ -6,16 +6,15 @@
 
   export const load = async ({ fetch, params }) => {
     try {
+      console.log('in the category page page file')
       const page = params.page ? params.page : 1
       const { category } = params
 
-      console.log(page, category)
-
-      // Keeps from duplicationg the blog index route as page 1
+      // Prevents duplication of page 1 as the index page
       if (page <= 1) {
         return {
           status: 301,
-          redirect: '/blog'
+          redirect: `/blog/category/${category}`
         }
       }
       
