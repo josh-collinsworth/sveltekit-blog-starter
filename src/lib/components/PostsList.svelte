@@ -8,18 +8,16 @@
     <li>
       <a href="/blog/{post.slug}">
         <img
-        src={post.coverImage}
-        alt="{post.title}"
-        width={post.coverWidth}
-        height={post.coverHeight}
-        style="ratio: {post.coverWidth} / {post.coverHeight}"
-      />
-      </a>
-      <h2>
-        <a href="/blog/{post.slug}">
+          src={post.coverImage}
+          alt=""
+          width={post.coverWidth}
+          height={post.coverHeight}
+          style="ratio: {post.coverWidth} / {post.coverHeight}"
+        />
+        <h2>
           {post.title}
-        </a>
-      </h2>
+        </h2>
+      </a>
 
       <p>{post.excerpt}</p>
     </li>

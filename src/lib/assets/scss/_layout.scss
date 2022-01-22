@@ -3,6 +3,7 @@
 *:after {
   box-sizing: border-box;
   font-family: inherit;
+  max-width: 100%;
 }
 
 main {
@@ -52,8 +53,12 @@ li {
     margin-bottom: 6rem;
   }
 
-  a + h2 {
+  img + h2 {
     margin-top: 1rem;
+  }
+
+  a {
+    display: block;
   }
 }
 

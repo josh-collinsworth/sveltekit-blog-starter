@@ -4,8 +4,8 @@ This starter contains everything you need to get up and running with [SvelteKit]
 
 ## Features
 
-- ⚡️ **Super fast static site generation** with hydration. Every route is compiled down to static HTML with optional JavaScript, thanks to the SvelteKit static adapter (pre-installed)
-- 📦 **Zero-config prefetching** for automatic, fast background page loading
+- ⚡️ **Super fast static site generation with hydration**. Every route is compiled down to static HTML and routed with (optional) JavaScript, thanks to the SvelteKit static adapter (pre-installed)
+- 📦 **Zero-config prefetching** for automatic, fast background preloading of all top-level pages
 - ✍️ **Markdown support** with a pre-configured blog
   - 📑 **Pagination** included (can also customize posts per page)
   - ✅ **Category pages** included
@@ -13,8 +13,7 @@ This starter contains everything you need to get up and running with [SvelteKit]
 - 💅 **Sass** pre-installed and -configured
 - 📝 **MDSvex** pre-installed--use Svelte components inside Markdown!
   - 🔗 **Rehype** plugins are included to generate unique heading IDs, for direct linking
-- 🌍 **Global layout file**, with dynamic classes and a "skip to content" link
-- 📱 **Responsive and accessible defaults**
+- 📱 **Responsive and accessible defaults**; includes a "skip to content" link and accessible mobile nav menu
 - 🔄 **Page transitions** (_fancy!_)
 - 🔎 **Basic SEO** for blog posts (_strongly recommend checking that out for yourself, though_)
 - 📰 **RSS feed** set up and ready to go (_though it could also likely benefit from some optimization_); just update `src/lib/config.js`
