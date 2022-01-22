@@ -3,6 +3,7 @@
 
   export let currentPage
   export let totalPosts
+  export let path = '/blog/page'
   
   let pagesAvailable
   $: pagesAvailable = Math.ceil(totalPosts / postsPerPage)
@@ -17,7 +18,7 @@
       <ul>
         {#each Array.from({length: pagesAvailable}, (_, i) => i + 1) as page}
           <li>
-            <a href="/blog/page/{page}" aria-current="{isCurrentPage(page)}">
+            <a href="{path}/{page}" aria-current="{isCurrentPage(page)}">
               <span class="sr-only">
                 {#if isCurrentPage(page)}
                   Current page: 

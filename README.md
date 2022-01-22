@@ -42,7 +42,7 @@ Be sure to update `src/lib/config.js` to reflect your site's domain, preferences
 
 ## Adding new posts
 
-Adding new posts is as simple as dropping a new `.md` file into `src/routes/blog/_posts`. It will automatically show up on the site, be added to the posts API, and any category pages.
+Adding new posts is as simple as dropping a new `.md` file into `src/lib/posts`. It will automatically show up on the site, be added to the posts API, and any category pages.
 
 A few demo Markdown posts are included, and highlight some of the features of this starter. These posts can be updated or removed, but it may be best to use one as a starting point, just for the frontmatter properties.
 
@@ -55,7 +55,7 @@ The starter will still work without `date` properties in your posts, but the sor
 
 ### Pagination
 
-Pagination automatically kicks in once you have more posts than the `postsPerPage` option in `src/lib/config.js`. This means you won't see the pagination right away unless you either change `postsPerPage` to a very low number, or add several more Markdown files to the `_posts` folder.
+Pagination automatically kicks in once you have more posts than the `postsPerPage` option in `src/lib/config.js`. This means you won't see the pagination right away unless you either change `postsPerPage` to a very low number, or add several more Markdown files to the `src/lib/posts` folder.
 
 
 ### RSS

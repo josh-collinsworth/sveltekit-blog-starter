@@ -3,7 +3,7 @@ import { siteTitle, siteDescription, siteURL, siteLink } from '$lib/config'
 
 export const get = async () => {  
   const data = await Promise.all(
-    Object.entries(import.meta.glob('../blog/_posts/*.md')).map(async ([path, page]) => {
+    Object.entries(import.meta.glob('../../lib/posts/*.md')).map(async ([path, page]) => {
       const { metadata } = await page()
       const slug = path.split('/').pop().split('.').shift()
       return { ...metadata, slug }
