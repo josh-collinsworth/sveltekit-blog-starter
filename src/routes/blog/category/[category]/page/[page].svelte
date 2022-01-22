@@ -6,7 +6,6 @@
 
   export const load = async ({ fetch, params }) => {
     try {
-      console.log('in the category page page file')
       const page = params.page ? params.page : 1
       const { category } = params
 

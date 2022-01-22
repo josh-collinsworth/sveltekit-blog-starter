@@ -7,8 +7,6 @@
   export const load = async ({ fetch, params }) => {
     try {
       const page = params.page ? params.page : 1
-      console.log('in the category page dynamic file')
-
 
       // Keeps from duplicationg the blog index route as page 1
       if (page <= 1) {
