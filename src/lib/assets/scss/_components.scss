@@ -2,6 +2,7 @@
   background: var(--lightAccent);
   padding: 2rem;
   width: calc(100% + 4rem);
+  max-width: unset;
   margin: 2rem 0 2rem -2rem;
   font-size: 1.125rem;
   font-style: italic;
