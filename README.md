@@ -11,7 +11,7 @@ This starter contains everything you need to get up and running with [SvelteKit]
   - ✅ **Category pages** included
   - 💬 **Posts JSON API**
 - 💅 **Sass** pre-installed and -configured
-- 📝 **MDSvex** pre-installed--use Svelte components inside Markdown!
+- 📝 **mdsvex** pre-installed--use Svelte components inside Markdown!
   - 🔗 **Rehype** plugins are included to generate unique heading IDs, for direct linking
 - 📱 **Responsive and accessible defaults**; includes a "skip to content" link and accessible mobile nav menu
 - 🔄 **Page transitions** (_fancy!_)

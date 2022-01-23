@@ -1,5 +1,5 @@
 ---
-title: "Syntax highlighting with MDSvex"
+title: "Syntax highlighting with mdsvex"
 date: "2021-12-01"
 updated: "2021-12-01"
 categories: 
@@ -13,7 +13,7 @@ coverHeight: 9
 excerpt: This post shows you how syntax highlighting works here.
 ---
 
-MDSvex has automatic, built-in syntax highlighting with [Prism.js](https://prismjs.com/); just include the language name after the triple backticks, like so:
+mdsvex has automatic, built-in syntax highlighting with [Prism.js](https://prismjs.com/); just include the language name after the triple backticks, like so:
 
 ```
 \```css
@@ -48,7 +48,7 @@ const invertNumberInRange = (num, range) => {
 invertNumberInRange(25, 100); // 75
 ```
 
-Of course, MDSvex supports Svelte highlighting, too:
+Of course, mdsvex supports Svelte highlighting, too:
 
 ```svelte
 <script>
