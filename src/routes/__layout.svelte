@@ -24,6 +24,7 @@
 	import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
+import Callout from '$lib/components/Callout.svelte';
 
   const transitionIn = { delay: 150, duration: 150 }
   const transitionOut = { duration: 100 }
@@ -52,12 +53,6 @@
 <!-- 
   The below markup is used on every page in the site. The <slot> is where the page's
   actual contents will show up.
-
-  NOTE: if you add content that doesn't belong inside a `<main>` element to any page
-  (such as a sidebar, for example), you'll want to change this `<main>` element to 
-  something else, and add a `<main>` on each page as needed instead. Otherwise, you'll
-  end up with poor semantics and accessibility.
-  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
 -->
 <div class="layout" class:open={$isMenuOpen}>
   <Header />
