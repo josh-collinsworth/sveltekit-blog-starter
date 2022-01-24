@@ -12,8 +12,8 @@ const config = {
 	preprocess: [
 		preprocess({
 			scss: {
-				// Ensures Sass variables are always available inside component <style> blocks
-				prependData: `@import 'src/lib/assets/scss/_vars.scss';`
+				// Ensures Sass variables are always available inside component <style> blocks as vars.$variableDefinedInFile
+				prependData: `@use 'src/lib/assets/scss/vars';`
 			},
 		}),
 		mdsvex({

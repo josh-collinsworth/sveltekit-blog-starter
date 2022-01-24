@@ -1,13 +1,12 @@
-@import './vars';
-@import './typography';
-@import './layout';
-@import './components';
-@import './header-and-footer';
-@import './forms';
-@import './animation';
-@import './utilities';
-@import './code';
-@import './prism';
+@use './typography';
+@use './layout';
+@use './components';
+@use './header-and-footer';
+@use './forms';
+@use './animation';
+@use './utilities';
+@use './code';
+@use './prism';
 
 *:focus {
   outline: 2px solid var(--accent);

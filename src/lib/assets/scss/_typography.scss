@@ -1,3 +1,5 @@
+@use './vars';
+
 h1, h2, h3, h4, h5, h6 {
   margin: 4.5rem 0 1rem;
   line-height: 1.1;
@@ -24,11 +26,11 @@ h1 {
     bottom: 0;
   }
 
-  @media (min-width: $smMin) {
+  @media (min-width: vars.$smMin) {
     font-size: 3.2rem;
   }
 
-  @media (min-width: $lgMin) {
+  @media (min-width: vars.$lgMin) {
     font-size: 3.4rem;
   }
 }
@@ -36,7 +38,7 @@ h1 {
 h2 {
   font-size: 2.1rem;
   
-  @media (min-width: $smMin) {
+  @media (min-width: vars.$smMin) {
     font-size: 2.3rem;
   }
 }

@@ -1,3 +1,5 @@
+@use './vars';
+
 *, 
 *:before, 
 *:after {
@@ -100,7 +102,7 @@ li {
       opacity: 0.2;
       transition: opacity .2s;
       
-      @media (min-width: $smMin) {
+      @media (min-width: vars.$smMin) {
         left: -1.5rem;
       }
     }
