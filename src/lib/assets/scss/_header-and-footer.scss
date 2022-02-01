@@ -3,7 +3,7 @@
 header,
 footer {
   font-family: var(--primaryFont);
-  padding: 3rem 2rem 2.5rem;
+  padding: 2.5rem 2rem;
   
   a {
     text-decoration: none;
@@ -53,11 +53,12 @@ header {
     text-align: center;
     margin: 0;
     display: block;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: bold;
 
     @media (min-width: vars.$smMin) {
       width: 100%;
-      font-size: 2.3rem;
+      font-size: 1.6rem;
     }
   }
 
@@ -151,6 +152,7 @@ header {
           display: initial;
           width: initial;
           text-align: initial;
+          margin-bottom: 0;
         }
       }
     }

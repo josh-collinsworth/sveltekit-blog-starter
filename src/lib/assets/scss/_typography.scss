@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 4.5rem 0 1rem;
   line-height: 1.1;
   font-family: var(--accentFont);
-  font-weight: normal;
+  font-weight: bold;
   color: var(--darker);
 }
 
@@ -18,7 +18,7 @@ h1 {
 
   &::after {
     content: '';
-    height: 0.25rem;
+    height: 0.1em;
     background: var(--accent);
     width: 100%;
     margin-left: -100%;
