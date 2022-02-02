@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-blog-starter",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",

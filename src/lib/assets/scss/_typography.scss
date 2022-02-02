@@ -1,6 +1,6 @@
 @use './vars';
 
-h1, h2, h3, h4, h5, h6 {
+:where(h1, h2, h3, h4, h5, h6) {
   margin: 4.5rem 0 1rem;
   line-height: 1.1;
   font-family: var(--accentFont);
@@ -9,9 +9,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin: 0 0 3rem;
-  line-height: 1;
   position: relative;
   overflow: hidden;
   padding-bottom: 1rem;
@@ -27,19 +26,19 @@ h1 {
   }
 
   @media (min-width: vars.$smMin) {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 
   @media (min-width: vars.$lgMin) {
-    font-size: 3.4rem;
+    font-size: 3.2rem;
   }
 }
 
 h2 {
-  font-size: 2.1rem;
+  font-size: 2.0rem;
   
   @media (min-width: vars.$smMin) {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 }
 
