@@ -29,8 +29,6 @@ const config = {
 	],
 
 	kit: {
-		// Default SvelteKit options
-		target: '#svelte',
 		adapter: adapter(),
 
 		// Allows reading from files in the root directory. Necessary for loading the README on the homepage, but nothing else.
