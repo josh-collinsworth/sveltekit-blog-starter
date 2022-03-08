@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>About</title>
+</svelte:head>
+
 # About
 
 This is an example of how you can have _markdown_ in page content!
