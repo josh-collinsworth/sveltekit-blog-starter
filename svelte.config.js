@@ -30,6 +30,7 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		prerender: { default: true },
 
 		// Allows reading from files in the root directory. Necessary for loading the README on the homepage, but nothing else.
 		vite: {
