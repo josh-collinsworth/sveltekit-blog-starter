@@ -1,17 +1,17 @@
 // Breakpoints
-$xsMin: 600px;
-$xsMax: 767px;
-$smMin: 768px;
-$smMax: 1023px;
-$mdMin: 1024px;
-$mdMax: 1279px;
-$lgMin: 1280px;
-$lgMax: 1439px;
-$xlMin: 1440px;
-$xlMax: 1679px;
-$xxlMin: 1680px;
-$xxlMax: 1959px;
-$xxxlMin: 1960px;
+$xsMin: 37.5rem;
+$xsMax: 47.9375rem;
+$smMin: 48rem;
+$smMax: 63.9375rem;
+$mdMin: 64rem;
+$mdMax: 79.9375rem;
+$lgMin: 80rem;
+$lgMax: 89.9375rem;
+$xlMin: 90rem;
+$xlMax: 104.9375rem;
+$xxlMin: 105rem;
+$xxlMax: 122.4375rem;
+$xxxlMin: 122.5rem;
 
 :root {
   // Colors
@@ -42,7 +42,9 @@ $xxxlMin: 1960px;
   // Base styles
   font-size: 1rem;
   line-height: 1.6;
+}
 
+body {
   @media (min-width: $smMin) {
     font-size: 1.125rem;
   }
