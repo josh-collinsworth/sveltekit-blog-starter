@@ -1,8 +1,8 @@
 {
   "name": "sveltekit-blog-starter",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "vite dev",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -20,7 +20,8 @@
     "rehype-autolink-headings": "^6.1.0",
     "rehype-slug": "^5.0.0",
     "sass": "^1.43.4",
-    "svelte": "^3.42.6"
+    "svelte": "^3.42.6",
+    "vite": "^2.9.14"
   },
   "type": "module",
   "dependencies": {
