@@ -1,5 +1,6 @@
 <script>
 	export let data
+  const { uniqueCategories } = data
 </script>
 
 
@@ -12,7 +13,7 @@
 	<h1 class="h2">All blog categories</h1>
 	
 	<ul>
-		{#each data.uniqueCategories as category}
+		{#each uniqueCategories as category}
 		<li>
 			<a href="/blog/category/{category.title}">
 				{ category.title }

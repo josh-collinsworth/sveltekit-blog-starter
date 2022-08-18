@@ -1,13 +1,8 @@
-<!-- This dynamic page renders any page at /blog/category/* -->
-<!-- TODO: add pagination to this route -->
-
+<!-- Renders any page at /blog/category/* -->
 <script>
 	import PostsList from '$lib/components/PostsList.svelte'
 	import Pagination from '$lib/components/Pagination.svelte'
 
-	// export let posts
-	// export let category
-	// export let total
 	export let data
 </script>
 
