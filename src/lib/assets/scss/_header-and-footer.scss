@@ -2,221 +2,221 @@
 
 header,
 footer {
-  font-family: var(--primaryFont);
-  padding: 2.5rem 2rem;
-  
-  a {
-    text-decoration: none;
+	font-family: var(--primaryFont);
+	padding: 2.5rem 2rem;
+	
+	a {
+		text-decoration: none;
 
-    &.active {
-      font-weight: bold;
-    }
-  }
+		&.active {
+			font-weight: bold;
+		}
+	}
 
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0rem 1.5rem;
-    padding: 0;
-    margin: 0;
+	nav ul {
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0rem 1.5rem;
+		padding: 0;
+		margin: 0;
 
-    a:hover {
-      text-decoration: underline;
-    }
-  }
+		a:hover {
+			text-decoration: underline;
+		}
+	}
 
-  svg {
-    fill: currentColor;
-  }
+	svg {
+		fill: currentColor;
+	}
 }
 
 header {
-  background: var(--lightAccent);
-  color: var(--darker);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	background: var(--lightAccent);
+	color: var(--darker);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-  @media (min-width: vars.$smMin) {
-    justify-content: center;
-    flex-wrap: wrap;
-    height: auto;
-  }
+	@media (min-width: vars.$smMin) {
+		justify-content: center;
+		flex-wrap: wrap;
+		height: auto;
+	}
 
-  .site-title {
-    font-family: var(--accentFont);
-    font-size: 2.1rem;
-    line-height: 1;
-    color: inherit;
-    text-align: center;
-    margin: 0;
-    display: block;
-    font-size: 1.4rem;
-    font-weight: bold;
+	.site-title {
+		font-family: var(--accentFont);
+		font-size: 2.1rem;
+		line-height: 1;
+		color: inherit;
+		text-align: center;
+		margin: 0;
+		display: block;
+		font-size: 1.4rem;
+		font-weight: bold;
 
-    @media (min-width: vars.$smMin) {
-      width: 100%;
-      font-size: 1.6rem;
-    }
-  }
+		@media (min-width: vars.$smMin) {
+			width: 100%;
+			font-size: 1.6rem;
+		}
+	}
 
-  .menu-button {
-    margin: 0;
-    background: transparent !important;
-    color: inherit;
-    padding: 0;
-    border: 0;
-    width: 2rem;
+	.menu-button {
+		margin: 0;
+		background: transparent !important;
+		color: inherit;
+		padding: 0;
+		border: 0;
+		width: 2rem;
 
-    @media (min-width: vars.$smMin) {
-      display: none;
-    }
-  }
+		@media (min-width: vars.$smMin) {
+			display: none;
+		}
+	}
 
-  .main-nav {
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    transform: translateX(-100vw);
-    visibility: hidden;
-    width: 100%;
-    height: 100vh;
-    pointer-events: none;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--darker);
-    color: var(--paper);
-    transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	.main-nav {
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		transform: translateX(-100vw);
+		visibility: hidden;
+		width: 100%;
+		height: 100vh;
+		pointer-events: none;
+		opacity: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: var(--darker);
+		color: var(--paper);
+		transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
-    &.open {
-      transform: translateX(0);
-      opacity: 1;
-      pointer-events: unset;
-      visibility: unset;
+		&.open {
+			transform: translateX(0);
+			opacity: 1;
+			pointer-events: unset;
+			visibility: unset;
 
-      li {
-        opacity: 0;
-        animation: slide_in_left .2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+			li {
+				opacity: 0;
+				animation: slide_in_left .2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
 
-        a {
-          color: inherit;
-        }
+				a {
+					color: inherit;
+				}
 
-        // Probably shouldn't have more than 8 main nav menu items, but if you do, you can adjust this
-        @for $i from 1 through 8 {
-          &:nth-of-type(#{$i}) {
-            animation-delay: 0.15s + $i * 0.05s;
-          }
-        }
-      }
-    }
+				// Probably shouldn't have more than 8 main nav menu items, but if you do, you can adjust this
+				@for $i from 1 through 8 {
+					&:nth-of-type(#{$i}) {
+						animation-delay: 0.15s + $i * 0.05s;
+					}
+				}
+			}
+		}
 
-    .menu-button {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-    }
-    
-    ul li {
-      font-size: 1.2rem;
-      display: block;
-      width: 100%;
-      text-align: center;
-      margin-bottom: calc(.2rem + 2vh);
-    }
+		.menu-button {
+			position: absolute;
+			top: 2rem;
+			right: 2rem;
+		}
+		
+		ul li {
+			font-size: 1.2rem;
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin-bottom: calc(.2rem + 2vh);
+		}
 
-    @media (min-width: vars.$smMin) {
-      opacity: 1;
-      transform: none;
-      position: unset;
-      height: auto;
-      width: auto;
-      background: unset;
-      pointer-events: unset;
-      visibility: unset;
-      color: inherit;
+		@media (min-width: vars.$smMin) {
+			opacity: 1;
+			transform: none;
+			position: unset;
+			height: auto;
+			width: auto;
+			background: unset;
+			pointer-events: unset;
+			visibility: unset;
+			color: inherit;
 
-      ul {
-        margin: 1rem auto 0;
-        padding-top: 0.5rem;
-        border-top: 1px solid var(--dark);
-        width: max-content;
+			ul {
+				margin: 1rem auto 0;
+				padding-top: 0.5rem;
+				border-top: 1px solid var(--dark);
+				width: max-content;
 
-        li {
-          font-size: inherit;
-          display: initial;
-          width: initial;
-          text-align: initial;
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
+				li {
+					font-size: inherit;
+					display: initial;
+					width: initial;
+					text-align: initial;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 }
 
 footer {
-  background: var(--darker);
-  color: var(--paper);
-  display: grid;
-  grid-template-columns: 100%;
-  align-items: stretch;
-  gap: 2rem;
+	background: var(--darker);
+	color: var(--paper);
+	display: grid;
+	grid-template-columns: 100%;
+	align-items: stretch;
+	gap: 2rem;
 
-  @media (min-width: vars.$smMin) {
-    grid-template-columns: 1fr 1fr 2fr;
-  }
+	@media (min-width: vars.$smMin) {
+		grid-template-columns: 1fr 1fr 2fr;
+	}
 
-  .menu-button {
-    display: none;
-  }
+	.menu-button {
+		display: none;
+	}
 
-  p {
-    margin: 0;
-    font-size: 0.8rem;
-  }
+	p {
+		margin: 0;
+		font-size: 0.8rem;
+	}
 
-  a {
-    color: inherit;
-  }
+	a {
+		color: inherit;
+	}
 
-  nav {
-    display: initial;
+	nav {
+		display: initial;
 
-    @media (min-width: vars.$smMin) {
-      border-right: 1px solid var(--dark);
-    }
+		@media (min-width: vars.$smMin) {
+			border-right: 1px solid var(--dark);
+		}
 
-    ul {
-      display: initial;
+		ul {
+			display: initial;
 
-      li + li {
-        margin-top: 0.5rem;
-      }
-    }
-  }
+			li + li {
+				margin-top: 0.5rem;
+			}
+		}
+	}
 }
 
 .skip-to-content-link {
-  position: absolute;
-  top: -6rem;
-  left: 0;
-  padding: .5em;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem;
-  background: var(--darker);
-  color: var(--background);
+	position: absolute;
+	top: -6rem;
+	left: 0;
+	padding: .5em;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	background: var(--darker);
+	color: var(--background);
 
-  &:focus {
-    transform: translateY(6rem);
-    opacity: 1;
-    z-index: 11;
-  }
+	&:focus {
+		transform: translateY(6rem);
+		opacity: 1;
+		z-index: 11;
+	}
 }

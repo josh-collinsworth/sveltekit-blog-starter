@@ -20,19 +20,19 @@ export const GET = async ({ url }) => {
 		 * query parameters wouldn't result in static routes being generated at build time.
 		 * It's also a little cleaner in the code.
 		 */
-    const { posts } = await fetchPosts(options)
+		const { posts } = await fetchPosts(options)
 		
 		return new Response(
-      JSON.stringify(posts),
-      { 
-        status: 200,
-        headers: {
-          'content-type': 'application/json'
-        }
-      }
-    )
+			JSON.stringify(posts),
+			{ 
+				status: 200,
+				headers: {
+					'content-type': 'application/json'
+				}
+			}
+		)
 	}
-			
+
 	catch(err) {
 		throw error(500, `Could not fetch posts. ${err}`)
 	}

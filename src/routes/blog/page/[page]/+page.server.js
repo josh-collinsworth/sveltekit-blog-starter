@@ -1,29 +1,24 @@
-import { redirect } from '@sveltejs/kit';
 import { postsPerPage } from '$lib/config'
 import fetchPosts from '$lib/assets/js/fetchPosts'
-import { error } from '@sveltejs/kit'
+import { redirect, error } from '@sveltejs/kit'
 
-export const load = async ({ params }) => {
-  try {
-    const page = params.page ? params.page : 1
+export const load = async ({ url, params }) => {
+  const page = params.page ? params.page : 1
 
-    // Keeps from duplicationg the blog index route as page 1
-    if (page <= 1) {
-      throw redirect(301, '/blog');
-    }
-    
-    let offset = (page * postsPerPage) - postsPerPage
+  // Keeps from duplicationg the blog index route as page 1
+  if (page <= 1) {
+    throw redirect(301, '/blog')
+  }
   
-    const totalPostsRes = await fetch('/api/posts/count.json')
-    const { total } = await totalPostsRes.json()
-    const { posts } = await fetchPosts({ offset, page })
-    
-    return {
-      posts,
-      page,
-      totalPosts: total
-    }
-  } catch(err) {
-    throw error(404, err)
+  let offset = (page * postsPerPage) - postsPerPage
+
+  const totalPostsRes = await fetch(`${url.origin}/api/posts/count.json`)
+  const total = await totalPostsRes.json()
+  const { posts } = await fetchPosts({ offset, page })
+  
+  return {
+    posts,
+    page,
+    totalPosts: total
   }
 }

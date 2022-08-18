@@ -25,9 +25,9 @@ And that will render just like so:
 
 ```css
 .my-css-class { 
-  color: #ffd100;
-  box-sizing: border-box;
-  /* etc... */
+	color: #ffd100;
+	box-sizing: border-box;
+	/* etc... */
 }
 ```
 
@@ -42,7 +42,7 @@ Here's how you'd do JavaScript:
 Highlighted code sample:
 ```js
 const invertNumberInRange = (num, range) => {
-  return range - num;
+	return range - num;
 }
 
 invertNumberInRange(25, 100); // 75
@@ -52,13 +52,13 @@ Of course, mdsvex supports Svelte highlighting, too:
 
 ```svelte
 <script>
-  import myComponent from '$lib/components/myComponent.svelte';
+	import myComponent from '$lib/components/myComponent.svelte';
 
-  export let myProp = undefined;
+	export let myProp = undefined;
 </script>
 
 <div>
-  <MyComponent prop={myProp}>
+	<MyComponent prop={myProp}>
 </div>
 ```
 

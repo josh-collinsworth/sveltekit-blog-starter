@@ -1,17 +1,17 @@
 .sr-only {
-  position: absolute;
-  left: -100vw;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: none;
-  word-wrap: normal;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
+	position: absolute;
+	left: -100vw;
+	opacity: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: none;
+	word-wrap: normal;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
 }
 
 .no-bullets {
-  list-style-type: none;
-  padding-left: 0;
+	list-style-type: none;
+	padding-left: 0;
 }

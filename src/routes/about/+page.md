@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>About</title>
+	<title>About</title>
 </svelte:head>
 
 # About
@@ -15,7 +15,7 @@ If you like, you can also import markdown into any Svelte page.
 Anyway, you can find this file here:
 
 ```
-src/routes/about.md
+src/routes/about/+page.md
 ```
 
 Here's the [home link](/) if you wanna go back.

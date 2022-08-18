@@ -7,12 +7,12 @@ This starter contains everything you need to get up and running with [SvelteKit]
 - ⚡️ **Super fast static site generation with hydration**. Every route is compiled down to static HTML and routed with (optional) JavaScript, thanks to the SvelteKit static adapter (pre-installed)
 - 📦 **Zero-config prefetching** for automatic, fast background preloading of all top-level pages
 - ✍️ **Markdown support** with a pre-configured blog
-  - 📑 **Pagination** included (_can customize posts per page_)
-  - ✅ **Category pages** included
-  - 💬 **Posts JSON API**
+	- 📑 **Pagination** included (_can customize posts per page_)
+	- ✅ **Category pages** included
+	- 💬 **Posts JSON API**
 - 💅 **Sass** pre-installed and -configured
 - 📝 **mdsvex** pre-installed--use Svelte components inside Markdown!
-  - 🔗 **Rehype** plugins are included to generate unique heading IDs, for direct linking
+	- 🔗 **Rehype** plugins are included to generate unique heading IDs, for direct linking
 - 📱 **Responsive and accessible defaults**; includes a "skip to content" link and accessible mobile nav menu
 - 🔄 **Page transitions** (_fancy!_)
 - 🔎 **Basic SEO** for blog posts (_strongly recommend checking that out for yourself, though_)
@@ -71,7 +71,7 @@ Pagination automatically kicks in once you have more posts than the `postsPerPag
 This starter also includes a basic RSS feed. It's very minimal, so you may want to tweak it depending on your XML feed needs, but it _does_ work out of the box.
 
 Update the `config` details in `src/lib/config.js` to get your site's unique info correct. (You could also pull this info in other places, or add to it, to keep things consistent, but that's up to you.)
-  
+	
 
 ## Sass
 
@@ -90,7 +90,7 @@ To add or remove pages from the site's navigation menu (in both the header and f
 This starter has a default color palette (Credit to [coolors.co](https://coolors.co/palettes/trending)) and fonts, but you can easily override those here:
 
 **Colors:** `src/lib/assets/scss/_vars.scss`
-  
+	
 **Fonts:** `src/app.html` for the links, `_vars.scss` for the font names.
 
 

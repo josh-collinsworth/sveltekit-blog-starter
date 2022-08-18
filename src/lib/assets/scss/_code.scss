@@ -1,29 +1,29 @@
 pre,
 code {
-  font-family: var(--codeFont);
-  -webkit-font-smoothing: auto;
-  -moz-osx-font-smoothing: auto;
+	font-family: var(--codeFont);
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
 }
 
 pre {
-  overflow-y: auto;
-  color: var(--paper);
-  background: var(--darker);
-  padding: 1rem;
-  font-size: 0.8rem;
+	overflow-y: auto;
+	color: var(--paper);
+	background: var(--darker);
+	padding: 1rem;
+	font-size: 0.8rem;
 }
 
 code {
-  color: var(--darker);
-  font-size: 1rem;
-  padding: .125em .25em;
-  border-radius: 4px;
-  background: var(--lighterAccent);
-  white-space: pre;
+	color: var(--darker);
+	font-size: 1rem;
+	padding: .125em .25em;
+	border-radius: 4px;
+	background: var(--lighterAccent);
+	white-space: pre;
 }
 
 pre code {
-  padding: 0;
-  background: transparent;
-  font-size: 0.8rem;
+	padding: 0;
+	background: transparent;
+	font-size: 0.8rem;
 }

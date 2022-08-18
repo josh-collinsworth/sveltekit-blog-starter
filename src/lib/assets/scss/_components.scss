@@ -1,53 +1,53 @@
 .callout {
-  background: var(--lightAccent);
-  padding: 2rem;
-  width: calc(100% + 4rem);
-  max-width: unset;
-  margin: 2rem 0 2rem -2rem;
-  font-style: italic;
-  border-radius: 0.125rem;
+	background: var(--lightAccent);
+	padding: 2rem;
+	width: calc(100% + 4rem);
+	max-width: unset;
+	margin: 2rem 0 2rem -2rem;
+	font-style: italic;
+	border-radius: 0.125rem;
 }
 
 .pagination {
-  margin: 0 0 1rem;
+	margin: 0 0 1rem;
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    list-style-type: none;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: start;
+		list-style-type: none;
+		gap: 0.5rem;
+		margin: 0;
+		padding: 0;
 
-    li {
-      margin: 0;
-    }
+		li {
+			margin: 0;
+		}
 
-    a {
-      background: var(--lightAccent);
-      text-decoration: none;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 2em;
-      height: 2em;
-      font-family: var(--primaryFont);
-      font-weight: bold;
-      transition: background .1s;
+		a {
+			background: var(--lightAccent);
+			text-decoration: none;
+			line-height: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 2em;
+			height: 2em;
+			font-family: var(--primaryFont);
+			font-weight: bold;
+			transition: background .1s;
 
-      &:hover {
-        background: var(--accent);
-        color: var(--background);
-      }
+			&:hover {
+				background: var(--accent);
+				color: var(--background);
+			}
 
-      &[aria-current="true"] {
-        background: var(--accent);
-        color: var(--background);
-        border: 1px solid currentColor;
-      }
-    }
+			&[aria-current="true"] {
+				background: var(--accent);
+				color: var(--background);
+				border: 1px solid currentColor;
+			}
+		}
 
-  }
+	}
 }
