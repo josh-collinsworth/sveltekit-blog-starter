@@ -1,9 +1,9 @@
 // IMPORTANT: update all these property values in src/lib/config.js
 import { siteTitle, siteDescription, siteURL, siteLink } from '$lib/config'
 
-export const get = async () => {  
+export const GET = async () => {  
   const data = await Promise.all(
-    Object.entries(import.meta.glob('../../lib/posts/*.md')).map(async ([path, page]) => {
+    Object.entries(import.meta.glob('$lib/posts/*.md')).map(async ([path, page]) => {
       const { metadata } = await page()
       const slug = path.split('/').pop().split('.').shift()
       return { ...metadata, slug }
@@ -14,14 +14,16 @@ export const get = async () => {
   })
 
   const body = render(data)
-  const headers = {
-    'Cache-Control': `max-age=0, s-max-age=${600}`,
-    'Content-Type': 'application/xml',
-  };
-  return {
+  const options = {
+    headers: {
+      'Cache-Control': `max-age=0, s-max-age=${600}`,
+      'Content-Type': 'application/xml',
+    }
+  }
+  return new Response(
     body,
-    headers,
-  };
+    options,
+  )
 };
 
 

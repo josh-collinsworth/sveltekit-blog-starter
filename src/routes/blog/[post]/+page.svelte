@@ -1,31 +1,8 @@
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
-
-<script context="module">
-  export const load = async ({ params }) => {
-    try {  
-      const post = await import(`../../lib/posts/${params.post}.md`)
-
-      return {
-        props: {
-          PostContent: post.default,
-          meta: { ...post.metadata, slug: params.post } 
-        }
-      }
-    } catch(error) {
-      return {
-        status: 404,
-        error: error.message
-      }
-    }
-  }
-</script>
-
-
 <script>
-  export let PostContent
-  export let meta
+export let data
 
-  const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = meta
+const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta
 </script>
 
 
@@ -63,8 +40,8 @@
     <br>
     <b>Updated:</b> {updated}
   </div>
-  
-  <svelte:component this={PostContent} />
+
+  {@html data.PostContent}
 
   {#if categories}
     <aside class="post-footer">
@@ -80,4 +57,4 @@
       </ul>
     </aside>
   {/if}
-</article>
+</article> 

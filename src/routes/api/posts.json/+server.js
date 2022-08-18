@@ -1,7 +1,8 @@
 import { postsPerPage } from '$lib/config'
 import fetchPosts from '$lib/assets/js/fetchPosts'
+import { error } from '@sveltejs/kit'
 
-export const get = async ({ url }) => {
+export const GET = async ({ url }) => {
 	try {
 		/**	
 		 * These let you add query params to change what's retrieved from the endpoint, e.g., 
@@ -19,22 +20,20 @@ export const get = async ({ url }) => {
 		 * query parameters wouldn't result in static routes being generated at build time.
 		 * It's also a little cleaner in the code.
 		 */
-		const { posts } = await fetchPosts(options)
+    const { posts } = await fetchPosts(options)
 		
-		return {
-			status: 200,
-			body: {
-				posts
-			}
-		}
+		return new Response(
+      JSON.stringify(posts),
+      { 
+        status: 200,
+        headers: {
+          'content-type': 'application/json'
+        }
+      }
+    )
 	}
 			
-	catch(error) {
-		return {
-			status: 500,
-			body: {
-				error: 'Could not fetch posts. ' + error
-			}
-		}
+	catch(err) {
+		throw error(500, `Could not fetch posts. ${err}`)
 	}
 }

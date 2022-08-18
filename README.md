@@ -7,7 +7,7 @@ This starter contains everything you need to get up and running with [SvelteKit]
 - ⚡️ **Super fast static site generation with hydration**. Every route is compiled down to static HTML and routed with (optional) JavaScript, thanks to the SvelteKit static adapter (pre-installed)
 - 📦 **Zero-config prefetching** for automatic, fast background preloading of all top-level pages
 - ✍️ **Markdown support** with a pre-configured blog
-  - 📑 **Pagination** included (can also customize posts per page)
+  - 📑 **Pagination** included (_can customize posts per page_)
   - ✅ **Category pages** included
   - 💬 **Posts JSON API**
 - 💅 **Sass** pre-installed and -configured
@@ -19,11 +19,9 @@ This starter contains everything you need to get up and running with [SvelteKit]
 - 📰 **RSS feed** set up and ready to go (_though it could also likely benefit from some optimization_); just update `src/lib/config.js`
 
 
-## Installation
+## Quick Start
 
-Clone or download [this repo](https://github.com/josh-collinsworth/sveltekit-blog-starter), then install the dependencies and run the dev server.
-
-I recommend using these commands:
+Clone or download [this repo](https://github.com/josh-collinsworth/sveltekit-blog-starter), then install the dependencies and run the dev server:
 
 ```
 npx degit https://github.com/josh-collinsworth/sveltekit-blog-starter my-sveltekit-blog
@@ -34,19 +32,29 @@ npm run dev -- --open
 
 That should get a dev server up and running (assuming you have npm and Node installed already). Any saved changes to components and styles should auto-refresh blazingly fast.
 
+Now all you need to do is:
+
+- Update the `src/lib/config.js` file
+- Drop your Markdown posts into `src/lib/posts`
+- Customize the styles in `lib/assets/scss`
+
+GLHF! Details below. 👇
+
 
 ## Customization
 
-Be sure to update `src/lib/config.js` to reflect your site's domain, preferences, etc. This is where the nav menu can be updated, as well as where details for the RSS feed will be pulled in.
+Be sure to update `src/lib/config.js` to reflect your site's domain, preferences, etc. This is also where the nav menu can be updated.
+
+**It's very important to update this file with the specific details of your site.** Info from this file is used in your RSS feed and SEO meta tags, so don't launch without updating it.
 
 
 ## Adding new posts
 
-Adding new posts is as simple as dropping a new `.md` file into `src/lib/posts`. It will automatically show up on the site, be added to the posts API, and any category pages.
+Adding new posts is as simple as dropping a new `.md` file into `src/lib/posts`. New posts will automatically show up on the site, be added to the posts API, and any category pages.
 
-A few demo Markdown posts are included, and highlight some of the features of this starter. These posts can be updated or removed, but it may be best to use one as a starting point, just for the frontmatter properties.
+A few demo Markdown posts are included, and highlight some of the features of this starter. These demo posts can be updated or removed, but it may be best to use one as a starting point, just for the frontmatter properties.
 
-If you want to use other frontmatter properties in the template (or just modify the layout), make changes in `src/routes/blog/[post].svelte`.
+If you want to use other frontmatter properties in the template (or just modify the layout), make changes in `src/routes/blog/[post]/+page.svelte`.
 
 **Note: posts should have a `date` frontmatter property.** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
 
@@ -67,7 +75,7 @@ Update the `config` details in `src/lib/config.js` to get your site's unique inf
 
 ## Sass
 
-**By default, all CSS in this starter is global.** It's located in `src/lib/assets/scss`, and all compiled into the `global.scss` file (which is then loaded into the global `__layout.svelte` file) automatically.
+**By default, all CSS in this starter is global.** It's located in `src/lib/assets/scss`, and all compiled into the `global.scss` file (which is then loaded into the global `+layout.svelte` file) automatically.
 
 I didn't use component `<style>` blocks because, while component-based scoped CSS is very nice, it can also be hard to track down and update. Since this is a starter, I felt it was best to keep all the styles together in one place, and let you, the author, decide whether you want to keep them as they are, move to scoped CSS instead, or use a mixture.
 

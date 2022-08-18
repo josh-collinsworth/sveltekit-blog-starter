@@ -5,9 +5,9 @@ const config = {
   plugins: [sveltekit()],
 
   server: {
-    fs: {
-      allow: ['.']
-    }
+    // fs: {
+    //   allow: ['.']
+    // }
   }
 };
 

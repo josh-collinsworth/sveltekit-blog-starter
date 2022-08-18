@@ -15,10 +15,11 @@ pre {
 
 code {
   color: var(--darker);
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: .125em .25em;
   border-radius: 4px;
   background: var(--lighterAccent);
+  white-space: pre;
 }
 
 pre code {
