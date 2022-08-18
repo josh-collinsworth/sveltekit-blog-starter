@@ -1,7 +1,5 @@
 <!-- Renders posts listed by category -->
 <script>
-	// throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
 	import PostsList from '$lib/components/PostsList.svelte'
 	import Pagination from '$lib/components/Pagination.svelte'
 	import { siteDescription, postsPerPage } from '$lib/config'
