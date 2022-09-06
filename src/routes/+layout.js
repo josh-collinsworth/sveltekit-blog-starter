@@ -1,12 +1,14 @@
 import { error } from '@sveltejs/kit'
 
+export const prerender = true
+
 export const load = async ({ url }) => {
 	try {
 		/**
 		 * This fetch call is not used in this file, but the route won't be pre-rendered 
 		 * and routed properly unless it's called inside a `load` function. ¯\_(ツ)_/¯
 		 * */ 
-		const rss = await fetch(`${url.origin}/api/rss.xml`)
+		// const rss = await fetch(`${url.origin}/api/rss.xml`)
 
 		return {
 			path: url.pathname

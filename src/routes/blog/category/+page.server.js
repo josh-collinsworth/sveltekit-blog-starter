@@ -1,5 +1,5 @@
 export const load = async ({ url }) => {
-	const res = await fetch(`${url.origin}/api/posts.json?limit=-1`)
+	const res = await fetch(`${url.origin}/api/posts.json`)
 	let posts = await res.json()
 
 	let uniqueCategories = {}
