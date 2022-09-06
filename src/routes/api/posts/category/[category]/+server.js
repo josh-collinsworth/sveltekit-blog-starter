@@ -1,21 +1,16 @@
 import fetchPosts from '$lib/assets/js/fetchPosts'
-import { error } from '@sveltejs/kit'
+import { error, json } from '@sveltejs/kit'
+
+export const prerender = true
 
 export const GET = async ({ params }) => {
 	const { category } = params
-
+  console.log(category)
 	try {
+    console.log(category)
 		const { posts } = await fetchPosts({ category })
 		
-		return new Response(
-			JSON.stringify(posts),
-			{ 
-				status: 200,
-				headers: {
-					'content-type': 'application/json'
-				}
-			}
-		)
+		return json(posts)
 	}
 
 	catch(err) {

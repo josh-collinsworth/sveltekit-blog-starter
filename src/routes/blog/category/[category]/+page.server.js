@@ -4,7 +4,7 @@ export const load = async ({ params, url }) => {
 	const category = params.category
 	const options = { category }
 	const { posts } = await fetchPosts(options)
-	const res = await fetch(`${url.origin}/api/posts/category/${category}/count.json`)
+	const res = await fetch(`${url.origin}/api/posts/category/${category}/count`)
 	const total = await res.json()
 
 	return { 
