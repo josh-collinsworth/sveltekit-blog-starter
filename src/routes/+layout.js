@@ -1,10 +1,5 @@
 import { error } from '@sveltejs/kit'
 
-<<<<<<< Updated upstream
-export const prerender = true
-
-export const load = async ({ url }) => {
-=======
 // Ensures all pages under this layout (which is all of them) are statically prerendered at build time 
 export const prerender = true
 
@@ -12,14 +7,7 @@ export const prerender = true
 export const csr = true
 
 export const load = async ({ url, fetch }) => {
->>>>>>> Stashed changes
 	try {
-		/**
-		 * This fetch call is not used in this file, but the route won't be pre-rendered 
-		 * and routed properly unless it's called inside a `load` function. ¯\_(ツ)_/¯
-		 * */ 
-		// const rss = await fetch(`${url.origin}/api/rss.xml`)
-
 		return {
 			path: url.pathname
 		}
