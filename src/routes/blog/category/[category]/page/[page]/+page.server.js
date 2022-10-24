@@ -2,8 +2,8 @@ import { redirect } from '@sveltejs/kit'
 import { postsPerPage } from '$lib/config'
 import fetchPosts from '$lib/assets/js/fetchPosts'
 
-export const load = async ({ url, params }) => {
-  const page = params.page ? params.page : 1
+export const load = async ({ url, params, fetch }) => {
+  const page = Number.isFinite(params.page) ? params.page : 1
   const { category } = params
 
   // Prevents duplication of page 1 as the index page

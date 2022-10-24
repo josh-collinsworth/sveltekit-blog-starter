@@ -1,6 +1,7 @@
 import { postsPerPage } from '$lib/config'
 
 const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
+
 	const posts = await Promise.all(
 		Object.entries(import.meta.glob('/src/lib/posts/*.md')).map(async ([path, resolver]) => {
 			const { metadata } = await resolver()

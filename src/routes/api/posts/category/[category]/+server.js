@@ -5,9 +5,7 @@ export const prerender = true
 
 export const GET = async ({ params }) => {
 	const { category } = params
-  console.log(category)
 	try {
-    console.log(category)
 		const { posts } = await fetchPosts({ category })
 		
 		return json(posts)

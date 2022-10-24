@@ -3,7 +3,7 @@ import { postsPerPage } from '$lib/config'
 import fetchPosts from '$lib/assets/js/fetchPosts'
 
 export const load = async ({ fetch, params }) => {
-  const page = params.page ? params.page : 1
+  const page = Number.isFinite(params.page) ? params.page : 1
 
   // Keeps from duplicationg the blog index route as page 1
   if (page <= 1) {

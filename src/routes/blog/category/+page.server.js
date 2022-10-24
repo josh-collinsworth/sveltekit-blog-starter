@@ -1,4 +1,4 @@
-export const load = async ({ url }) => {
+export const load = async ({ url, fetch }) => {
 	const res = await fetch(`${url.origin}/api/posts.json`)
 	let posts = await res.json()
 

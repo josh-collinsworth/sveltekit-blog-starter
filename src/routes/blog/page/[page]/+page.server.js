@@ -1,9 +1,9 @@
 import { postsPerPage } from '$lib/config'
 import fetchPosts from '$lib/assets/js/fetchPosts'
-import { redirect, error } from '@sveltejs/kit'
+import { redirect } from '@sveltejs/kit'
 
-export const load = async ({ url, params }) => {
-  const page = params.page ? params.page : 1
+export const load = async ({ url, params, fetch }) => {
+  const page = Number.isFinite(params.page) ? params.page : 1
 
   // Keeps from duplicationg the blog index route as page 1
   if (page <= 1) {
