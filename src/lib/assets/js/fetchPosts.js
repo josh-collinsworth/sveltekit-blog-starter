@@ -1,5 +1,8 @@
 import { postsPerPage } from '$lib/config'
 
+import { PUBLIC_RENDER_DRAFTS } from '$env/static/public';
+
+
 const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
 
 	const posts = await Promise.all(
@@ -9,11 +12,15 @@ const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = 
 			return { ...metadata, slug }
 		})
 	)
-
-	let publishedPosts = posts.filter(post => !post.draft)
+	let publishedPosts
+	if (PUBLIC_RENDER_DRAFTS == 'true') {
+		publishedPosts = posts
+	} else {
+		publishedPosts = posts.filter(post => !post.draft)
+	}
 
 	let sortedPosts = publishedPosts.sort((a, b) => new Date(b.date) - new Date(a.date))
-	
+
 	if (category) {
     sortedPosts = sortedPosts.filter(post => post.categories.includes(category))
 	}
