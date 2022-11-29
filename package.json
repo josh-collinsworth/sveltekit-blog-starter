@@ -1,6 +1,6 @@
 {
   "name": "sveltekit-blog-starter",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -16,16 +16,13 @@
     "eslint-plugin-svelte3": "^3.2.1",
     "mdsvex": "^0.9.8",
     "prettier": "^2.4.1",
-    "prettier-plugin-svelte": "^2.4.0",
-    "rehype-autolink-headings": "^6.1.0",
-    "rehype-slug": "^5.0.0",
-    "sass": "^1.43.4",
-    "svelte": "^3.42.6",
-    "vite": "^3.1.0"
+    "prettier-plugin-svelte": "^2.8.1",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-slug": "^5.1.0",
+    "sass": "^1.56.1",
+    "svelte": "^3.53.1",
+    "svelte-preprocess": "^4.10.7",
+    "vite": "^3.2.4"
   },
-  "type": "module",
-  "dependencies": {
-    "just-throttle": "^4.0.1",
-    "svelte-preprocess": "^4.9.8"
-  }
+  "type": "module"
 }

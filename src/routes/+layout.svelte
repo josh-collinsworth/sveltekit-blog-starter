@@ -5,7 +5,7 @@
 	import Footer from '$lib/components/Footer.svelte'
 	import { currentPage, isMenuOpen } from '$lib/assets/js/store'
 	import { navItems } from '$lib/config'
-	import { prefetch } from '$app/navigation'
+	import { preloadCode } from '$app/navigation'
 	import { onMount } from 'svelte'
 	import { fade } from 'svelte/transition'
 	export let data
@@ -20,16 +20,18 @@
 	 * the current page in the nav, but could be useful for other purposes.)
 	 **/
 	$: currentPage.set(data.path)
-
+  
 	/**
 	 * This pre-fetches all top-level routes on the site in the background for faster loading.
-	 * https://kit.svelte.dev/docs#modules-$app-navigation
+	 * https://kit.svelte.dev/docs/modules#$app-navigation-preloaddata
 	 * 
-	 * Any route added in src/lib/config.js will be prefetched automatically. You can add your
-	 * own prefetch() calls here, too.
+	 * Any route added in src/lib/config.js will be preloaded automatically. You can add your
+	 * own preloadData() calls here, too.
 	 **/
-	onMount(() => {
-		navItems.forEach(item => prefetch(item.route))
+
+  onMount(() => {
+    const navRoutes = navItems.map(item => item.route)
+    preloadCode(...navRoutes)
 	})
 </script>
 

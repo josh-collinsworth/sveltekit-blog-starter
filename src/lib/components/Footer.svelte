@@ -9,7 +9,7 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="/api/rss.xml" rel="external">RSS</a>
+				<a href="/api/rss.xml" data-sveltekit-reload>RSS</a>
 			</li>
 			<li>
 				<a href="/">Home</a>
