@@ -16,15 +16,16 @@ export const GET = async () => {
 	})
 
 	const body = render(data)
-	const options = {
-		headers: {
-			'Cache-Control': `max-age=0, s-max-age=${600}`,
-			'Content-Type': 'application/xml',
-		}
+	const headers = {
+		'Cache-Control': `max-age=0, s-max-age=${600}`,
+		'Content-Type': 'application/xml',
 	}
 	return new Response(
 		body,
-		options,
+		{
+			status: 200,
+			headers,
+		}
 	)
 };
 
