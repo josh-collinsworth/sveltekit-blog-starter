@@ -1,11 +1,11 @@
 {
   "name": "sveltekit-blog-starter",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "lint": "prettier --ignore-path .gitignore --check -- plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
