@@ -2,7 +2,17 @@
 <script>
 export let data
 
-const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta
+const {
+	title,
+	excerpt,
+	date,
+	updated,
+	coverImage,
+	coverWidth,
+	coverHeight,
+	categories 
+} = data.meta
+const { PostContent } = data
 </script>
 
 
@@ -41,7 +51,7 @@ const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, cate
 		<b>Updated:</b> {updated}
 	</div>
 
-	{@html data.PostContent}
+	<svelte:component this={PostContent} />
 
 	{#if categories}
 		<aside class="post-footer">
