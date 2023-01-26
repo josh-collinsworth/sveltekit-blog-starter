@@ -59,9 +59,9 @@ A few demo Markdown posts are included, and highlight some of the features of th
 
 If you want to use other frontmatter properties in the template (or just modify the layout), make changes in `src/routes/blog/[post]/+page.svelte`.
 
-**Note: posts should have a `date` frontmatter property.** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
+⚠️ **Note: posts should have a `date` and an `excerpt` defined in the fronmatter.** They're sorted by `date`, and use `excerpt` in page meta tags (for SEO, social sharing, etc.) There are also other frontmatter properties used to enhance the site experience, like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift.
 
-The starter will still work without `date` properties in your posts, but the sorting won't be right.
+The starter will still work without `date` properties in your posts, but the sorting won't be right. Similarly, you can have posts without an `excerpt`, but your SEO/social previews will be sub-optimal.
 
 Also: while there's no link to it by default, `/blog/category` exists as an archive of all your post categories.
 
