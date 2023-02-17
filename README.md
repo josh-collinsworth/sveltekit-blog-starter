@@ -115,7 +115,7 @@ Things that should just live in the site root of the finished site (like a `robo
 (Placeholder images credit [Unsplash](https://unsplash.com); photographer names are in the file names.)
 
 
-## Building and deploying
+## Building, deploying and hosting
 
 The build command (from package.json) is simply:
 
@@ -123,9 +123,11 @@ The build command (from package.json) is simply:
 npm run build
 ```
 
-That should do it on a host like Netlify or Vercel. Or, if you prefer, you can run `npm run build` to generate the static files, then upload those (they'll be generated into a `build` folder).
+You can use that as your build command if your repo is connected to a host like Netlify or Vercel, which automatically deploys.
 
-Use `npm run preview` _after_ a build to preview the built site.
+Or, if you prefer, you can run `npm run build` locally to generate the static files. That will result in a `build` folder you can upload anywhere a static site can be hosted.
+
+Use `npm run preview` _after_ a build to preview the built site locally.
 
 
 ## Further documentation
