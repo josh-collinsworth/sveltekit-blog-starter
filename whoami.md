@@ -16,4 +16,4 @@ My goal is typically to make applications robust and observable so when I inevit
 * Modular Origami
 * Rock Climbing
 
-You can find the source code for this blog on [GitHub](https://TODO(bianchi)).
+You can find the source code for this blog on [GitHub](https://github.com/bianchidotdev/bianchi.dev).
