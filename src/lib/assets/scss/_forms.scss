@@ -3,7 +3,7 @@ form {
 }
 
 button,
-input[type=submit] {
+input[type='submit'] {
 	font-size: 1rem;
 	padding: 0.5rem 1rem;
 	background: var(--darker);
@@ -15,7 +15,7 @@ input[type=submit] {
 	margin: 2rem 0 0;
 	display: block;
 	width: max-content;
-	transition: background .2s;
+	transition: background 0.2s;
 
 	&:hover,
 	&:focus {
@@ -44,8 +44,8 @@ input {
 	accent-color: var(--accent);
 	background-color: transparent;
 
-	&[type=radio],
-	&[type=checkbox] {
+	&[type='radio'],
+	&[type='checkbox'] {
 		display: initial;
 		width: auto;
 

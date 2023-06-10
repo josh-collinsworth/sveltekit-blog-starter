@@ -35,8 +35,8 @@ h1 {
 }
 
 h2 {
-	font-size: 2.0rem;
-	
+	font-size: 2rem;
+
 	@media (min-width: vars.$smMin) {
 		font-size: 2.2rem;
 	}
@@ -59,7 +59,7 @@ h6 {
 }
 
 a {
-	color: var(--darker);
+	color: var(--url);
 	text-decoration-thickness: 1px;
 	text-decoration-color: var(--dark);
 }

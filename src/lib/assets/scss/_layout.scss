@@ -1,7 +1,7 @@
 @use './vars';
 
-*, 
-*:before, 
+*,
+*:before,
 *:after {
 	box-sizing: border-box;
 	font-family: inherit;
@@ -64,7 +64,7 @@ li {
 	}
 }
 
-.post-footer { 
+.post-footer {
 	ul {
 		padding: 0;
 	}
@@ -75,7 +75,7 @@ li {
 
 		a {
 			background-color: var(--lightAccent);
-			padding: .5rem 0.75rem;
+			padding: 0.5rem 0.75rem;
 			text-transform: uppercase;
 			font-family: var(--primaryFont);
 			font-weight: bold;
@@ -90,7 +90,7 @@ li {
 :where(h2, h3, h4, h5, h6) {
 	.icon-link {
 		position: relative;
-		
+
 		&::before {
 			content: url('/link.svg');
 			fill: currentColor;
@@ -100,8 +100,8 @@ li {
 			height: 1rem;
 			top: 0;
 			opacity: 0.2;
-			transition: opacity .2s;
-			
+			transition: opacity 0.2s;
+
 			@media (min-width: vars.$smMin) {
 				left: -1.5rem;
 			}

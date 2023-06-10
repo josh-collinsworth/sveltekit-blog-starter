@@ -26,3 +26,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
+
+b + b {
+	margin-left: 1rem;
+}

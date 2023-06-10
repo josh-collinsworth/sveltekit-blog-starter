@@ -15,27 +15,37 @@ $xxxlMin: 122.5rem;
 
 :root {
 	// Colors
-	--accent: #E63946;
-	--background: #FAF9F8;
-	--lightAccent: #A8DAE5;
-	--lighterAccent: #E6E8E4;
-	--dark: #457B9D;
-	--darker: #1D3557;
-	--slate: #2F3948;
+	// --accent: #E63946;
+	// --background: #FAF9F8;
+	// --lightAccent: #99d1db;
+	// --lighterAccent: #E6E8E4;
+	// --dark: #457B9D;
+	// --darker: #1D3557;
+	// --slate: #2F3948;
+
+	// --white: #fff;
+	// --black: #152030;
+
+	--accent: #7287fd;
+	--background: #faf9f8;
+	--lightAccent: #99d1db;
+	--lighterAccent: #e6e8e4;
+	--dark: #5c5f77;
+	--darker: #4c4f69;
+	--slate: #4c4f69;
 
 	--white: #fff;
 	--black: #152030;
-
 	--ink: var(--slate);
 	--paper: var(--background);
-	
+	--url: #8839ef;
 
 	// Fonts
 	/**
 	 * These are broken out into two separate variables from a previous iteration. I left
 	 * it in because it's nice to be able to split out the heading and body fonts.
 	 */
-	--accentFont: 'Libre Franklin', Georgia, Times, serif; 
+	--accentFont: 'Libre Franklin', Georgia, Times, serif;
 	--primaryFont: 'Libre Franklin', sans-serif;
 	--codeFont: 'Fira Code', monospace;
 
