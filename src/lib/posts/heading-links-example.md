@@ -11,6 +11,15 @@ coverHeight: 9
 excerpt: Check out how heading links work with this starter in this post.
 ---
 
+<script>
+	import ClickMe from '$lib/components/ClickMe.svelte'
+</script>
+
+
+## ClickMe:
+
+<ClickMe />
+
 Here are some headings:
 
 ## Here's an h2
