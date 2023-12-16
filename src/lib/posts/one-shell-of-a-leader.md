@@ -1,7 +1,7 @@
 ---
 title: "One Shell of a Leader"
 date: "2023-9-14"
-updated: "-"
+updated: 
 categories: 
 - "facebook post"
 - "leadership"

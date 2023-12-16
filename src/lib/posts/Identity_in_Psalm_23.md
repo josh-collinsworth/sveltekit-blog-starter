@@ -1,7 +1,7 @@
 ---
 title: "Discovering Identity Beyond Actions: Insights from Psalm 23"
 date: "2020-05-05"
-updated: "-"
+updated:
 categories: 
 - "musings"
 - "facebook post"

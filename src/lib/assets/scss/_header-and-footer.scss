@@ -33,11 +33,6 @@ footer {
 }
 
 header {
-	background: var(--lightAccent);
-	color: var(--darker);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 
 	@media (min-width: vars.$smMin) {
 		justify-content: center;
@@ -142,9 +137,6 @@ header {
 			color: inherit;
 
 			ul {
-				margin: 1rem auto 0;
-				padding-top: 0.5rem;
-				border-top: 1px solid var(--dark);
 				width: max-content;
 
 				li {

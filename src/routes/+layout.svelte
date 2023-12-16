@@ -1,4 +1,4 @@
-<!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
+<!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component AA every page component on the site.) -->
 <script>
 	import '$lib/assets/scss/global.scss'
 	import Header from '$lib/components/Header.svelte'
@@ -44,7 +44,6 @@
 	<Header />
 	{#key data.path}
 		<main
-			id="main"
 			tabindex="-1"
 			in:fade={transitionIn}
 			out:fade={transitionOut}

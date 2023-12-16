@@ -1,7 +1,7 @@
 ---
 title: "Nostalgia for Childhood: The Magic of Simple Moments"
 date: "2020-10-17"
-updated: "-"
+updated:
 categories: 
 - "personal life"
 - "musings"

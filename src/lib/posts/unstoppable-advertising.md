@@ -1,7 +1,7 @@
 ---
 title: "Unstoppable Advertising"
 date: "2021-4-25"
-updated: "-"
+updated: 
 categories: 
 - "facebook post"
 - "musings"

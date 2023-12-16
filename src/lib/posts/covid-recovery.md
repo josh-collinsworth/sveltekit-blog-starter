@@ -1,7 +1,7 @@
 ---
 title: "My Covid Recovery"
 date: "2021-1-27"
-updated: "-"
+updated:
 categories: 
 - "personal life"
 - "musings"

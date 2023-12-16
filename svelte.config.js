@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-static'
 import { mdsvex } from 'mdsvex'
 import preprocess from 'svelte-preprocess'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import toc from '@jsdevtools/rehype-toc';
 import rehypeSlug from 'rehype-slug'
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -23,6 +24,7 @@ const config = {
 			// Adds IDs to headings, and anchor links to those IDs. Note: must stay in this order to work.
 			rehypePlugins: [
 				rehypeSlug,
+				//toc,
 				rehypeAutolinkHeadings,
 			],
 		}),

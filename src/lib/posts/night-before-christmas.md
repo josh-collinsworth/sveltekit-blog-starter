@@ -1,7 +1,7 @@
 ---
-title: "'Twas the Night Before Christmas (kinda)'"
+title: "'Twas the Night Before Christmas (kinda)"
 date: "2023-10-31"
-updated: "-"
+updated: 
 categories: 
 - "facebook post"
 - "fun"

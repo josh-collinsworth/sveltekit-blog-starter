@@ -1,7 +1,7 @@
 ---
 title: "Leadership Lessons from the Sewer"
 date: "2023-9-22"
-updated: "-"
+updated:
 categories: 
 - "other blogs"
 - "leadership"

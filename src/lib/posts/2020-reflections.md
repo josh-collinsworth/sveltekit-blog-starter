@@ -1,7 +1,7 @@
 ---
 title: "2020 - End of the Year Reflections"
 date: "2021-01-01"
-updated: “-”
+updated: 
 categories: 
 - "personal life"
 - "musings"

@@ -1,7 +1,7 @@
 ---
 title: "Remembering Harold During the Holidays"
 date: "2020-12-14"
-updated: "-"
+updated:
 categories: 
 - "personal life"
 - "musings"

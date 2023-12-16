@@ -15,18 +15,22 @@ $xxxlMin: 122.5rem;
 
 :root {
 	// Colors
-	--accent: #E63946;
-	--background: #FAF9F8;
-	--lightAccent: #A8DAE5;
-	--lighterAccent: #E6E8E4;
-	--dark: #457B9D;
-	--darker: #1D3557;
-	--slate: #2F3948;
+--cream: #F8F4EE;
+--yellow: #F9DE6B;
 
-	--white: #fff;
-	--black: #152030;
 
-	--ink: var(--slate);
+	--accent: var(--yellow);
+	--background: var(--cream);
+	--lightAccent: var(--cream);
+	--lighterAccent:  var(--yellow);
+	--dark: var(--black);
+	--darker: var(--black);
+	--slate: var(--black);
+
+	--white: var(--cream);
+	--black: #292929;
+
+	--ink: var(--black);
 	--paper: var(--background);
 	
 
@@ -35,12 +39,12 @@ $xxxlMin: 122.5rem;
 	 * These are broken out into two separate variables from a previous iteration. I left
 	 * it in because it's nice to be able to split out the heading and body fonts.
 	 */
-	--accentFont: 'Libre Franklin', Georgia, Times, serif; 
-	--primaryFont: 'Libre Franklin', sans-serif;
+	--accentFont: 'Barlow', sans-serif;
+	--primaryFont: 'Barlow', sans-serif;
 	--codeFont: 'Fira Code', monospace;
 
 	// Base styles
-	font-size: 1rem;
+	font-size: .9rem;
 	line-height: 1.6;
 }
 

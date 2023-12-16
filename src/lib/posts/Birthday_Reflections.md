@@ -1,7 +1,7 @@
 ---
 title: "A treasure chest full of Birthday reflections"
 date: "2020-12-08"
-updated: "-"
+updated:
 categories: 
 - "personal life"
 - "musings"
