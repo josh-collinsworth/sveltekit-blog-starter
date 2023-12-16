@@ -1,7 +1,7 @@
 ---
 title: "Caring for Each Other in Tough Times"
 date: "2020-12-10"
-updated: "-"
+updated:
 categories: 
 - "musings"
 - "facebook post"

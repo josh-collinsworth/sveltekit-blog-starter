@@ -1,7 +1,7 @@
 ---
 title: "The Power of Perspective: A Morning Run Reflection"
 date: "2020-05-25"
-updated: "-"
+updated:
 categories: 
 - "personal life"
 - "musings"

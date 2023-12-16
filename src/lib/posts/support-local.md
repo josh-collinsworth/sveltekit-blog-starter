@@ -1,7 +1,7 @@
 ---
 title: "Support Local"
 date: "2023-10-3"
-updated: "-"
+updated: 
 categories: 
 - "facebook post"
 - "musings"

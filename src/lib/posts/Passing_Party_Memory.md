@@ -1,7 +1,7 @@
 ---
 title: "Childhood Memories: The Passing Party Incident"
 date: "2019-12-19"
-updated: "-"
+updated: 
 categories: 
 - "personal life"
 - "facebook post"

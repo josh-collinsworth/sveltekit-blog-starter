@@ -15,11 +15,39 @@
 		Skip to main content
 	</a>
 	
-	<a href="/" class="site-title">
-		{siteTitle}
+	<a href="/">
+		<h2><span style="font-weight:300;">jimmy</span><span style="font-weight:800">lemon</span></h2>
 	</a>
 	
 	<HamburgerMenuButton />
 	<MainNav />
 
 </header>
+
+<style>
+	header {
+	background:var(--yellow);
+	color:var(--black);
+	display:flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	border-bottom: 2px solid var(--black);
+	}
+
+	header li a {
+		font-weight:600!important;
+	}
+	header h2 {
+		margin:0px;
+		padding:0px;
+	}
+
+	header .main-nav {
+    font-weight:700;
+}
+
+header .main-nav li.active {
+    color:red;
+}
+</style>

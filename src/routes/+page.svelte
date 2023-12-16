@@ -1,12 +1,25 @@
 <script>
 	import { siteTitle } from '$lib/config';
-
-	export let data;
 </script>
 
 <svelte:head>
 	<title>{siteTitle}</title>
 </svelte:head>
 
-<!-- This is the README.md file in the root of the repo. It serves double duty as the homepage's content. If you'd rather use your own HTML and/or Svelte, you can delete/modify everything in this file. -->
-<svelte:component this={data.ReadMe} />
+<section class="hero">
+	<h1>Hey, I'm <strong>Jimmy</strong><br />
+		I'm just here to <strong>talk about life, leadership</strong> and the pursuit of <strong>the perfect dad joke.</strong> </h1>
+</section>
+
+<style>
+	section.hero {
+		max-width: 65vw;
+		padding-top:4rem;
+		font-weight:300;
+		margin-left:10vw;
+	}
+
+	section.hero h1 {
+		font-weight:300;
+	}
+</style>

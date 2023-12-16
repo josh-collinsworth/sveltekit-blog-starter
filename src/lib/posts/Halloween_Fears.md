@@ -1,7 +1,7 @@
 ---
 title: "Things That Scare Me: A Halloween Reflection"
 date: "2020-10-31"
-updated: "-"
+updated: 
 categories: 
 - "personal life"
 - "musings"

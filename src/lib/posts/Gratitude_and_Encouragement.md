@@ -1,7 +1,7 @@
 ---
 title: "The Importance of Expressing Gratitude and Encouragement"
 date: "2020-11-02"
-updated: "-"
+updated:
 categories: 
 - "personal life"
 - "musings"
