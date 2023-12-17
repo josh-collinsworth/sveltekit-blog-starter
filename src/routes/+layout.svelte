@@ -43,13 +43,12 @@
 <div class="layout" class:open={$isMenuOpen}>
 	<Header />
 	{#key data.path}
-		<main
+		<section class='content'
 			tabindex="-1"
 			in:fade={transitionIn}
-			out:fade={transitionOut}
-		>
+			out:fade={transitionOut}>
 			<slot />
-		</main>
+		</section>
 	{/key}
 	<Footer />
 </div>
