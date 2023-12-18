@@ -5,7 +5,7 @@ updated:
 categories: 
 - "facebook post"
 - "musings"
-coverImage: "https://scontent.fpit1-1.fna.fbcdn.net/v/t39.30808-6/385033789_10106669223909043_6762220655045476515_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=vqslzLkiGLAAX-Ufilz&_nc_ht=scontent.fpit1-1.fna&oh=00_AfCpcpxDfCetKgJE8eJPcKZXLHeYZHYKghLvYT8uhv7Icw&oe=657A529A"
+coverImage: "/images/huntington.jpg"
 coverWidth: 528
 coverHeight: 704
 excerpt: Put your money where your mouth is!

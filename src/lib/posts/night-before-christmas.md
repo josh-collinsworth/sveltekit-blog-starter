@@ -5,7 +5,7 @@ updated:
 categories: 
 - "facebook post"
 - "fun"
-coverImage: "https://scontent.fpit1-1.fna.fbcdn.net/v/t39.30808-6/397416839_10106713073708693_2177673832271346996_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=Lo8IgV4aQOAAX-darqU&_nc_ht=scontent.fpit1-1.fna&oh=00_AfBQI--BrJo5xLyxyQIbv6YuUABVP4M3W5Lu-rKzo02i9A&oe=65795FD5"
+coverImage: "/images/halloween-santa.jpg"
 coverWidth: 1
 coverHeight: 1
 excerpt: Everyone knows that Halloween is really Christmas Eve.

@@ -13,3 +13,4 @@ export const load = async () => {
 		throw error(500, err)
 	}
 }
+

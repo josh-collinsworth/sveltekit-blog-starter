@@ -1,9 +1,9 @@
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
 <script>
-
+    import { formatDate } from '$lib/assets/js/dateUtils.js';
     export let data;
 
-    const {
+    let {
         title,
         excerpt,
         date,
@@ -14,6 +14,7 @@
         categories 
     } = data.meta;
     const PostContent = data.PostContent;
+    date = formatDate(date);
 </script>
 
 <svelte:head>
@@ -36,7 +37,7 @@
     <img
         class="cover-image"
         src="{coverImage}"
-        alt=""
+        alt="{title}"
         style="aspect-ratio: {coverWidth} / {coverHeight};"
         width={coverWidth}
         height={coverHeight}
