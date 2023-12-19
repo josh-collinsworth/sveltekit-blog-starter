@@ -60,6 +60,12 @@
 					><img src="/images/facebook@2x.png" alt="facebook Link" /><span>/jimmy.lemon</span></a
 				>
 			</li>
+
+      <li style="grid-column: span 2;">
+				<a href="https://bullseyetotalmedia.com" target="_blank"
+					><img src="/images/btm-icon-round.png" alt="facebook Link" /><span><strong>work with me:</strong> bullseyetotalmedia.com</span></a
+				>
+			</li>
 		</ul>
 	</div>
 	<div class="latest-post">
@@ -142,6 +148,7 @@
 	.latest-post a:hover li {
 		border-left: 40px solid var(--black);
 		padding-left: 2rem;
+    cursor:pointer;
 	}
 
 	a {
@@ -158,7 +165,13 @@
 		margin: 0 auto;
 		max-height: 150px;
 		border-radius: 100%;
+    transform:rotate(0deg)
 	}
+
+  .socialLinks img.headshot:hover {
+    transition: all .3s ease;
+    transform:rotate(-360deg)
+  }
 
   .socialLinks {
     display: flex;
@@ -178,11 +191,13 @@
     padding:.5rem;
     gap:1rem;
     transition: all .3s ease;
+    border-left:0px solid var(--black);
       }
 
       .socialLinks li a:hover {
         border-left:8px solid var(--black);
         padding-left:12px;
+        cursor:pointer;
       }
 
       .socialLinks h2 {
