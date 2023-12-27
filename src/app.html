@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.png" />
+		<link rel="icon" href="/jl-si.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
 		%sveltekit.head%
@@ -15,6 +15,15 @@
 
 		<!-- You can add global <meta> tags here, but anything not global or dynamic should be a `<svelte:head>` tag on the proper page(s) instead. -->
 	</head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3JTQQM4ZLP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3JTQQM4ZLP');
+</script>
 	<body>
 		<div id="svelte">%sveltekit.body%</div>
 	</body>

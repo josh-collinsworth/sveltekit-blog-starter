@@ -27,6 +27,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"animate.css": "^4.1.1",
 		"remark": "^15.0.1",
 		"remark-html": "^16.0.1",
 		"remark-toc": "^9.0.0",

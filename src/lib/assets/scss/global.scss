@@ -73,3 +73,20 @@ body {
   #root, #__next {
 	isolation: isolate;
   }
+
+  .btn {
+	background:var(--yellow);
+	padding:.5rem .75rem;
+	margin-top:1rem;
+	display:inline-block;
+	transition:all .3s ease;
+	border: 1px solid var(--black);
+  }
+
+  .btn:hover {
+	border-left: 12px solid var(--black);
+  }
+
+  ul {
+	margin-bottom:1rem;
+  }

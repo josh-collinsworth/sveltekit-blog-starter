@@ -15,6 +15,9 @@
     } = data.meta;
     const PostContent = data.PostContent;
     date = formatDate(date);
+
+    
+    
 </script>
 
 <svelte:head>
@@ -31,6 +34,9 @@
     <meta property="og:image:height" content={coverHeight} />
     <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
+
+<progress id="reading-progress" max="100" value="0" ></progress>
+
 
 <article class="post">
     <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
@@ -73,3 +79,62 @@
         </aside>
     {/if}
 </article> 
+
+<style>
+    :root {
+  --progress-width: 100%;
+  --progress-height: 8px;
+  --progress-bar-color: rgb(115, 0, 209);
+  --progress-bg: none;
+  --progress-border-radius: 5px;
+}
+
+progress {
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+/*Target this for applying styles*/
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Get rid of default border in Firefox. */
+  border: none;
+
+  width: var(--progress-width);
+  height: var(--progress-height);
+
+  /* Firefox: any style applied here applies to the container. */
+  background-color: var(--progress-bg);
+  border-radius: var(--progress-border-radius);
+
+  /* For IE10 */
+  color: var(--progress-bar-color);
+}
+
+/* For Firefox: progress bar */
+progress[value]::-moz-progress-bar {
+  background-color: var(--progress-bar-color);
+  border-radius: var(--progress-border-radius);
+}
+
+/* WebKit/Blink browsers:
+    -webkit-progress-bar is to style the container */
+progress[value]::-webkit-progress-bar {
+  background-color: var(--progress-bg);
+  border-radius: var(--progress-border-radius);
+}
+
+/*-webkit-progress-value is to style the progress bar.*/
+progress[value]::-webkit-progress-value {
+  background-color: var(--progress-bar-color);
+  border-radius: var(--progress-border-radius);
+}
+</style>

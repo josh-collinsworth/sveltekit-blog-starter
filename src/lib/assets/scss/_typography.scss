@@ -6,12 +6,11 @@
 	font-family: var(--accentFont);
 	color: var(--black);
 	font-weight:800;
-	
 }
 
 h1 {
 	font-size: 2.8rem;
-	margin: 0 0 3rem;
+	margin: 0 0 1.5rem;
 	position: relative;
 	overflow: hidden;
 	padding-bottom: 1rem;
@@ -78,3 +77,5 @@ ul {
 	}
 
 }
+
+p {margin-bottom:1rem;}

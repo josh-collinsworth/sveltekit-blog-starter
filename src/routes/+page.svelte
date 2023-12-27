@@ -85,7 +85,7 @@
 			<p>Loading...</p>
 		{/if}
 
-		<a href="/blog"><button>More from the Blog</button></a>
+		<a href="/blog" class="btn">More from the Blog</a>
 	</div>
 </section>
 
@@ -165,13 +165,7 @@
 		margin: 0 auto;
 		max-height: 150px;
 		border-radius: 100%;
-    transform:rotate(0deg)
-	}
-
-  .socialLinks img.headshot:hover {
-    transition: all .3s ease;
-    transform:rotate(-360deg)
-  }
+}
 
   .socialLinks {
     display: flex;

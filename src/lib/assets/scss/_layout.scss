@@ -35,7 +35,7 @@ img {
 
 	.meta {
 		font-size: 0.8rem;
-		margin-bottom: 4rem;
+		margin-bottom: 1rem;
 	}
 
 	img + h1 {
@@ -64,7 +64,31 @@ li {
 	}
 }
 
+.button {
+	background: var(--yellow);
+	padding:.5rem .75rem;
+	margin-top:1rem;
+	display:inline-block;
+	transition: all .3s ease;
+	text-decoration: none;
+	border-left:0px solid var(--black);
+}
+
+.button:hover {
+	border-left:8px solid var(--black);
+}
+
+
+.button.facebook {
+	background:  #4267B2;
+		color:#fff;
+
+}
+
 .post-footer { 
+	margin-top:2rem;
+	border-top:1px solid var(--black);
+	padding-top:2rem;
 	ul {
 		padding: 0;
 	}
@@ -79,6 +103,7 @@ li {
 			text-transform: uppercase;
 			font-family: var(--primaryFont);
 			font-weight: bold;
+			background:var(--yellow);
 		}
 
 		+ li {
