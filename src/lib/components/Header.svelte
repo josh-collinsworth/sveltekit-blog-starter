@@ -11,9 +11,7 @@
 
 
 <header>
-	<a on:click|preventDefault={focusMain} class="skip-to-content-link" href="#main">
-		Skip to main content
-	</a>
+
 	
 	<a href="/">
 		<h2><span style="font-weight:300;">jimmy</span><span style="font-weight:800">lemon</span></h2>
@@ -43,11 +41,7 @@
 		padding:0px;
 	}
 
-	header .main-nav {
-    font-weight:700;
-}
 
-header .main-nav li.active {
-    color:red;
-}
+
+
 </style>
