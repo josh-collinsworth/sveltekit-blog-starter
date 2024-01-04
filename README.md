@@ -89,7 +89,7 @@ To add or remove pages from the site's navigation menu (in both the header and f
 
 ## Colors
 
-This starter has a default color palette (Credit to [coolors.co](https://coolors.co/palettes/trending)) but you can easily override those in the CSS.
+This starter has a default color palette (Credit to [coolors.co](https://coolors.co/palettes/trending)) but you can easily override those in the CSS. The color variable values can be found in `static/css/vars.css`.
 
 ## Fonts
 
