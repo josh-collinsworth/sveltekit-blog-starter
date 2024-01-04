@@ -4,20 +4,21 @@ This starter contains everything you need to get up and running with [SvelteKit]
 
 ## Features
 
-- 🎉 **Fully up-to-date with SvelteKit 1.25+!**
+- 🎉 **Fully up-to-date with SvelteKit 2!**
 - ⚡️ **Super fast static site generation with hydration**. Every route is compiled down to static HTML and routed with (optional) JavaScript, thanks to the SvelteKit static adapter (pre-installed)
 - 📦 **Zero-config preloading** for automatic, fast background preloading of all top-level pages
 - ✍️ **Markdown support** with a pre-configured blog
   - 📑 **Pagination** included (_can customize posts per page_)
   - ✅ **Category pages** included
   - 💬 **Posts JSON API**
-- 💅 **Sass** pre-installed and -configured
 - 📝 **mdsvex** pre-installed--use Svelte components inside Markdown!
   - 🔗 **Rehype** plugins are included to generate unique heading IDs, for direct linking
 - 📱 **Responsive and accessible defaults**; includes a "skip to content" link and accessible mobile nav menu
 - 🔄 **Page transitions** (_fancy!_)
 - 🔎 **Basic SEO** for blog posts (_strongly recommend checking that out for yourself, though_)
 - 📰 **RSS feed** set up and ready to go (_though it could also likely benefit from some optimization_); just update `src/lib/config.js`
+- 💈 **Basic CSS ready to use, customize, or remove!** Want to use Sass or Tailwind instead? Just install them! (Directions to come in a future update; check the SvelteKit docs in the meantime.) Prefer to write your own? Delete `static/css` and add your own links in `+layout.svelte`.
+- ℹ️ **Fonts included**. (No more built-in Google tracking.)
 
 ## Quick Start
 
@@ -36,7 +37,7 @@ Now all you need to do is:
 
 - Update the `src/lib/config.js` file
 - Drop your Markdown posts into `src/lib/posts`
-- Optionally, customize the styles in `lib/assets/scss`
+- Optionally, customize the styles in `static/css`
 
 GLHF! Details below. 👇
 
@@ -56,7 +57,7 @@ A few demo Markdown posts are included, and highlight some of the features of th
 
 If you want to use other frontmatter properties in the template (or just modify the layout), make changes in `src/routes/blog/[post]/+page.svelte`.
 
-⚠️ **Note: posts should have a `date` and an `excerpt` defined in the fronmatter.** They're sorted by `date`, and use `excerpt` in page meta tags (for SEO, social sharing, etc.) There are also other frontmatter properties used to enhance the site experience, like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift.
+⚠️ **Note: posts should have a `date` and an `excerpt` defined in the frontmatter.** They're sorted by `date`, and use `excerpt` in page meta tags (for SEO, social sharing, etc.) There are also other frontmatter properties used to enhance the site experience, like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift.
 
 The starter will still work without `date` properties in your posts, but the sorting won't be right. Similarly, you can have posts without an `excerpt`, but your SEO/social previews will be sub-optimal.
 
@@ -74,9 +75,9 @@ This starter also includes a basic RSS feed. It's very minimal, so you may want 
 
 Update the `config` details in `src/lib/config.js` to get your site's unique info correct. (You could also pull this info in other places, or add to it, to keep things consistent, but that's up to you.)
 
-## Sass
+## CSS
 
-**By default, all CSS in this starter is global.** It's located in `src/lib/assets/scss`, and all compiled into the `global.scss` file (which is then loaded into the global `+layout.svelte` file) automatically.
+**By default, all CSS in this starter is global vanilla CSS.** It's located in `static/css` (linked from `+layout.svelte`).
 
 I didn't use component `<style>` blocks because, while component-based scoped CSS is very nice, it can also be hard to track down and update. Since this is a starter, I felt it was best to keep all the styles together in one place, and let you, the author, decide whether you want to keep them as they are, move to scoped CSS instead, or use a mixture.
 
@@ -84,13 +85,17 @@ I didn't use component `<style>` blocks because, while component-based scoped CS
 
 To add or remove pages from the site's navigation menu (in both the header and footer), edit the `navItems` array in `src/lib/config.js`. Items there will be automatically added to the main menu in the header and footer, and the mobile nav menu. They'll also have proper classes and ARIA attributes to show when they're the current page.
 
-## Colors and Fonts
+## Colors
 
-This starter has a default color palette (Credit to [coolors.co](https://coolors.co/palettes/trending)) and fonts, but you can easily override those here:
+This starter has a default color palette (Credit to [coolors.co](https://coolors.co/palettes/trending)) but you can easily override those in the CSS.
 
-**Colors:** `src/lib/assets/scss/_vars.scss`
+## Fonts
 
-**Fonts:** `src/app.html` for the links, `_vars.scss` for the font names.
+Previously, fonts were loaded from Google Fonts, but now they're hosted locally, for moderately better performance and a 100% reduction in tracking.
+
+The fonts in question are [Atkinson Hyperlegible](https://brailleinstitute.org/freefont) by the Braille Institute, and [Fira Code](https://github.com/tonsky/FiraCode) by Nikita Prokopov. The fonts are open-source; please consider supporting the authors.
+
+The font files themselves are hosted in `static/fonts`. They are linked from the `fonts.css` file, and set in `typography.css`.
 
 ## Components
 

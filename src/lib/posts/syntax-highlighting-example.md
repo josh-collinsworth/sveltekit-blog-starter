@@ -1,8 +1,8 @@
 ---
 title: "Syntax highlighting with mdsvex"
-date: "2021-12-01"
-updated: "2021-12-01"
-categories: 
+date: "2023-01-05"
+updated: "2023-01-05"
+categories:
   - "sveltekit"
   - "web"
   - "css"
@@ -24,7 +24,7 @@ mdsvex has automatic, built-in syntax highlighting with [Prism.js](https://prism
 And that will render just like so:
 
 ```css
-.my-css-class { 
+.my-css-class {
 	color: #ffd100;
 	box-sizing: border-box;
 	/* etc... */
@@ -62,4 +62,4 @@ Of course, mdsvex supports Svelte highlighting, too:
 </div>
 ```
 
-All these colors are in the `_prism.scss` file inside `src/lib/assets/scss`, if you'd like to change them.
+All these colors are in `src/lib/assets/css/prism.css`, if you'd like to change them.

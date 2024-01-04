@@ -1,13 +1,3 @@
-@use './typography';
-@use './layout';
-@use './components';
-@use './header-and-footer';
-@use './forms';
-@use './animation';
-@use './utilities';
-@use './code';
-@use './prism';
-
 *:focus {
 	outline: 2px solid var(--accent);
 	outline-offset: 2px;

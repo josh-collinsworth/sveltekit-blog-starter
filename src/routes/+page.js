@@ -10,6 +10,6 @@ export const load = async () => {
 		}
 	}
 	catch(err) {
-		throw error(500, err)
+		error(500, err);
 	}
 }

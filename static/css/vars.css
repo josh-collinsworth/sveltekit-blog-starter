@@ -1,0 +1,29 @@
+:root {
+	/* Colors */
+	--accent: #E63946;
+	--background: #FAF9F8;
+	--lightAccent: #A8DAE5;
+	--lighterAccent: #E6E8E4;
+	--dark: #457B9D;
+	--darker: #1D3557;
+	--slate: #2F3948;
+
+	--white: #fff;
+	--black: #152030;
+
+	--ink: var(--slate);
+	--paper: var(--background);
+
+
+	/**
+	 * These fonts are broken out into two separate variables from a previous iteration. I left
+	 * it in because it's nice to be able to split out the heading and body fonts.
+	 */
+	--accentFont: 'Atkinson Hyperlegible', Georgia, Times, serif;
+	--primaryFont: 'Atkinson Hyperlegible', sans-serif;
+	--codeFont: 'Fira Code', monospace;
+
+	/* Base styles */
+	font-size: 1rem;
+	line-height: 1.5;
+}

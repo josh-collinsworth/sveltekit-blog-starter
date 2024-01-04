@@ -16,12 +16,11 @@ input[type=submit] {
 	display: block;
 	width: max-content;
 	transition: background .2s;
-
-	&:hover,
-	&:focus {
-		background: var(--accent);
-	}
 }
+
+:where(button, input[type=submit]):where(:hover, :focus) {
+	background: var(--accent);
+} 
 
 label,
 fieldset {
@@ -43,16 +42,17 @@ input {
 	width: 100%;
 	accent-color: var(--accent);
 	background-color: transparent;
+}
 
-	&[type=radio],
-	&[type=checkbox] {
-		display: initial;
-		width: auto;
+input[type=radio],
+input[type=checkbox] {
+	display: initial;
+	width: auto;
+}
 
-		&:not(:checked) + label {
-			font-weight: normal;
-		}
-	}
+:where(input[type=radio],
+	input[type=checkbox]):not(:checked)+label {
+	font-weight: normal;
 }
 
 .form-section,

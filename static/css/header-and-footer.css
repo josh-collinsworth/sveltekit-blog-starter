@@ -1,0 +1,258 @@
+header,
+footer {
+	font-family: var(--primaryFont);
+	padding: 2.5rem 2rem;
+}
+
+:where(header, footer) a {
+	text-decoration: none;
+
+	&.active {
+		font-weight: bold;
+	}
+}
+
+:where(header, footer) nav ul {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0rem 1.5rem;
+	padding: 0;
+	margin: 0;
+}
+
+:where(header, footer) a:hover {
+	text-decoration: underline;
+}
+
+:where(header, footer) svg {
+	fill: currentColor;
+}
+
+header {
+	background: var(--lightAccent);
+	color: var(--darker);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media (min-width: 48rem) {
+	header {
+
+		justify-content: center;
+		flex-wrap: wrap;
+		height: auto;
+	}
+}
+
+.site-title {
+	font-family: var(--accentFont);
+	font-size: 2.1rem;
+	line-height: 1;
+	color: inherit;
+	text-align: center;
+	margin: 0;
+	display: block;
+	font-size: 1.4rem;
+	font-weight: bold;
+
+	@media (min-width: 48rem) {
+		width: 100%;
+		font-size: 1.6rem;
+	}
+}
+
+.menu-button {
+	margin: 0;
+	background: transparent !important;
+	color: inherit;
+	padding: 0;
+	border: 0;
+	width: 2rem;
+}
+
+@media (min-width: 48rem) {
+	.menu-button {
+
+		display: none;
+	}
+}
+
+.main-nav {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	transform: translateX(-100vw);
+	visibility: hidden;
+	width: 100%;
+	height: 100vh;
+	pointer-events: none;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--darker);
+	color: var(--paper);
+	transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.main-nav.open {
+	transform: translateX(0);
+	opacity: 1;
+	pointer-events: unset;
+	visibility: unset;
+}
+
+.main-nav.open li {
+	--delay: 0.1s;
+	opacity: 0;
+	animation: slide_in_left .2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+}
+
+.main-nav a {
+	color: inherit;
+}
+
+.main-nav li:nth-of-type(1) {
+	animation-delay: calc(var(--delay) * 1)
+}
+
+.main-nav li:nth-of-type(2) {
+	animation-delay: calc(var(--delay) * 2)
+}
+
+.main-nav li:nth-of-type(3) {
+	animation-delay: calc(var(--delay) * 3)
+}
+
+.main-nav li:nth-of-type(4) {
+	animation-delay: calc(var(--delay) * 4)
+}
+
+.main-nav li:nth-of-type(5) {
+	animation-delay: calc(var(--delay) * 5)
+}
+
+.main-nav li:nth-of-type(6) {
+	animation-delay: calc(var(--delay) * 6)
+}
+
+.main-nav li:nth-of-type(7) {
+	animation-delay: calc(var(--delay) * 7)
+}
+
+.main-nav li:nth-of-type(8) {
+	animation-delay: calc(var(--delay) * 8)
+}
+
+.menu-button {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+}
+
+.main nav ul li {
+	font-size: 1.2rem;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-bottom: calc(.2rem + 2vh);
+}
+
+@media (min-width: 48rem) {
+	header .main-nav {
+		opacity: 1;
+		transform: none;
+		position: unset;
+		height: auto;
+		width: auto;
+		background: unset;
+		pointer-events: unset;
+		visibility: unset;
+		color: inherit;
+	}
+
+	header .main-nav ul {
+		margin: 1rem auto 0;
+		padding-top: 0.5rem;
+		border-top: 1px solid var(--dark);
+		width: max-content;
+	}
+
+	header .main-nav li {
+		font-size: inherit;
+		display: initial;
+		width: initial;
+		text-align: initial;
+		margin-bottom: 0;
+	}
+}
+
+footer {
+	background: var(--darker);
+	color: var(--paper);
+	display: grid;
+	grid-template-columns: 100%;
+	align-items: stretch;
+	gap: 2rem;
+}
+
+@media (min-width: 48rem) {
+	footer {
+		grid-template-columns: 1fr 1fr 2fr;
+	}
+
+	.menu-button {
+		display: none;
+	}
+}
+
+footer p {
+	margin: 0;
+	font-size: 0.8rem;
+}
+
+footer a {
+	color: inherit;
+}
+
+footer nav {
+	display: initial;
+}
+
+@media (min-width: 48rem) {
+	footer nav {
+		border-right: 1px solid var(--dark);
+	}
+}
+
+footer ul {
+	display: initial;
+}
+
+footer ul li+li {
+	margin-top: 0.5rem;
+}
+
+.skip-to-content-link {
+	position: absolute;
+	top: -6rem;
+	left: 0;
+	padding: .5em;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	background: var(--darker);
+	color: var(--background);
+}
+
+.skip-to-content-link:focus {
+	transform: translateY(6rem);
+	opacity: 1;
+	z-index: 11;
+}
