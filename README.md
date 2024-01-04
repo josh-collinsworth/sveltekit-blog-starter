@@ -81,6 +81,8 @@ Update the `config` details in `src/lib/config.js` to get your site's unique inf
 
 I didn't use component `<style>` blocks because, while component-based scoped CSS is very nice, it can also be hard to track down and update. Since this is a starter, I felt it was best to keep all the styles together in one place, and let you, the author, decide whether you want to keep them as they are, move to scoped CSS instead, or use a mixture.
 
+(_Note: previous versions of this starter came with Sass pre-installed. I've removed it now because it seems like vanilla CSS is almost entirely as powerful as Sass now anyway, and because it's probably easier for people who want it to opt in than for those who don't to opt out_.)
+
 ## Site navigation menus
 
 To add or remove pages from the site's navigation menu (in both the header and footer), edit the `navItems` array in `src/lib/config.js`. Items there will be automatically added to the main menu in the header and footer, and the mobile nav menu. They'll also have proper classes and ARIA attributes to show when they're the current page.

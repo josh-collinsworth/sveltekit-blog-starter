@@ -62,9 +62,11 @@ li {
 	}
 }
 
-
-.post-footer ul {
+.post-footer__categories {
 	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
 }
 
 .post-footer li {
@@ -78,11 +80,6 @@ li {
 	text-transform: uppercase;
 	font-family: var(--primaryFont);
 	font-weight: bold;
-}
-
-.post-footer a+li {
-	margin-left: 0.5rem;
-
 }
 
 .icon-link {
