@@ -45,7 +45,12 @@
 	<link rel="stylesheet" href="/css/utilities.css" />
 	<link rel="stylesheet" href="/css/code.css" />
 	<link rel="stylesheet" href="/css/prism.css" />
-	<link rel="alternate" type="application/rss+xml" title={siteTitle} href="{siteURL}/api/rss.xml" />
+	<link
+		rel="alternate"
+		type="application/rss+xml"
+		title={siteTitle}
+		href="http://{siteURL}/api/rss.xml"
+	/>
 </svelte:head>
 
 <!--
