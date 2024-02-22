@@ -40,7 +40,6 @@ header {
 
 @media (min-width: 48rem) {
 	header {
-
 		justify-content: center;
 		flex-wrap: wrap;
 		height: auto;
@@ -75,7 +74,6 @@ header {
 
 @media (min-width: 48rem) {
 	.menu-button {
-
 		display: none;
 	}
 }
@@ -96,7 +94,7 @@ header {
 	align-items: center;
 	background: var(--darker);
 	color: var(--paper);
-	transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .main-nav.open {
@@ -109,7 +107,7 @@ header {
 .main-nav.open li {
 	--delay: 0.1s;
 	opacity: 0;
-	animation: slide_in_left .2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+	animation: slide_in_left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 .main-nav a {
@@ -117,35 +115,35 @@ header {
 }
 
 .main-nav li:nth-of-type(1) {
-	animation-delay: calc(var(--delay) * 1)
+	animation-delay: calc(var(--delay) * 1);
 }
 
 .main-nav li:nth-of-type(2) {
-	animation-delay: calc(var(--delay) * 2)
+	animation-delay: calc(var(--delay) * 2);
 }
 
 .main-nav li:nth-of-type(3) {
-	animation-delay: calc(var(--delay) * 3)
+	animation-delay: calc(var(--delay) * 3);
 }
 
 .main-nav li:nth-of-type(4) {
-	animation-delay: calc(var(--delay) * 4)
+	animation-delay: calc(var(--delay) * 4);
 }
 
 .main-nav li:nth-of-type(5) {
-	animation-delay: calc(var(--delay) * 5)
+	animation-delay: calc(var(--delay) * 5);
 }
 
 .main-nav li:nth-of-type(6) {
-	animation-delay: calc(var(--delay) * 6)
+	animation-delay: calc(var(--delay) * 6);
 }
 
 .main-nav li:nth-of-type(7) {
-	animation-delay: calc(var(--delay) * 7)
+	animation-delay: calc(var(--delay) * 7);
 }
 
 .main-nav li:nth-of-type(8) {
-	animation-delay: calc(var(--delay) * 8)
+	animation-delay: calc(var(--delay) * 8);
 }
 
 .menu-button {
@@ -159,7 +157,7 @@ header {
 	display: block;
 	width: 100%;
 	text-align: center;
-	margin-bottom: calc(.2rem + 2vh);
+	margin-bottom: calc(0.2rem + 2vh);
 }
 
 @media (min-width: 48rem) {
@@ -233,7 +231,7 @@ footer ul {
 	display: initial;
 }
 
-footer ul li+li {
+footer ul li + li {
 	margin-top: 0.5rem;
 }
 
@@ -241,7 +239,7 @@ footer ul li+li {
 	position: absolute;
 	top: -6rem;
 	left: 0;
-	padding: .5em;
+	padding: 0.5em;
 	opacity: 0;
 	display: flex;
 	justify-content: center;

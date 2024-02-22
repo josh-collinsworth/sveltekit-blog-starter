@@ -1,11 +1,9 @@
 <script>
-	import MainNav from './MainNav.svelte'
-	import { siteAuthor } from '$lib/config'
+	import { siteAuthor } from '$lib/config';
+	import NavItems from './NavItems.svelte';
 </script>
 
 <footer>
-	<MainNav />
-
 	<nav>
 		<ul>
 			<li>
@@ -15,6 +13,9 @@
 				<a href="/">Home</a>
 			</li>
 		</ul>
+	</nav>
+	<nav>
+		<NavItems />
 	</nav>
 
 	<p>&copy;{new Date().getFullYear()} {siteAuthor}</p>
