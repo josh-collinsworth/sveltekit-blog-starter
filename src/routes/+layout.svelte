@@ -28,7 +28,9 @@
 	 **/
 	onMount(() => {
 		const navRoutes = navItems.map((item) => item.route);
-		preloadCode(...navRoutes);
+		for (const route of navRoutes) {
+			preloadCode(route);
+		}
 	});
 </script>
 
