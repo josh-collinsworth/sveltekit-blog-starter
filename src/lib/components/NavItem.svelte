@@ -1,9 +1,9 @@
 <script>
 	import { currentPage, isMenuOpen } from '../assets/js/store';
 
-	export let href;
+	let { href, children } = $props();
 
-	$: isCurrentPage = $currentPage.startsWith(href);
+	let isCurrentPage = $derived($currentPage.startsWith(href));
 
 	const maybeCloseMenu = () => {
 		if (href != $currentPage) {
@@ -15,10 +15,10 @@
 <li>
 	<a
 		{href}
-		on:click={maybeCloseMenu}
+		onclick={maybeCloseMenu}
 		class:active={isCurrentPage}
 		aria-current={isCurrentPage ? 'page' : false}
 	>
-		<slot />
+		{@render children?.()}
 	</a>
 </li>

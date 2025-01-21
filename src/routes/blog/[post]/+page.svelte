@@ -1,6 +1,6 @@
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
 <script>
-	export let data;
+	let { data } = $props();
 
 	const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } =
 		data.meta;
@@ -43,7 +43,7 @@
 		{updated}
 	</div>
 
-	<svelte:component this={PostContent} />
+	<PostContent />
 
 	{#if categories}
 		<aside class="post-footer">

@@ -9,7 +9,7 @@ view the
 
 ## Features
 
-- 🎉 **Fully up-to-date with SvelteKit 2!**
+- 🎉 **Fully up-to-date with SvelteKit 2 and Svelte 5!**
 - ⚡️ **Super fast static site generation with hydration**. Every route is
   compiled down to static HTML and routed with (optional) JavaScript, thanks to
   the SvelteKit static adapter (pre-installed)
@@ -24,7 +24,7 @@ view the
     direct linking
 - 📱 **Responsive and accessible defaults**; includes a "skip to content" link
   and accessible mobile nav menu
-- 🔄 **Page transitions** (_fancy!_)
+- 🔄 **Page transitions** (_fancy and customizable!_)
 - 🔎 **Basic SEO** for blog posts (_strongly recommend checking that out for
   yourself, though_)
 - 📰 **RSS feed** set up and ready to go (_though it could also likely benefit

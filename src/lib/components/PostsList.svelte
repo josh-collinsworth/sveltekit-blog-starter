@@ -1,5 +1,5 @@
 <script>
-	export let posts = []
+	let { posts = [] } = $props();
 </script>
 
 
