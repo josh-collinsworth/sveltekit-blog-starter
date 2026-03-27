@@ -6,7 +6,10 @@
 
 	let { data } = $props();
 
-  const { page, posts, category, total } = data
+	let page = $derived(data.page)
+	let posts = $derived(data.posts)
+	let category = $derived(data.category)
+	let total = $derived(data.total)
 
 	let lowerBound = $derived((page * postsPerPage) - (postsPerPage - 1) || 1)
 	let upperBound = $derived(Math.min(page * postsPerPage, total))

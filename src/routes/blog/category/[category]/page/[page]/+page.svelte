@@ -5,7 +5,10 @@
 	import { siteDescription, postsPerPage } from '$lib/config'
 
 	let { data } = $props();
-	const { page, category, totalPosts, posts } = data 
+	let page = $derived(data.page)
+	let category = $derived(data.category)
+	let totalPosts = $derived(data.totalPosts)
+	let posts = $derived(data.posts)
 
 	let lowerBound = $derived((page * postsPerPage) - (postsPerPage - 1) || 1)
 	let upperBound = $derived(Math.min(page * postsPerPage, totalPosts))
