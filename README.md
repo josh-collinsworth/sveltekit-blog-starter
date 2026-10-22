@@ -201,6 +201,12 @@ site can be hosted.
 
 Use `npm run preview` _after_ a build to preview the built site locally.
 
+### Deploy on Wasmer
+
+[![Deploy to Wasmer](https://img.shields.io/badge/Deploy%20to-Wasmer-171717?logo=wasmer&logoColor=white)](https://wasmer.io/apps/create?github=josh-collinsworth%2Fsveltekit-blog-starter)
+
+Wasmer detects this SvelteKit project, runs `npm install` and `npm run build`, and serves the generated `build` folder as static files. The button opens Wasmer's import page for this public repository, where you review the configuration and click Deploy; it does not create a copy of the repository in your GitHub account. To use it for your own blog, fork this repository (or copy it into a new repo) and import that repository on Wasmer.
+
 ## Adding Tailwind
 
 [The directions for adding Tailwind can be found in the Tailwind docs, here](https://tailwindcss.com/docs/guides/sveltekit).
